@@ -1,22 +1,48 @@
 {
-  "version": 2,
+  "version": 1,
   "accountKey": "act_1234567890",
   "intent": "activate",
-  "source": "web",
-  "actor": "user:web-ui",
-  "rationale": "練習モード: ユーザー承認によるACTIVE化",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "練習モード: ユーザー承認によるACTIVE化（mock実行器対応形式に修正）",
   "createdAt": "2026-06-11T04:42:11.806Z",
   "actions": [
     {
-      "kind": "campaign.status",
-      "payload": {
-        "campaignId": "cmp_traffic_3000jpy",
-        "status": "ACTIVE"
-      },
+      "resource": "campaigns",
+      "verb": "update",
+      "args": [
+        "ads",
+        "campaign",
+        "update",
+        "mock-act_1234567890-campaign-cmp_traffic_3000jpy",
+        "--status",
+        "ACTIVE"
+      ],
       "entity": {
         "nodeType": "campaign",
         "nodeKey": "cmp_traffic_3000jpy",
-        "status": "active"
+        "displayName": "トラフィックキャンペーン（日予算3,000円）",
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "resource": "adsets",
+      "verb": "update",
+      "args": [
+        "ads",
+        "adset",
+        "update",
+        "mock-act_1234567890-adset-ads_traffic_3000jpy_main",
+        "--status",
+        "ACTIVE"
+      ],
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_traffic_3000jpy_main",
+        "displayName": "メイン広告セット（日本）",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_traffic_3000jpy",
+        "status": "ACTIVE"
       }
     }
   ]
