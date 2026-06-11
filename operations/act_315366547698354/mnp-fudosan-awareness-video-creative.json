@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "認知キャンペーン用30秒動画クリエイティブ（問題提起型・ユーザー入稿承認済み）。video_id 1535204534813170 はアップロード・処理完了済み。",
+  "createdAt": "2026-06-11T11:00:00.000Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "creative:awareness_video30s",
+      "payload": {
+        "creativeId": "cr_awareness_video30s",
+        "name": "認知_動画30秒_問題提起型",
+        "pageId": "214160711780390",
+        "objectStorySpec": {
+          "page_id": "214160711780390",
+          "video_data": {
+            "video_id": "1535204534813170",
+            "image_hash": "7cb395cd928819ac3b8a686801a3e2ff",
+            "title": "「不動産は高い」は古い常識",
+            "message": "「不動産投資には数千万円必要」——その常識、30秒で壊します。リフォーム込み50万円以内で始める激安不動産投資。詳しい方法は無料セミナーで解説します。",
+            "call_to_action": {
+              "type": "LEARN_MORE",
+              "value": { "link": "https://sub.ad-marketing.xyz/p/sCPyfCkgRwJJ" }
+            }
+          }
+        }
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "cr_awareness_video30s",
+        "displayName": "認知_動画30秒_問題提起型",
+        "status": "paused"
+      }
+    }
+  ]
+}
