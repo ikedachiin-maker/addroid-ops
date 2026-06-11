@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "accountKey": "act_1234567890",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "ユーザー依頼: 日予算3,000円・トラフィック目的のキャンペーン作成（練習モード）",
+  "createdAt": "2026-06-11T05:00:00.000Z",
+  "actions": [
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:traffic_3000jpy",
+      "payload": {
+        "campaignId": "cmp_traffic_3000jpy",
+        "name": "トラフィックキャンペーン（日予算3,000円）",
+        "objective": "OUTCOME_TRAFFIC",
+        "status": "PAUSED"
+      }
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:traffic_3000jpy_main",
+      "dependsOn": ["campaign:traffic_3000jpy"],
+      "payload": {
+        "adsetId": "ads_traffic_3000jpy_main",
+        "campaignRef": "cmp_traffic_3000jpy",
+        "name": "メイン広告セット（日本・日予算3,000円）",
+        "status": "PAUSED",
+        "optimizationGoal": "LINK_CLICKS",
+        "billingEvent": "IMPRESSIONS",
+        "dailyBudget": 3000,
+        "targeting": {
+          "geo_locations": { "countries": ["JP"] }
+        }
+      }
+    }
+  ]
+}
