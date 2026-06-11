@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "常識破壊広告の見出しをモバイル表示で切れない短縮版に差し替え（ユーザー指示）。",
+  "createdAt": "2026-06-11T10:00:00.000Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "creative:awareness_joushiki_v3",
+      "payload": {
+        "creativeId": "cr_awareness_joushiki_v3",
+        "name": "認知_常識破壊_v3_見出し短縮",
+        "pageId": "214160711780390",
+        "storageKey": "creatives/awareness-0611/ad1_joushiki.png",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/sCPyfCkgRwJJ",
+        "title": "10万円の戸建てが、全国に余っている理由",
+        "body": "「不動産投資には数千万円必要」——その思い込みの陰で、全国の\"10万円戸建て\"は今日も見過ごされています。リフォーム込み50万円以内で大家になる手順を、無料セミナーで実例とともに解説します。",
+        "callToAction": "LEARN_MORE"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "cr_awareness_joushiki_v3",
+        "displayName": "認知_常識破壊_v3_見出し短縮",
+        "status": "paused"
+      }
+    }
+  ]
+}
