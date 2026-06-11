@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "accountKey": "act_1234567890",
+  "intent": "activate",
+  "source": "web",
+  "actor": "user:web-ui",
+  "rationale": "練習モード: ユーザー承認によるACTIVE化",
+  "createdAt": "2026-06-11T04:42:11.806Z",
+  "actions": [
+    {
+      "kind": "campaign.status",
+      "payload": {
+        "campaignId": "cmp_traffic_3000jpy",
+        "status": "ACTIVE"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_traffic_3000jpy",
+        "status": "active"
+      }
+    }
+  ]
+}
