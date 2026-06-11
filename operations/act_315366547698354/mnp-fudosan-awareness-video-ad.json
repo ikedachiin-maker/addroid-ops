@@ -4,24 +4,24 @@
   "intent": "other",
   "source": "claude-code",
   "actor": "claude-code",
-  "rationale": "動画広告のクリエイティブをv2（MNP表現除去版）へ付け替え（ユーザー指示）",
+  "rationale": "動画広告をv3（池田本人ボイス版）クリエイティブへ付け替え",
   "createdAt": "2026-06-11T11:30:00.000Z",
   "actions": [
     {
       "kind": "ad.update",
       "payload": {
         "adId": "120247242185460649",
-        "name": "認知_動画30秒_v2_問題提起型",
+        "name": "認知_動画30秒_v3_池田ボイス",
         "graphPayload": {
           "creative": {
-            "creative_id": "1661043921837780"
+            "creative_id": "2458394517967872"
           }
         }
       },
       "entity": {
         "nodeType": "ad",
         "nodeKey": "ad_awareness_video30s",
-        "displayName": "認知_動画30秒_v2_問題提起型",
+        "displayName": "認知_動画30秒_v3_池田ボイス",
         "parentNodeType": "adset",
         "parentNodeKey": "ads_mnp_fudosan_awareness_main",
         "status": "paused"
