@@ -4,23 +4,24 @@
   "intent": "other",
   "source": "claude-code",
   "actor": "claude-code",
-  "rationale": "認知キャンペーンに30秒動画広告を追加（4本目・PAUSED・ユーザー入稿承認済み）。",
+  "rationale": "動画広告のクリエイティブをv2（MNP表現除去版）へ付け替え（ユーザー指示）",
   "createdAt": "2026-06-11T11:30:00.000Z",
   "actions": [
     {
-      "kind": "ad.create",
-      "ref": "ad:awareness_video30s",
+      "kind": "ad.update",
       "payload": {
-        "adId": "ad_awareness_video30s",
-        "adsetId": "120247226338950649",
-        "creativeId": "2325583867845155",
-        "name": "認知_動画30秒_問題提起型",
-        "status": "PAUSED"
+        "adId": "120247242185460649",
+        "name": "認知_動画30秒_v2_問題提起型",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "1661043921837780"
+          }
+        }
       },
       "entity": {
         "nodeType": "ad",
         "nodeKey": "ad_awareness_video30s",
-        "displayName": "認知_動画30秒_問題提起型",
+        "displayName": "認知_動画30秒_v2_問題提起型",
         "parentNodeType": "adset",
         "parentNodeKey": "ads_mnp_fudosan_awareness_main",
         "status": "paused"
