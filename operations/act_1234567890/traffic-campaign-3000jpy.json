@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 1,
   "accountKey": "act_1234567890",
   "intent": "other",
   "source": "claude-code",
@@ -8,31 +8,45 @@
   "createdAt": "2026-06-11T05:00:00.000Z",
   "actions": [
     {
-      "kind": "campaign.create",
-      "ref": "campaign:traffic_3000jpy",
-      "payload": {
-        "campaignId": "cmp_traffic_3000jpy",
-        "name": "トラフィックキャンペーン（日予算3,000円）",
-        "objective": "OUTCOME_TRAFFIC",
+      "resource": "campaigns",
+      "verb": "create",
+      "args": [
+        "ads", "campaign", "create",
+        "--name", "トラフィックキャンペーン（日予算3,000円）",
+        "--objective", "OUTCOME_TRAFFIC",
+        "--status", "PAUSED",
+        "--daily-budget", "3000"
+      ],
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_traffic_3000jpy",
+        "displayName": "トラフィックキャンペーン（日予算3,000円）",
         "status": "PAUSED"
-      }
+      },
+      "externalIdRequired": true
     },
     {
-      "kind": "adset.create",
-      "ref": "adset:traffic_3000jpy_main",
-      "dependsOn": ["campaign:traffic_3000jpy"],
-      "payload": {
-        "adsetId": "ads_traffic_3000jpy_main",
-        "campaignRef": "cmp_traffic_3000jpy",
-        "name": "メイン広告セット（日本・日予算3,000円）",
-        "status": "PAUSED",
-        "optimizationGoal": "LINK_CLICKS",
-        "billingEvent": "IMPRESSIONS",
-        "dailyBudget": 3000,
-        "targeting": {
-          "geo_locations": { "countries": ["JP"] }
-        }
-      }
+      "resource": "adsets",
+      "verb": "create",
+      "args": [
+        "ads", "adset", "create",
+        "--campaign-id", "cmp_traffic_3000jpy",
+        "--name", "メイン広告セット（日本）",
+        "--status", "PAUSED",
+        "--optimization-goal", "LINK_CLICKS",
+        "--billing-event", "IMPRESSIONS",
+        "--daily-budget", "3000",
+        "--countries", "JP"
+      ],
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_traffic_3000jpy_main",
+        "displayName": "メイン広告セット（日本）",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_traffic_3000jpy",
+        "status": "PAUSED"
+      },
+      "externalIdRequired": true
     }
   ]
 }
