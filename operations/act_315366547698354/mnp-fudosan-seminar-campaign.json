@@ -15,7 +15,8 @@
         "name": "MNP×激安不動産_セミナー集客",
         "objective": "OUTCOME_TRAFFIC",
         "status": "PAUSED",
-        "specialAdCategories": []
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
       },
       "entity": {
         "nodeType": "campaign",
@@ -27,7 +28,9 @@
     {
       "kind": "adset.create",
       "ref": "adset:mnp_fudosan_seminar_main",
-      "dependsOn": ["campaign:mnp_fudosan_seminar"],
+      "dependsOn": [
+        "campaign:mnp_fudosan_seminar"
+      ],
       "payload": {
         "adsetId": "ads_mnp_fudosan_seminar_main",
         "campaignRef": "cmp_mnp_fudosan_seminar",
@@ -38,13 +41,26 @@
         "dailyBudget": 3000,
         "destinationType": "WEBSITE",
         "targeting": {
-          "geo_locations": { "countries": ["JP"] },
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ]
+          },
           "age_min": 30,
           "age_max": 55,
-          "genders": [1],
-          "publisher_platforms": ["facebook", "instagram"],
-          "facebook_positions": ["feed"],
-          "instagram_positions": ["stream"]
+          "genders": [
+            1
+          ],
+          "publisher_platforms": [
+            "facebook",
+            "instagram"
+          ],
+          "facebook_positions": [
+            "feed"
+          ],
+          "instagram_positions": [
+            "stream"
+          ]
         }
       },
       "entity": {
