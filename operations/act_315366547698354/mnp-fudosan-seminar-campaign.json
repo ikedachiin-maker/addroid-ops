@@ -4,7 +4,7 @@
   "intent": "other",
   "source": "claude-code",
   "actor": "claude-code",
-  "rationale": "広告セットのみ作成（キャンペーン 120247222038500649 は作成済み）。campaignId は実IDを直接指定。",
+  "rationale": "広告セット作成（入札=自動/最大ボリューム、配信開始=2026-06-12 00:00 JST 統一ルール適用）",
   "createdAt": "2026-06-11T06:00:00.000Z",
   "actions": [
     {
@@ -40,7 +40,9 @@
             "stream"
           ]
         },
-        "campaignId": "120247222038500649"
+        "campaignId": "120247222038500649",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "startTime": "2026-06-12T00:00:00+09:00"
       },
       "entity": {
         "nodeType": "adset",
