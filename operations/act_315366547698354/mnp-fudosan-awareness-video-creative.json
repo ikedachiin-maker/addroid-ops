@@ -4,20 +4,20 @@
   "intent": "other",
   "source": "claude-code",
   "actor": "claude-code",
-  "rationale": "動画テロップの「MNP特典」を「経験・知識」に差し替えた修正版（ユーザー指示・審査対策）",
+  "rationale": "ナレーションを池田氏本人のクローン音声（Fish Audio）に差し替えた最終版",
   "createdAt": "2026-06-11T11:00:00.000Z",
   "actions": [
     {
       "kind": "creative.create",
-      "ref": "creative:awareness_video30s_v2",
+      "ref": "creative:awareness_video30s_v3",
       "payload": {
-        "creativeId": "cr_awareness_video30s_v2",
-        "name": "認知_動画30秒_v2_MNP表現除去",
+        "creativeId": "cr_awareness_video30s_v3",
+        "name": "認知_動画30秒_v3_池田ボイス",
         "pageId": "214160711780390",
         "objectStorySpec": {
           "page_id": "214160711780390",
           "video_data": {
-            "video_id": "1030164299355851",
+            "video_id": "853727381143060",
             "image_hash": "7cb395cd928819ac3b8a686801a3e2ff",
             "title": "「不動産は高い」は古い常識",
             "message": "「不動産投資には数千万円必要」——その常識、30秒で壊します。リフォーム込み50万円以内で始める激安不動産投資。詳しい方法は無料セミナーで解説します。",
@@ -32,8 +32,8 @@
       },
       "entity": {
         "nodeType": "creative",
-        "nodeKey": "cr_awareness_video30s_v2",
-        "displayName": "認知_動画30秒_v2_MNP表現除去",
+        "nodeKey": "cr_awareness_video30s_v3",
+        "displayName": "認知_動画30秒_v3_池田ボイス",
         "status": "paused"
       }
     }
