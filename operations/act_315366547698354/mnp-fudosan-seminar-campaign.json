@@ -4,36 +4,14 @@
   "intent": "other",
   "source": "claude-code",
   "actor": "claude-code",
-  "rationale": "MNP×激安不動産JVコンサルのファネル（無料セミナー集客）向けキャンペーン。日予算3,000円・トラフィック目的・LP誘導。広告クリエイティブは後続PRで追加予定。",
+  "rationale": "広告セットのみ作成（キャンペーン 120247222038500649 は作成済み）。campaignId は実IDを直接指定。",
   "createdAt": "2026-06-11T06:00:00.000Z",
   "actions": [
     {
-      "kind": "campaign.create",
-      "ref": "campaign:mnp_fudosan_seminar",
-      "payload": {
-        "campaignId": "cmp_mnp_fudosan_seminar",
-        "name": "MNP×激安不動産_セミナー集客",
-        "objective": "OUTCOME_TRAFFIC",
-        "status": "PAUSED",
-        "specialAdCategories": [],
-        "isAdsetBudgetSharingEnabled": false
-      },
-      "entity": {
-        "nodeType": "campaign",
-        "nodeKey": "cmp_mnp_fudosan_seminar",
-        "displayName": "MNP×激安不動産_セミナー集客",
-        "status": "paused"
-      }
-    },
-    {
       "kind": "adset.create",
       "ref": "adset:mnp_fudosan_seminar_main",
-      "dependsOn": [
-        "campaign:mnp_fudosan_seminar"
-      ],
       "payload": {
         "adsetId": "ads_mnp_fudosan_seminar_main",
-        "campaignRef": "cmp_mnp_fudosan_seminar",
         "name": "サラリーマン副業層_男性30-55_日本",
         "status": "PAUSED",
         "optimizationGoal": "LINK_CLICKS",
@@ -61,7 +39,8 @@
           "instagram_positions": [
             "stream"
           ]
-        }
+        },
+        "campaignId": "120247222038500649"
       },
       "entity": {
         "nodeType": "adset",
