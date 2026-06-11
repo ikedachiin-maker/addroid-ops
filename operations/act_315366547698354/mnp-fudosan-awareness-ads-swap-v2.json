@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "既存広告3本のクリエイティブをコピー強化版v2（太陽スタイル）へ付け替え。ユーザー採用案A2/B2/C2。",
+  "createdAt": "2026-06-11T09:30:00.000Z",
+  "actions": [
+    {
+      "kind": "ad.update",
+      "payload": {
+        "adId": "120247232432090649",
+        "name": "認知_常識破壊_v2_太陽スタイル",
+        "graphPayload": { "creative": { "creative_id": "2153745055170544" } }
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_joushiki",
+        "displayName": "認知_常識破壊_v2_太陽スタイル",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.update",
+      "payload": {
+        "adId": "120247232433920649",
+        "name": "認知_税理士権威_v2_太陽スタイル",
+        "graphPayload": { "creative": { "creative_id": "3208177619571048" } }
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_zeirishi",
+        "displayName": "認知_税理士権威_v2_太陽スタイル",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.update",
+      "payload": {
+        "adId": "120247232438670649",
+        "name": "認知_NISA対比_v2_太陽スタイル",
+        "graphPayload": { "creative": { "creative_id": "1657454712142288" } }
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_nisa",
+        "displayName": "認知_NISA対比_v2_太陽スタイル",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    }
+  ]
+}
