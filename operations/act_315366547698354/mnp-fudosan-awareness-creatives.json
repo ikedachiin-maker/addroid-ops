@@ -1,0 +1,71 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "認知キャンペーン用クリエイティブ3本（常識破壊/税理士権威/NISA対比）。ユーザー承認済み。",
+  "createdAt": "2026-06-11T08:00:00.000Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "creative:awareness_joushiki",
+      "payload": {
+        "creativeId": "cr_awareness_joushiki",
+        "name": "認知_常識破壊_50万円戸建て",
+        "pageId": "214160711780390",
+        "storageKey": "creatives/awareness-0611/ad1_joushiki.png",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/sCPyfCkgRwJJ",
+        "title": "「不動産は高い」は古い常識",
+        "body": "戸建て10万円以下の物件が全国に存在します。リフォーム代込み50万円以内から始められる激安不動産投資という選択肢。信じられない方こそ、まず無料セミナーでご確認ください。",
+        "callToAction": "LEARN_MORE"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "cr_awareness_joushiki",
+        "displayName": "認知_常識破壊_50万円戸建て",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "creative.create",
+      "ref": "creative:awareness_zeirishi",
+      "payload": {
+        "creativeId": "cr_awareness_zeirishi",
+        "name": "認知_税理士権威_節税不動産",
+        "pageId": "214160711780390",
+        "storageKey": "creatives/awareness-0611/ad2_zeirishi.png",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/sCPyfCkgRwJJ",
+        "title": "税理士が直接教える「節税×不動産」",
+        "body": "不動産は節税との組み合わせで手取りが大きく変わります。税理士と不動産コンサルが同席する無料セミナーで、収入と節税を同時に設計する方法を学べます。先着20名限定。",
+        "callToAction": "LEARN_MORE"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "cr_awareness_zeirishi",
+        "displayName": "認知_税理士権威_節税不動産",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "creative.create",
+      "ref": "creative:awareness_nisa",
+      "payload": {
+        "creativeId": "cr_awareness_nisa",
+        "name": "認知_NISA対比",
+        "pageId": "214160711780390",
+        "storageKey": "creatives/awareness-0611/ad3_nisa_hikaku.png",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/sCPyfCkgRwJJ",
+        "title": "NISAと激安不動産、どちらを選びますか？",
+        "body": "同じ資金を投じるなら、リターンの構造の違いは知っておくべきです。NISAと激安不動産投資の比較を、無料セミナーで分かりやすく解説します。",
+        "callToAction": "LEARN_MORE"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "cr_awareness_nisa",
+        "displayName": "認知_NISA対比",
+        "status": "paused"
+      }
+    }
+  ]
+}
