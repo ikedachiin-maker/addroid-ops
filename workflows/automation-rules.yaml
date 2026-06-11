@@ -1,0 +1,8 @@
+# AdDroid OSS — automation rules.
+#
+# 自然言語リクエストはこの構造化 DSL に変換してから保存・実行する。
+# LLM は DSL 生成まで、実行時の判定は deterministic rule engine が行う。
+
+version: 1
+
+rules: []

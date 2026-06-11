@@ -1,0 +1,4 @@
+version: 1
+workspace:
+  slug: default
+  displayName: "Default Workspace"

@@ -1,0 +1,17 @@
+version: 1
+# AdDroid に登録する cron プリセット。
+# GitHub PR のポーリングは AdDroid の内部必須ジョブとしてコード側で登録されます。
+# このファイルにはユーザーが有効化・停止・頻度変更できる標準 cron だけを載せます。
+schedules:
+  - name: daily_report
+    cron: "0 9 * * *"
+    enabled: false
+  - name: today_report
+    cron: "0 * * * *"
+    enabled: false
+  - name: improvement_pr
+    cron: "0 10 * * 1"
+    enabled: false
+  - name: auto_creative_generation
+    cron: "0 9 * * *"
+    enabled: false
