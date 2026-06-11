@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "認知キャンペーン（120247223181370649）配下の広告セット作成。¥500/日・ノンターゲット・日本・日本語・2026-06-12 00:00 JST 配信開始（統一ルール）",
+  "createdAt": "2026-06-11T07:30:00.000Z",
+  "actions": [
+    {
+      "kind": "adset.create",
+      "ref": "adset:mnp_fudosan_awareness_main",
+      "payload": {
+        "adsetId": "ads_mnp_fudosan_awareness_main",
+        "campaignId": "120247223181370649",
+        "name": "ノンターゲット_日本_日本語",
+        "status": "PAUSED",
+        "optimizationGoal": "REACH",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "dailyBudget": 500,
+        "startTime": "2026-06-12T00:00:00+09:00",
+        "targeting": {
+          "geo_locations": { "countries": ["JP"] },
+          "locales": [11],
+          "targeting_automation": { "advantage_audience": 0 }
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_mnp_fudosan_awareness_main",
+        "displayName": "ノンターゲット_日本_日本語",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_mnp_fudosan_awareness",
+        "status": "paused"
+      }
+    }
+  ]
+}
