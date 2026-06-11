@@ -1,0 +1,68 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "認知キャンペーン広告3本作成（adset 120247226338950649 配下・PAUSED）。ユーザー承認済み入稿の最終ステップ。",
+  "createdAt": "2026-06-11T08:20:00.000Z",
+  "actions": [
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_joushiki",
+      "payload": {
+        "adId": "ad_awareness_joushiki",
+        "adsetId": "120247226338950649",
+        "creativeId": "1382927387218274",
+        "name": "認知_常識破壊_50万円戸建て",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_joushiki",
+        "displayName": "認知_常識破壊_50万円戸建て",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_zeirishi",
+      "payload": {
+        "adId": "ad_awareness_zeirishi",
+        "adsetId": "120247226338950649",
+        "creativeId": "1540680384395202",
+        "name": "認知_税理士権威_節税不動産",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_zeirishi",
+        "displayName": "認知_税理士権威_節税不動産",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_nisa",
+      "payload": {
+        "adId": "ad_awareness_nisa",
+        "adsetId": "120247226338950649",
+        "creativeId": "977648591719915",
+        "name": "認知_NISA対比",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_nisa",
+        "displayName": "認知_NISA対比",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    }
+  ]
+}
