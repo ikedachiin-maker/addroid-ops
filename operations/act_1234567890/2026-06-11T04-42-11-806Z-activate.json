@@ -4,7 +4,7 @@
   "intent": "activate",
   "source": "claude-code",
   "actor": "claude-code",
-  "rationale": "練習モード: ユーザー承認によるACTIVE化（mock実行器対応形式に修正）",
+  "rationale": "練習モード: ユーザー承認によるACTIVE化（entity.status小文字修正）",
   "createdAt": "2026-06-11T04:42:11.806Z",
   "actions": [
     {
@@ -22,7 +22,7 @@
         "nodeType": "campaign",
         "nodeKey": "cmp_traffic_3000jpy",
         "displayName": "トラフィックキャンペーン（日予算3,000円）",
-        "status": "ACTIVE"
+        "status": "active"
       }
     },
     {
@@ -42,7 +42,7 @@
         "displayName": "メイン広告セット（日本）",
         "parentNodeType": "campaign",
         "parentNodeKey": "cmp_traffic_3000jpy",
-        "status": "ACTIVE"
+        "status": "active"
       }
     }
   ]
