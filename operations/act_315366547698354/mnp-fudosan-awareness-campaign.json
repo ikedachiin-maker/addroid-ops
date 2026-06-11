@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "認知キャンペーン作成（¥500/日・ノンターゲット・日本・日本語）＋ユーザー指示によるトラフィック版キャンペーン削除",
+  "createdAt": "2026-06-11T07:10:00.000Z",
+  "actions": [
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:mnp_fudosan_awareness",
+      "payload": {
+        "campaignId": "cmp_mnp_fudosan_awareness",
+        "name": "MNP×激安不動産_認知",
+        "objective": "OUTCOME_AWARENESS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_mnp_fudosan_awareness",
+        "displayName": "MNP×激安不動産_認知",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "campaign.delete",
+      "payload": {
+        "campaignId": "120247222038500649"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_mnp_fudosan_seminar",
+        "displayName": "MNP×激安不動産_セミナー集客",
+        "status": "deleted"
+      }
+    }
+  ]
+}
