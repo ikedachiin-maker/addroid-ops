@@ -38,7 +38,10 @@
           ],
           "instagram_positions": [
             "stream"
-          ]
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
         },
         "campaignId": "120247222038500649",
         "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
