@@ -1,0 +1,71 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "広告コピー強化版クリエイティブ3本（太陽スタイル・ユーザー採用案A2/B2/C2）。画像は既存と同一。",
+  "createdAt": "2026-06-11T09:00:00.000Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "creative:awareness_joushiki_v2",
+      "payload": {
+        "creativeId": "cr_awareness_joushiki_v2",
+        "name": "認知_常識破壊_v2_太陽スタイル",
+        "pageId": "214160711780390",
+        "storageKey": "creatives/awareness-0611/ad1_joushiki.png",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/sCPyfCkgRwJJ",
+        "title": "なぜ10万円の戸建てが全国に余っているのか？",
+        "body": "「不動産投資には数千万円必要」——その思い込みの陰で、全国の\"10万円戸建て\"は今日も見過ごされています。リフォーム込み50万円以内で大家になる手順を、無料セミナーで実例とともに解説します。",
+        "callToAction": "LEARN_MORE"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "cr_awareness_joushiki_v2",
+        "displayName": "認知_常識破壊_v2_太陽スタイル",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "creative.create",
+      "ref": "creative:awareness_zeirishi_v2",
+      "payload": {
+        "creativeId": "cr_awareness_zeirishi_v2",
+        "name": "認知_税理士権威_v2_太陽スタイル",
+        "pageId": "214160711780390",
+        "storageKey": "creatives/awareness-0611/ad2_zeirishi.png",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/sCPyfCkgRwJJ",
+        "title": "手取りを変えるのは給料ではなく税の知識",
+        "body": "給料が上がっても手取りが増えない——原因は収入ではなく\"税の設計\"かもしれません。税理士と不動産コンサルが同席する無料セミナーで、「増やす」と「守る」を同時に叶える設計図をお話しします。先着20名。",
+        "callToAction": "LEARN_MORE"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "cr_awareness_zeirishi_v2",
+        "displayName": "認知_税理士権威_v2_太陽スタイル",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "creative.create",
+      "ref": "creative:awareness_nisa_v2",
+      "payload": {
+        "creativeId": "cr_awareness_nisa_v2",
+        "name": "認知_NISA対比_v2_太陽スタイル",
+        "pageId": "214160711780390",
+        "storageKey": "creatives/awareness-0611/ad3_nisa_hikaku.png",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/sCPyfCkgRwJJ",
+        "title": "NISAは正解。でも\"唯一の正解\"ではない",
+        "body": "NISAは正解。でも\"唯一の正解\"ではありません。20年かけて育てる積立と、50万円の戸建てから始まる家賃収入。数字の違いを、無料セミナーで一緒に比べてみませんか？",
+        "callToAction": "LEARN_MORE"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "cr_awareness_nisa_v2",
+        "displayName": "認知_NISA対比_v2_太陽スタイル",
+        "status": "paused"
+      }
+    }
+  ]
+}
