@@ -1,0 +1,391 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "認知_動画30秒の訴求バリエーション20本を新規広告として追加（既存認知広告セットに入稿・全PAUSED）",
+  "createdAt": "2026-06-16T13:30:00.000Z",
+  "actions": [
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v01",
+      "payload": {
+        "adId": "ad_awareness_v01",
+        "adsetId": "120247226338950649",
+        "creativeId": "2125624611338049",
+        "name": "認知_動画30秒_v01_資金の常識破壊",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v01",
+        "displayName": "認知_動画30秒_v01_資金の常識破壊",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v02",
+      "payload": {
+        "adId": "ad_awareness_v02",
+        "adsetId": "120247226338950649",
+        "creativeId": "1546365933550030",
+        "name": "認知_動画30秒_v02_NISAだけで足りる？",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v02",
+        "displayName": "認知_動画30秒_v02_NISAだけで足りる？",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v03",
+      "payload": {
+        "adId": "ad_awareness_v03",
+        "adsetId": "120247226338950649",
+        "creativeId": "3509847859193440",
+        "name": "認知_動画30秒_v03_給料が上がらない",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v03",
+        "displayName": "認知_動画30秒_v03_給料が上がらない",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v04",
+      "payload": {
+        "adId": "ad_awareness_v04",
+        "adsetId": "120247226338950649",
+        "creativeId": "1550435353156150",
+        "name": "認知_動画30秒_v04_貯金が増えない",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v04",
+        "displayName": "認知_動画30秒_v04_貯金が増えない",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v05",
+      "payload": {
+        "adId": "ad_awareness_v05",
+        "adsetId": "120247226338950649",
+        "creativeId": "1448704390362983",
+        "name": "認知_動画30秒_v05_老後2000万問題",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v05",
+        "displayName": "認知_動画30秒_v05_老後2000万問題",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v06",
+      "payload": {
+        "adId": "ad_awareness_v06",
+        "adsetId": "120247226338950649",
+        "creativeId": "1007172438472713",
+        "name": "認知_動画30秒_v06_副業が続かなかった",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v06",
+        "displayName": "認知_動画30秒_v06_副業が続かなかった",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v07",
+      "payload": {
+        "adId": "ad_awareness_v07",
+        "adsetId": "120247226338950649",
+        "creativeId": "1783740639457010",
+        "name": "認知_動画30秒_v07_物価高・インフレ",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v07",
+        "displayName": "認知_動画30秒_v07_物価高・インフレ",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v08",
+      "payload": {
+        "adId": "ad_awareness_v08",
+        "adsetId": "120247226338950649",
+        "creativeId": "1044781251212797",
+        "name": "認知_動画30秒_v08_知識ゼロ不安",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v08",
+        "displayName": "認知_動画30秒_v08_知識ゼロ不安",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v09",
+      "payload": {
+        "adId": "ad_awareness_v09",
+        "adsetId": "120247226338950649",
+        "creativeId": "1022065303803735",
+        "name": "認知_動画30秒_v09_失敗が怖い",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v09",
+        "displayName": "認知_動画30秒_v09_失敗が怖い",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v10",
+      "payload": {
+        "adId": "ad_awareness_v10",
+        "adsetId": "120247226338950649",
+        "creativeId": "2540935903009716",
+        "name": "認知_動画30秒_v10_時間がない会社員",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v10",
+        "displayName": "認知_動画30秒_v10_時間がない会社員",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v11",
+      "payload": {
+        "adId": "ad_awareness_v11",
+        "adsetId": "120247226338950649",
+        "creativeId": "1450154043535790",
+        "name": "認知_動画30秒_v11_教育費が不安",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v11",
+        "displayName": "認知_動画30秒_v11_教育費が不安",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v12",
+      "payload": {
+        "adId": "ad_awareness_v12",
+        "adsetId": "120247226338950649",
+        "creativeId": "1697892844752331",
+        "name": "認知_動画30秒_v12_年金不安",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v12",
+        "displayName": "認知_動画30秒_v12_年金不安",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v13",
+      "payload": {
+        "adId": "ad_awareness_v13",
+        "adsetId": "120247226338950649",
+        "creativeId": "1700818097696590",
+        "name": "認知_動画30秒_v13_ローンが組めない",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v13",
+        "displayName": "認知_動画30秒_v13_ローンが組めない",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v14",
+      "payload": {
+        "adId": "ad_awareness_v14",
+        "adsetId": "120247226338950649",
+        "creativeId": "1538290787665290",
+        "name": "認知_動画30秒_v14_少額から始める",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v14",
+        "displayName": "認知_動画30秒_v14_少額から始める",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v15",
+      "payload": {
+        "adId": "ad_awareness_v15",
+        "adsetId": "120247226338950649",
+        "creativeId": "1794741101689013",
+        "name": "認知_動画30秒_v15_高額という誤解",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v15",
+        "displayName": "認知_動画30秒_v15_高額という誤解",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v16",
+      "payload": {
+        "adId": "ad_awareness_v16",
+        "adsetId": "120247226338950649",
+        "creativeId": "1327745018823004",
+        "name": "認知_動画30秒_v16_もう一つの収入源",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v16",
+        "displayName": "認知_動画30秒_v16_もう一つの収入源",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v17",
+      "payload": {
+        "adId": "ad_awareness_v17",
+        "adsetId": "120247226338950649",
+        "creativeId": "1535337574804130",
+        "name": "認知_動画30秒_v17_50代からでも",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v17",
+        "displayName": "認知_動画30秒_v17_50代からでも",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v18",
+      "payload": {
+        "adId": "ad_awareness_v18",
+        "adsetId": "120247226338950649",
+        "creativeId": "1525497142363304",
+        "name": "認知_動画30秒_v18_専業主婦・主夫",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v18",
+        "displayName": "認知_動画30秒_v18_専業主婦・主夫",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v19",
+      "payload": {
+        "adId": "ad_awareness_v19",
+        "adsetId": "120247226338950649",
+        "creativeId": "1534533875015159",
+        "name": "認知_動画30秒_v19_預金金利の虚しさ",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v19",
+        "displayName": "認知_動画30秒_v19_預金金利の虚しさ",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:awareness_v20",
+      "payload": {
+        "adId": "ad_awareness_v20",
+        "adsetId": "120247226338950649",
+        "creativeId": "1708426776966319",
+        "name": "認知_動画30秒_v20_行動できない人へ",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_awareness_v20",
+        "displayName": "認知_動画30秒_v20_行動できない人へ",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_mnp_fudosan_awareness_main",
+        "status": "paused"
+      }
+    }
+  ]
+}
