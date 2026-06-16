@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "認知広告セット(ノンターゲット_日本_日本語)の最適化目標をリーチ最大化(REACH)から広告想起リフト最大化(AD_RECALL_LIFT)へ変更。課金イベントはIMPRESSIONSのまま（AD_RECALL_LIFTと整合）。ユーザー指示。",
+  "createdAt": "2026-06-16T14:10:00.000Z",
+  "actions": [
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120247226338950649",
+        "graphPayload": {
+          "optimization_goal": "AD_RECALL_LIFT"
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_mnp_fudosan_awareness_main",
+        "displayName": "ノンターゲット_日本_日本語",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_mnp_fudosan_awareness",
+        "status": "paused"
+      }
+    }
+  ]
+}
