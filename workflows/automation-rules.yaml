@@ -5,4 +5,34 @@
 
 version: 1
 
-rules: []
+rules:
+  # 成績不振広告の停止「提案」(毎時評価・実行は人間承認)
+  # 過去7日で spend >= 10,000円 かつ CV=0 の ACTIVE 広告を PAUSED 提案する。
+  - id: pause-no-cv-ads
+    schedule: "0 * * * *"
+    scope:
+      level: ad
+      includePaused: false
+    window:
+      preset: last_7d
+      timezone: account
+    metrics:
+      spend:
+        field: spend
+        unit: currency
+      conversions:
+        field: conversions
+        unit: count
+    when:
+      all:
+        - metric: spend
+          gte: 10000
+        - metric: conversions
+          eq: 0
+    action:
+      type: set_status
+      status: PAUSED
+    safety:
+      mode: proposal
+      minSpend: 10000
+      cooldownHours: 24
