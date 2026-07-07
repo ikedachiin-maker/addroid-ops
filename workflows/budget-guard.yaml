@@ -20,4 +20,7 @@ autoPause:
 # Optional per-account budgets (currency major unit)。
 # 日予算/月予算をユーザー確認後に設定する。未設定の間は
 # daily_budget_80 / monthly_pace ルールは静かに skip される。
-accounts: {}
+accounts:
+  act_315366547698354:
+    dailyBudget: 10000
+    monthlyBudget: 300000
