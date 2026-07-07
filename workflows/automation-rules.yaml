@@ -9,6 +9,7 @@ rules:
   # 成績不振広告の停止「提案」(毎時評価・実行は人間承認)
   # 過去7日で spend >= 10,000円 かつ CV=0 の ACTIVE 広告を PAUSED 提案する。
   - id: pause-no-cv-ads
+    enabled: true
     schedule: "0 * * * *"
     scope:
       level: ad
