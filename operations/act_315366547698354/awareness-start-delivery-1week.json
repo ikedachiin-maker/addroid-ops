@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "認知動画テスト配信: 広告セット日予算を¥500→¥1,000、配信期間を2026-07-09 0:00〜2026-07-16 0:00 JST(1週間)に設定。動画20本のみ配信予定(ACTIVE化は別途activate)。",
+  "createdAt": "2026-07-08T01:45:00.000Z",
+  "actions": [
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120247226338950649",
+        "graphPayload": {
+          "daily_budget": "1000",
+          "start_time": "2026-07-09T00:00:00+0900",
+          "end_time": "2026-07-16T00:00:00+0900"
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_mnp_fudosan_awareness_main",
+        "displayName": "ノンターゲット_日本_日本語",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_mnp_fudosan_awareness",
+        "status": "paused"
+      }
+    }
+  ]
+}
