@@ -9,3 +9,14 @@ guards:
     warnOverRatio: 2
     # 現在予算の5倍以上に増える変更はブロックします。
     blockOverRatio: 5
+  # 認知広告ガード (運用プレイブック): 認知配信の optimization_goal を検査。
+  # REACH / IMPRESSIONS (リーチ/インプレッション最大化) は警告、
+  # 認知キャンペーン配下は AD_RECALL_LIFT / THRUPLAY のみ許可。
+  awarenessOptimizationGoal:
+    mode: warn
+    allowedGoals: [AD_RECALL_LIFT, THRUPLAY]
+    forbiddenGoals: [REACH, IMPRESSIONS]
+    exemptFiles:
+      # ガード導入以前の歴史的 manifest。REACH で作成後、
+      # mnp-fudosan-awareness-adset-optgoal.json で AD_RECALL_LIFT に修正済み。
+      - "operations/act_315366547698354/mnp-fudosan-awareness-adset.json"
