@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "LINE指示「広告作って」。高単価アフィリ構築講座のオプトインLP(https://utage-system.com/p/QJ71QSCYzJAa)へ誘導するトラフィックキャンペーン。第1段階=キャンペーンのみ作成(PAUSED)。広告セット・クリエイティブ・広告は本キャンペーンの実ID確定後に第2段階PRで追加する",
+  "createdAt": "2026-07-12T07:48:00.000Z",
+  "actions": [
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:kotanka_affiliate_optin",
+      "payload": {
+        "campaignId": "cmp_kotanka_affiliate_optin",
+        "name": "高単価アフィリ構築講座_オプトイン",
+        "objective": "OUTCOME_TRAFFIC",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_kotanka_affiliate_optin",
+        "displayName": "高単価アフィリ構築講座_オプトイン",
+        "status": "paused"
+      }
+    }
+  ]
+}
