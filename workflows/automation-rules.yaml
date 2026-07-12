@@ -14,6 +14,8 @@ rules:
     scope:
       level: ad
       includePaused: false
+      # 認知(OUTCOME_AWARENESS)配下は CV=0 が正常のため除外 (CVプレイブック)
+      campaignObjectiveExcludes: [OUTCOME_AWARENESS]
     window:
       preset: last_7d
       timezone: account
@@ -36,4 +38,86 @@ rules:
     safety:
       mode: proposal
       minSpend: 10000
+      cooldownHours: 24
+
+  # CVプレイブック: 1,000リーチに達して CV=0 の CV 広告を PAUSED「提案」
+  # (毎時評価・実行は人間承認)。講座の「最初の判断基準」。
+  # reach は impressions ÷ frequency で導出し、frequency 未取得時は
+  # impressions >= 1500 で代替判定する (reach <= impressions のため保守的)。
+  # 認知(OUTCOME_AWARENESS)キャンペーン配下は CV=0 が正常のため除外。
+  # 窓は直近7日のローリング (講座は累積判断だが運用上の近似)。
+  - id: pause-cv0-after-1000reach
+    enabled: true
+    schedule: "0 * * * *"
+    scope:
+      level: ad
+      includePaused: false
+      campaignObjectiveExcludes: [OUTCOME_AWARENESS]
+    window:
+      preset: last_7d
+      timezone: account
+    metrics:
+      spend:
+        field: spend
+        unit: currency
+      conversions:
+        field: conversions
+        unit: count
+      impressions:
+        field: impressions
+        unit: count
+    computed:
+      reach: "impressions / frequency"
+    when:
+      all:
+        - metric: conversions
+          eq: 0
+      any:
+        - metric: reach
+          gte: 1000
+        - metric: impressions
+          gte: 1500
+    action:
+      type: set_status
+      status: PAUSED
+    safety:
+      mode: proposal
+      cooldownHours: 24
+
+  # CVプレイブック: リーチ1,000超えでリンククリック CTR 1% 未満 =
+  # 「ダメな広告」の定義に該当する CV 広告を PAUSED「提案」(毎時・承認制)。
+  - id: pause-low-ctr-ads
+    enabled: true
+    schedule: "0 * * * *"
+    scope:
+      level: ad
+      includePaused: false
+      campaignObjectiveExcludes: [OUTCOME_AWARENESS]
+    window:
+      preset: last_7d
+      timezone: account
+    metrics:
+      clicks:
+        field: clicks
+        unit: count
+      impressions:
+        field: impressions
+        unit: count
+    computed:
+      ctr: "clicks / impressions"
+      reach: "impressions / frequency"
+    when:
+      all:
+        - metric: ctr
+          lt: 0.01
+      any:
+        - metric: reach
+          gte: 1000
+        - metric: impressions
+          gte: 1500
+    action:
+      type: set_status
+      status: PAUSED
+    safety:
+      mode: proposal
       cooldownHours: 24
