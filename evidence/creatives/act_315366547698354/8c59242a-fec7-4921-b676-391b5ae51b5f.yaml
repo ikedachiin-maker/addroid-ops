@@ -1,0 +1,35 @@
+version: 1
+creative:
+  id: "8c59242a-fec7-4921-b676-391b5ae51b5f"
+  key: "image_40a40055-4822-411f-b839-34e9717da7cd_v0"
+  accountKey: "act_315366547698354"
+  displayName: "Image variant 1"
+  mediaType: "image"
+  variantIndex: 0
+  status: "fallback_text_only"
+prompt:
+  text: "Operator-grade Japanese B2B ad creative for an advertising operations consulting service. Square composition, clean dark navy and charcoal background with high-contrast white typography and subtle electric blue / green accents. Central visual: a strategic command-board style layout showing generic ad account metrics as abstract panels, with CPO and ROAS highlighted as the largest decision indicators, and smaller supporting indicators CPA, CVR, CTR faded into the background. Include a simple funnel flow from ad spend to lead to seminar application to backend sales, rendered as minimalist lines and nodes. No platform logos, no recognizable UI, no screenshots. Add prominent Japanese headline text:「CPO/ROASで広告運用を再設計」and smaller support text:「キャンペーン単体CPAではなく、アカウント全体で判断」. Premium consulting tone, precise, analytical, credible, designed for business owners and marketing managers."
+  negativePrompt: "trademarked logos, Meta logo, Facebook logo, Instagram logo, exact platform UI, real dashboard screenshot, generic storefront, smiling lifestyle stock photo, coupons, easy money imagery, flashy get-rich-quick design, cluttered layout, low contrast, unreadable tiny text, childish icons, exaggerated claims, before-after body/health imagery"
+  styleNotes: "Conversion-oriented feed square. Emphasize CPO/ROAS as the decision hierarchy, using operator-grade contrast and minimal Japanese copy. Keep all UI generic and logo-free."
+  rationale: "配信実績が0のため勝ち負けの学習ではなく、知識ブリーフの『コンバージョン広告の判断基準』に沿ってCPO/ROAS・バックエンド売上を上位指標に据えた再設計訴求へ寄せました。ASCとAdvantage+の並行運用、既存顧客除外、認知動画の完全視聴率重視という方針を、ロゴなしの汎用的な広告運用ビジュアルで表現しています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "全体としてB2B向けの広告運用改善訴求であり、Meta広告ポリシー上の重大な違反は確認できません。商標名称の扱いと成果改善表現には注意が必要ですが、現状でもロゴ・UI回避や誇大な保証回避ができています。"
+  issues:
+    - severity: "info"
+      category: "meta_ad_policy"
+      message: "コピー・画像プロンプトともに、個人属性の断定、差別的表現、誤解を招く金融/健康/雇用系主張、過度な成果保証は見当たりません。B2B広告運用コンサルの訴求として概ね適合しています。"
+    - severity: "warn"
+      category: "brand_trademark"
+      message: "「Meta広告」「Facebook」「FB」「Advantage+」等のプラットフォーム関連名称を使用しているため、Metaとの提携・認定・公式サービスであるかのように見えない表現管理が必要です。ロゴやUIを避ける指定は適切ですが、必要に応じて非提携の明確化を検討してください。"
+    - severity: "warn"
+      category: "claims_substantiation"
+      message: "「売上を伸ばす」「広告アカウント全体を改善します」など成果改善を示す表現があります。保証表現ではないものの、実績や根拠を示せない場合は期待値を抑えた表現の方が安全です。"
+ai:
+  imagePromptAiRunId: "40a40055-4822-411f-b839-34e9717da7cd"
+  creativeQaAiRunId: "2b939137-5042-4d04-8145-aea541f272de"

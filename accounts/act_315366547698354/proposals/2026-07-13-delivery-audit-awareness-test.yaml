@@ -1,0 +1,115 @@
+version: 1
+kind: ad_improvement_proposal
+account_id: act_315366547698354
+created_at: "2026-07-13"
+status: proposed
+dry_run: true
+
+snapshot:
+  window:
+    start: "2026-07-06"
+    end: "2026-07-12"
+  metrics:
+    spend: 0
+    impressions: 0
+    clicks: 0
+    conversions: 0
+  diagnosis: >-
+    No delivery was observed during the snapshot window. Audit delivery blockers
+    before changing performance levers such as CPA targets, creative allocation,
+    or conversion optimization.
+
+gates:
+  - id: delivery_blocker_audit
+    required_before:
+      - awareness_test_preparation
+      - campaign_creation
+      - budget_activation
+    checks:
+      - account_spending_limit
+      - payment_status
+      - campaign_delivery_status
+      - adset_delivery_status
+      - ad_delivery_status
+      - review_status
+      - campaign_schedule
+      - adset_schedule
+      - campaign_budget_caps
+      - adset_budget_caps
+      - bid_strategy_constraints
+      - pixel_availability
+      - conversion_event_availability
+    pass_condition: >-
+      No account, billing, review, schedule, budget, bid, pixel, or event issue
+      is blocking delivery.
+
+actions:
+  - id: audit_delivery_blockers
+    hierarchy: account
+    target: act_315366547698354
+    category: delivery_diagnosis
+    mode: manual_checklist
+    priority: 1
+    proposed_change: >-
+      Audit delivery blockers before performance optimization: account spending
+      limit, payment status, campaign/ad set/ad delivery status, review status,
+      schedules, budget caps, bid strategy constraints, and pixel/conversion
+      event availability.
+    rationale: >-
+      Spend, impressions, clicks, and conversions were all 0, so the first
+      actionable step is to identify why delivery is not occurring.
+
+  - id: prepare_awareness_test_after_audit
+    hierarchy: campaign
+    target: act_315366547698354
+    category: new_campaign
+    mode: human_approved_draft
+    priority: 2
+    depends_on:
+      - delivery_blocker_audit
+    campaign:
+      objective: OUTCOME_AWARENESS
+      optimization_goals_allowed:
+        - AD_RECALL_LIFT
+        - THRUPLAY
+      optimization_goals_disallowed:
+        - REACH
+        - IMPRESSIONS
+      creative_test:
+        format: video
+        hook_variants: 5
+        daily_budget_per_variant_jpy: 1000
+        minimum_duration_days: 2
+        primary_quality_metric: video_100_percent_completion_rate
+        success_threshold:
+          video_100_percent_completion_rate: 0.02
+      approval_required: true
+    budget_impact:
+      immediate_jpy: 0
+      if_approved_minimum_jpy: 10000
+      calculation: "5 variants x ¥1,000/day x 2 days"
+    rationale: >-
+      Awareness tests should optimize only for AD_RECALL_LIFT or THRUPLAY,
+      evaluate creative quality by video 100% completion rate of at least 2.0%,
+      and test 5 creatives at about ¥1,000/day each for 2+ days.
+
+  - id: verify_thruplay_billing
+    hierarchy: adset
+    target: OUTCOME_AWARENESS ThruPlay ad sets
+    category: bid_change
+    mode: conditional_setting
+    priority: 3
+    applies_when:
+      campaign_objective: OUTCOME_AWARENESS
+      optimization_goal: THRUPLAY
+    proposed_change: >-
+      Verify whether ThruPlay billing is available. Select ThruPlay billing when
+      available; otherwise keep impression billing and monitor video 100%
+      completion rate.
+    fallback:
+      billing_event: IMPRESSIONS
+      monitor_metric: video_100_percent_completion_rate
+    rationale: >-
+      ThruPlay billing can improve full-view efficiency once available, while
+      awareness evaluation should focus on video completion quality rather than
+      CPA or conversion volume.
