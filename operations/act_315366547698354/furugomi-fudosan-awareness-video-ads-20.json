@@ -1,0 +1,391 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "古物商×激安不動産_認知: 広告セット2本(AD_RECALL_LIFT:120248975471800649 / THRUPLAY:120248975472990649)にショート動画広告を各10本ずつ計20本作成。creativeIdは目標別に別アップ済みのもの(uploaded.json)。全PAUSED・配信は翌日0時JST・ACTIVE化はユーザー承認後。",
+  "createdAt": "2026-07-14T04:25:00.000Z",
+  "actions": [
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v01_recall",
+      "payload": {
+        "adId": "ad_furugomi_v01_recall",
+        "adsetId": "120248975471800649",
+        "creativeId": "1745553843116941",
+        "name": "認知_古物商動画_v01_古物商許可の意外な使い道_RECALL",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v01_recall",
+        "displayName": "認知_古物商動画_v01_古物商許可の意外な使い道_RECALL",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_recall",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v01_thruplay",
+      "payload": {
+        "adId": "ad_furugomi_v01_thruplay",
+        "adsetId": "120248975472990649",
+        "creativeId": "1930934397408415",
+        "name": "認知_古物商動画_v01_古物商許可の意外な使い道_THRUPLAY",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v01_thruplay",
+        "displayName": "認知_古物商動画_v01_古物商許可の意外な使い道_THRUPLAY",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_thruplay",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v02_recall",
+      "payload": {
+        "adId": "ad_furugomi_v02_recall",
+        "adsetId": "120248975471800649",
+        "creativeId": "2220064185513609",
+        "name": "認知_古物商動画_v02_1万円→185万円_RECALL",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v02_recall",
+        "displayName": "認知_古物商動画_v02_1万円→185万円_RECALL",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_recall",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v02_thruplay",
+      "payload": {
+        "adId": "ad_furugomi_v02_thruplay",
+        "adsetId": "120248975472990649",
+        "creativeId": "1376005704626158",
+        "name": "認知_古物商動画_v02_1万円→185万円_THRUPLAY",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v02_thruplay",
+        "displayName": "認知_古物商動画_v02_1万円→185万円_THRUPLAY",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_thruplay",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v03_recall",
+      "payload": {
+        "adId": "ad_furugomi_v03_recall",
+        "adsetId": "120248975471800649",
+        "creativeId": "3051575881846249",
+        "name": "認知_古物商動画_v03_10万円→利回り151%_RECALL",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v03_recall",
+        "displayName": "認知_古物商動画_v03_10万円→利回り151%_RECALL",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_recall",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v03_thruplay",
+      "payload": {
+        "adId": "ad_furugomi_v03_thruplay",
+        "adsetId": "120248975472990649",
+        "creativeId": "1577547903766375",
+        "name": "認知_古物商動画_v03_10万円→利回り151%_THRUPLAY",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v03_thruplay",
+        "displayName": "認知_古物商動画_v03_10万円→利回り151%_THRUPLAY",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_thruplay",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v04_recall",
+      "payload": {
+        "adId": "ad_furugomi_v04_recall",
+        "adsetId": "120248975471800649",
+        "creativeId": "1006521712379746",
+        "name": "認知_古物商動画_v04_全損からの復活_RECALL",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v04_recall",
+        "displayName": "認知_古物商動画_v04_全損からの復活_RECALL",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_recall",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v04_thruplay",
+      "payload": {
+        "adId": "ad_furugomi_v04_thruplay",
+        "adsetId": "120248975472990649",
+        "creativeId": "1033677685741076",
+        "name": "認知_古物商動画_v04_全損からの復活_THRUPLAY",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v04_thruplay",
+        "displayName": "認知_古物商動画_v04_全損からの復活_THRUPLAY",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_thruplay",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v05_recall",
+      "payload": {
+        "adId": "ad_furugomi_v05_recall",
+        "adsetId": "120248975471800649",
+        "creativeId": "1359418509478926",
+        "name": "認知_古物商動画_v05_空き家900万戸_RECALL",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v05_recall",
+        "displayName": "認知_古物商動画_v05_空き家900万戸_RECALL",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_recall",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v05_thruplay",
+      "payload": {
+        "adId": "ad_furugomi_v05_thruplay",
+        "adsetId": "120248975472990649",
+        "creativeId": "1755812432217039",
+        "name": "認知_古物商動画_v05_空き家900万戸_THRUPLAY",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v05_thruplay",
+        "displayName": "認知_古物商動画_v05_空き家900万戸_THRUPLAY",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_thruplay",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v06_recall",
+      "payload": {
+        "adId": "ad_furugomi_v06_recall",
+        "adsetId": "120248975471800649",
+        "creativeId": "1341824921417698",
+        "name": "認知_古物商動画_v06_残置物40万の逆張り_RECALL",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v06_recall",
+        "displayName": "認知_古物商動画_v06_残置物40万の逆張り_RECALL",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_recall",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v06_thruplay",
+      "payload": {
+        "adId": "ad_furugomi_v06_thruplay",
+        "adsetId": "120248975472990649",
+        "creativeId": "2041379039813250",
+        "name": "認知_古物商動画_v06_残置物40万の逆張り_THRUPLAY",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v06_thruplay",
+        "displayName": "認知_古物商動画_v06_残置物40万の逆張り_THRUPLAY",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_thruplay",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v07_recall",
+      "payload": {
+        "adId": "ad_furugomi_v07_recall",
+        "adsetId": "120248975471800649",
+        "creativeId": "2907140699632630",
+        "name": "認知_古物商動画_v07_1年300万の副収入_RECALL",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v07_recall",
+        "displayName": "認知_古物商動画_v07_1年300万の副収入_RECALL",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_recall",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v07_thruplay",
+      "payload": {
+        "adId": "ad_furugomi_v07_thruplay",
+        "adsetId": "120248975472990649",
+        "creativeId": "1481990603616444",
+        "name": "認知_古物商動画_v07_1年300万の副収入_THRUPLAY",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v07_thruplay",
+        "displayName": "認知_古物商動画_v07_1年300万の副収入_THRUPLAY",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_thruplay",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v08_recall",
+      "payload": {
+        "adId": "ad_furugomi_v08_recall",
+        "adsetId": "120248975471800649",
+        "creativeId": "1564129535123804",
+        "name": "認知_古物商動画_v08_いつまで無料_RECALL",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v08_recall",
+        "displayName": "認知_古物商動画_v08_いつまで無料_RECALL",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_recall",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v08_thruplay",
+      "payload": {
+        "adId": "ad_furugomi_v08_thruplay",
+        "adsetId": "120248975472990649",
+        "creativeId": "2303480337128246",
+        "name": "認知_古物商動画_v08_いつまで無料_THRUPLAY",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v08_thruplay",
+        "displayName": "認知_古物商動画_v08_いつまで無料_THRUPLAY",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_thruplay",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v09_recall",
+      "payload": {
+        "adId": "ad_furugomi_v09_recall",
+        "adsetId": "120248975471800649",
+        "creativeId": "1422947039674218",
+        "name": "認知_古物商動画_v09_高いの思い込み破壊_RECALL",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v09_recall",
+        "displayName": "認知_古物商動画_v09_高いの思い込み破壊_RECALL",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_recall",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v09_thruplay",
+      "payload": {
+        "adId": "ad_furugomi_v09_thruplay",
+        "adsetId": "120248975472990649",
+        "creativeId": "904406875354900",
+        "name": "認知_古物商動画_v09_高いの思い込み破壊_THRUPLAY",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v09_thruplay",
+        "displayName": "認知_古物商動画_v09_高いの思い込み破壊_THRUPLAY",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_thruplay",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v10_recall",
+      "payload": {
+        "adId": "ad_furugomi_v10_recall",
+        "adsetId": "120248975471800649",
+        "creativeId": "1535471798218773",
+        "name": "認知_古物商動画_v10_古物商×不動産ブルーオーシャン_RECALL",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v10_recall",
+        "displayName": "認知_古物商動画_v10_古物商×不動産ブルーオーシャン_RECALL",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_recall",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:furugomi_v10_thruplay",
+      "payload": {
+        "adId": "ad_furugomi_v10_thruplay",
+        "adsetId": "120248975472990649",
+        "creativeId": "27002899416051998",
+        "name": "認知_古物商動画_v10_古物商×不動産ブルーオーシャン_THRUPLAY",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_furugomi_v10_thruplay",
+        "displayName": "認知_古物商動画_v10_古物商×不動産ブルーオーシャン_THRUPLAY",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_furugomi_fudosan_awareness_thruplay",
+        "status": "paused"
+      }
+    }
+  ]
+}
