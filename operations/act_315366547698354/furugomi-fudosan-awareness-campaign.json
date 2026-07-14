@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "古物商×激安不動産の認知キャンペーン新規作成（OUTCOME_AWARENESS・PAUSED）。配下に AD_RECALL_LIFT / THRUPLAY の2広告セットを並行で立て、認知ショート動画10本を目標別に別アップして配信予定。",
+  "createdAt": "2026-07-14T02:22:23.000Z",
+  "actions": [
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:furugomi_fudosan_awareness",
+      "payload": {
+        "campaignId": "cmp_furugomi_fudosan_awareness",
+        "name": "古物商×激安不動産_認知",
+        "objective": "OUTCOME_AWARENESS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_furugomi_fudosan_awareness",
+        "displayName": "古物商×激安不動産_認知",
+        "status": "paused"
+      }
+    }
+  ]
+}
