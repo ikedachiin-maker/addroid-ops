@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "accountKey": "act_315366547698354",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code",
+  "rationale": "古物商×激安不動産_認知キャンペーン(120248975357870649)配下に広告セット2本を作成。同一の認知ショート動画10本を最適化目標別(AD_RECALL_LIFT / THRUPLAY)に別アップして視聴者オーディエンスを分離。各¥1,000/日・ノンターゲット・日本・日本語・2026-07-15 00:00 JST 配信開始(統一ルール)・全PAUSED。",
+  "createdAt": "2026-07-14T04:20:00.000Z",
+  "actions": [
+    {
+      "kind": "adset.create",
+      "ref": "adset:furugomi_fudosan_awareness_recall",
+      "payload": {
+        "adsetId": "ads_furugomi_fudosan_awareness_recall",
+        "campaignId": "120248975357870649",
+        "name": "ノンターゲット_日本_日本語_AD_RECALL_LIFT",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "dailyBudget": 1000,
+        "startTime": "2026-07-15T00:00:00+09:00",
+        "targeting": {
+          "geo_locations": { "countries": ["JP"] },
+          "locales": [11],
+          "targeting_automation": { "advantage_audience": 0 }
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_furugomi_fudosan_awareness_recall",
+        "displayName": "ノンターゲット_日本_日本語_AD_RECALL_LIFT",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_furugomi_fudosan_awareness",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:furugomi_fudosan_awareness_thruplay",
+      "payload": {
+        "adsetId": "ads_furugomi_fudosan_awareness_thruplay",
+        "campaignId": "120248975357870649",
+        "name": "ノンターゲット_日本_日本語_THRUPLAY",
+        "status": "PAUSED",
+        "optimizationGoal": "THRUPLAY",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "dailyBudget": 1000,
+        "startTime": "2026-07-15T00:00:00+09:00",
+        "targeting": {
+          "geo_locations": { "countries": ["JP"] },
+          "locales": [11],
+          "targeting_automation": { "advantage_audience": 0 }
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_furugomi_fudosan_awareness_thruplay",
+        "displayName": "ノンターゲット_日本_日本語_THRUPLAY",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_furugomi_fudosan_awareness",
+        "status": "paused"
+      }
+    }
+  ]
+}
