@@ -1,0 +1,153 @@
+apiVersion: addroid.io/v1
+kind: CampaignPlan
+metadata:
+  accountId: act_315366547698354
+  name: awareness-video-test-2026-08
+  labels:
+    category: new_campaign
+    proposal: improvement-act-315366547698354
+spec:
+  objective: OUTCOME_AWARENESS
+  status: PAUSED
+  buyingType: AUCTION
+  campaignName: AW_202608_video-hook-test
+  guardrails:
+    allowedOptimizationGoals:
+      - AD_RECALL_LIFT
+      - THRUPLAY
+    disallowedOptimizationGoals:
+      - REACH
+      - IMPRESSIONS
+    requireSeparateViewerPools: true
+    requireDistinctAssetNamesByOptimizationGoal: true
+  budget:
+    currency: JPY
+    initialDailyBudget: 5000
+    minimumTestDays: 2
+    allocation:
+      unit: creative_variant
+      dailyBudgetPerCreative: 1000
+      splitByOptimizationGoal:
+        AD_RECALL_LIFT: 500
+        THRUPLAY: 500
+  evaluation:
+    primaryMetric: video_p100_rate
+    passLine: 0.02
+    winnerRule:
+      description: Shift post-test budget toward the creative with the highest 100% video completion rate if it reaches or exceeds 2.0%.
+      minimumSpendDays: 2
+      tieBreakerMetrics:
+        - thruplay_rate
+        - cost_per_thruplay
+  adSets:
+    - name: AW_202608_ARL_hook01_benefit_reveal
+      optimizationGoal: AD_RECALL_LIFT
+      dailyBudget: 500
+      creativeRef: hook01_benefit_reveal_ad_recall_lift
+      audiencePoolLabel: viewers_aw_202608_arl_hook01
+    - name: AW_202608_TP_hook01_benefit_reveal
+      optimizationGoal: THRUPLAY
+      dailyBudget: 500
+      creativeRef: hook01_benefit_reveal_thruplay
+      audiencePoolLabel: viewers_aw_202608_tp_hook01
+    - name: AW_202608_ARL_hook02_problem_first
+      optimizationGoal: AD_RECALL_LIFT
+      dailyBudget: 500
+      creativeRef: hook02_problem_first_ad_recall_lift
+      audiencePoolLabel: viewers_aw_202608_arl_hook02
+    - name: AW_202608_TP_hook02_problem_first
+      optimizationGoal: THRUPLAY
+      dailyBudget: 500
+      creativeRef: hook02_problem_first_thruplay
+      audiencePoolLabel: viewers_aw_202608_tp_hook02
+    - name: AW_202608_ARL_hook03_before_after
+      optimizationGoal: AD_RECALL_LIFT
+      dailyBudget: 500
+      creativeRef: hook03_before_after_ad_recall_lift
+      audiencePoolLabel: viewers_aw_202608_arl_hook03
+    - name: AW_202608_TP_hook03_before_after
+      optimizationGoal: THRUPLAY
+      dailyBudget: 500
+      creativeRef: hook03_before_after_thruplay
+      audiencePoolLabel: viewers_aw_202608_tp_hook03
+    - name: AW_202608_ARL_hook04_end_offer
+      optimizationGoal: AD_RECALL_LIFT
+      dailyBudget: 500
+      creativeRef: hook04_end_offer_ad_recall_lift
+      audiencePoolLabel: viewers_aw_202608_arl_hook04
+    - name: AW_202608_TP_hook04_end_offer
+      optimizationGoal: THRUPLAY
+      dailyBudget: 500
+      creativeRef: hook04_end_offer_thruplay
+      audiencePoolLabel: viewers_aw_202608_tp_hook04
+    - name: AW_202608_ARL_hook05_secret_tip
+      optimizationGoal: AD_RECALL_LIFT
+      dailyBudget: 500
+      creativeRef: hook05_secret_tip_ad_recall_lift
+      audiencePoolLabel: viewers_aw_202608_arl_hook05
+    - name: AW_202608_TP_hook05_secret_tip
+      optimizationGoal: THRUPLAY
+      dailyBudget: 500
+      creativeRef: hook05_secret_tip_thruplay
+      audiencePoolLabel: viewers_aw_202608_tp_hook05
+  creatives:
+    - ref: hook01_benefit_reveal_ad_recall_lift
+      variant: hook01_benefit_reveal
+      optimizationCell: AD_RECALL_LIFT
+      assetFile: assets/videos/aw_202608_arl_hook01_benefit_reveal.mp4
+      videoName: AW_202608_ARL_hook01_benefit_reveal
+      hook: Open with the main benefit and promise a practical detail revealed at the end.
+    - ref: hook01_benefit_reveal_thruplay
+      variant: hook01_benefit_reveal
+      optimizationCell: THRUPLAY
+      assetFile: assets/videos/aw_202608_tp_hook01_benefit_reveal.mp4
+      videoName: AW_202608_TP_hook01_benefit_reveal
+      hook: Open with the main benefit and promise a practical detail revealed at the end.
+    - ref: hook02_problem_first_ad_recall_lift
+      variant: hook02_problem_first
+      optimizationCell: AD_RECALL_LIFT
+      assetFile: assets/videos/aw_202608_arl_hook02_problem_first.mp4
+      videoName: AW_202608_ARL_hook02_problem_first
+      hook: Start with the audience problem and say the final scene shows the easiest fix.
+    - ref: hook02_problem_first_thruplay
+      variant: hook02_problem_first
+      optimizationCell: THRUPLAY
+      assetFile: assets/videos/aw_202608_tp_hook02_problem_first.mp4
+      videoName: AW_202608_TP_hook02_problem_first
+      hook: Start with the audience problem and say the final scene shows the easiest fix.
+    - ref: hook03_before_after_ad_recall_lift
+      variant: hook03_before_after
+      optimizationCell: AD_RECALL_LIFT
+      assetFile: assets/videos/aw_202608_arl_hook03_before_after.mp4
+      videoName: AW_202608_ARL_hook03_before_after
+      hook: Show a before/after contrast and tell viewers the reason appears at the end.
+    - ref: hook03_before_after_thruplay
+      variant: hook03_before_after
+      optimizationCell: THRUPLAY
+      assetFile: assets/videos/aw_202608_tp_hook03_before_after.mp4
+      videoName: AW_202608_TP_hook03_before_after
+      hook: Show a before/after contrast and tell viewers the reason appears at the end.
+    - ref: hook04_end_offer_ad_recall_lift
+      variant: hook04_end_offer
+      optimizationCell: AD_RECALL_LIFT
+      assetFile: assets/videos/aw_202608_arl_hook04_end_offer.mp4
+      videoName: AW_202608_ARL_hook04_end_offer
+      hook: Lead with a special-information tease and disclose the offer or key detail at the end.
+    - ref: hook04_end_offer_thruplay
+      variant: hook04_end_offer
+      optimizationCell: THRUPLAY
+      assetFile: assets/videos/aw_202608_tp_hook04_end_offer.mp4
+      videoName: AW_202608_TP_hook04_end_offer
+      hook: Lead with a special-information tease and disclose the offer or key detail at the end.
+    - ref: hook05_secret_tip_ad_recall_lift
+      variant: hook05_secret_tip
+      optimizationCell: AD_RECALL_LIFT
+      assetFile: assets/videos/aw_202608_arl_hook05_secret_tip.mp4
+      videoName: AW_202608_ARL_hook05_secret_tip
+      hook: Start with a surprising tip and say the most useful step is shown last.
+    - ref: hook05_secret_tip_thruplay
+      variant: hook05_secret_tip
+      optimizationCell: THRUPLAY
+      assetFile: assets/videos/aw_202608_tp_hook05_secret_tip.mp4
+      videoName: AW_202608_TP_hook05_secret_tip
+      hook: Start with a surprising tip and say the most useful step is shown last.

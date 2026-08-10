@@ -1,0 +1,35 @@
+version: 1
+creative:
+  id: "70e3c46b-6e0c-441d-9584-32d77224792f"
+  key: "image_630ccda8-2680-4bd7-a4a3-d2806d3079e2_v0"
+  accountKey: "act_315366547698354"
+  displayName: "Image variant 1"
+  mediaType: "image"
+  variantIndex: 0
+  status: "fallback_text_only"
+prompt:
+  text: "Create a clean Japanese B2B ad key visual for 池田FB広告運用代行, operator-grade consulting tone. Square 1:1 composition. Main concept: Meta広告 for 講座・無形商材 should separate awareness and conversion. High-contrast first-frame style with a dark navy background, off-white panels, cyan accent lines, and subtle amber highlights. Center visual: a two-stage funnel diagram from left to right: 「認知動画」→「50% / 100% 視聴者データ」→「ASC + Advantage+」→「CV」. Large readable headline text: 「認知とCVを分ける広告設計」. Subtext in smaller Japanese: 「完全視聴率で見極め、後段で獲得へ」. Add minimal abstract icons: play button, audience clusters, funnel arrow, conversion checkpoint. No platform UI screenshots, no trademarked logos, no people posing, no generic storefront. Premium, analytical, trustworthy, designed like an expert advertising strategy slide."
+  negativePrompt: "trademarked logos, Meta logo, Facebook logo, Instagram logo, platform UI screenshot, fake dashboard UI, generic SaaS dashboard, storefront, coupon design, cheap flashy sale banner, exaggerated income claims, stock photo handshake, smiling lifestyle model, cluttered text, unreadable tiny typography, low contrast, garish colors, medical or financial guarantees"
+  styleNotes: "Feed square awareness-video first-frame concept; emphasizes the knowledgeBrief rule of separating awareness evaluation from CV evaluation and using complete-view data before conversion delivery."
+  rationale: "配信実績が0で勝敗判断できないため、knowledgeBriefsの方針どおりCPAではなくThruPlay・100%完全視聴率を伸ばす認知動画の冒頭フックと、後段CV配信へ接続する二段階設計を可視化しました。配置情報が不明なため、dimensionPresetsからフィード正方形・縦長フィード・Story/Reelsをカバーし、講座/無形商材向けの専門的でoperator-gradeな図解トーンに統一しています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "Meta広告運用の専門性を訴求する内容で、成果保証や不適切なターゲティング示唆はなく、画像プロンプトもロゴ・UIの回避が明記されています。軽微な可読性とブランド誤認防止の注意はありますが、配信前提として大きなポリシーリスクは低いです。"
+  issues:
+    - severity: "info"
+      category: "policy_compliance"
+      message: "コピーはB2B広告運用ノウハウの訴求で、禁止コンテンツ、誇大な成果保証、個人属性の断定、差別的表現は見当たりません。"
+    - severity: "info"
+      category: "brand_usage"
+      message: "Meta、ASC、Advantage+などの名称を説明的に使用しており、ロゴやUI使用を避ける指示も入っています。広告・LP上ではMeta/Facebook公式または提携先であるかのような表現にならないよう維持してください。"
+    - severity: "warn"
+      category: "creative_readability"
+      message: "画像内にKPI名、フロー、複数ステップなどテキスト要素が多いため、実制作時に小さな配置では可読性が落ちる可能性があります。特にStory/Reelsでは安全領域と文字サイズの確認を推奨します。"
+ai:
+  imagePromptAiRunId: "630ccda8-2680-4bd7-a4a3-d2806d3079e2"
+  creativeQaAiRunId: "37a231e1-9b45-4800-bff0-792062e883bd"

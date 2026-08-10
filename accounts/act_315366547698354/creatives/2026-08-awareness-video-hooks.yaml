@@ -1,0 +1,57 @@
+apiVersion: addroid.io/v1
+kind: CreativeBrief
+metadata:
+  accountId: act_315366547698354
+  name: awareness-video-hooks-2026-08
+  labels:
+    category: creative_change
+    proposal: improvement-act-315366547698354
+spec:
+  format: video
+  campaignRef: awareness-video-test-2026-08
+  objective: OUTCOME_AWARENESS
+  creativeCount: 5
+  successMetric:
+    name: video_p100_rate
+    passLine: 0.02
+  productionGuidance:
+    - Include a reason to watch through the end in the first seconds.
+    - Prioritize opening-hook differences between variants.
+    - Keep the body offer and core message comparable across variants.
+    - Export separate files for AD_RECALL_LIFT and THRUPLAY cells to preserve distinct viewer pools.
+  variants:
+    - id: hook01_benefit_reveal
+      concept: Benefit reveal
+      openingHook: State the main viewer benefit immediately.
+      retentionDevice: Promise a practical detail revealed at the end.
+      requiredFiles:
+        AD_RECALL_LIFT: assets/videos/aw_202608_arl_hook01_benefit_reveal.mp4
+        THRUPLAY: assets/videos/aw_202608_tp_hook01_benefit_reveal.mp4
+    - id: hook02_problem_first
+      concept: Problem first
+      openingHook: Name the audience problem in the first line.
+      retentionDevice: Tell viewers the final scene shows the easiest fix.
+      requiredFiles:
+        AD_RECALL_LIFT: assets/videos/aw_202608_arl_hook02_problem_first.mp4
+        THRUPLAY: assets/videos/aw_202608_tp_hook02_problem_first.mp4
+    - id: hook03_before_after
+      concept: Before and after
+      openingHook: Start with a clear before/after contrast.
+      retentionDevice: Say the reason for the change appears at the end.
+      requiredFiles:
+        AD_RECALL_LIFT: assets/videos/aw_202608_arl_hook03_before_after.mp4
+        THRUPLAY: assets/videos/aw_202608_tp_hook03_before_after.mp4
+    - id: hook04_end_offer
+      concept: Special information at end
+      openingHook: Tease special information without revealing it immediately.
+      retentionDevice: Disclose the offer or key detail in the closing section.
+      requiredFiles:
+        AD_RECALL_LIFT: assets/videos/aw_202608_arl_hook04_end_offer.mp4
+        THRUPLAY: assets/videos/aw_202608_tp_hook04_end_offer.mp4
+    - id: hook05_secret_tip
+      concept: Surprising tip
+      openingHook: Lead with a surprising or counterintuitive tip.
+      retentionDevice: Save the most useful implementation step for the last section.
+      requiredFiles:
+        AD_RECALL_LIFT: assets/videos/aw_202608_arl_hook05_secret_tip.mp4
+        THRUPLAY: assets/videos/aw_202608_tp_hook05_secret_tip.mp4

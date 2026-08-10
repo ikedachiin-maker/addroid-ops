@@ -1,0 +1,35 @@
+version: 1
+creative:
+  id: "d3596ea8-a6ba-413e-919f-21b74c3d5413"
+  key: "image_630ccda8-2680-4bd7-a4a3-d2806d3079e2_v2"
+  accountKey: "act_315366547698354"
+  displayName: "Image variant 3"
+  mediaType: "image"
+  variantIndex: 2
+  status: "fallback_text_only"
+prompt:
+  text: "Create a 9:16 story/reels first-frame visual for a Japanese ad operations agency, 池田FB広告運用代行. Designed for an awareness video hook, not a conversion hard-sell. Strong thumb-stopping opening: large centered Japanese text 「CV広告が“はじめまして”になっていませんか？」. Under it, show a simple three-step vertical motion-ready composition: top card 「認知動画」 with play icon, middle card 「視聴者データ 1,000件」 with audience dots expanding, bottom card 「類似1% / 3% / 5% → CV広告」 with upward arrow. Add small footer text: 「講座・無形商材の二段階広告設計」. Dark navy gradient background, crisp white typography, cyan path line connecting the cards, subtle amber highlight on “1,000件”. Minimal, premium, expert, analytical. Leave safe margins at top and bottom for story UI overlays. No logos or app UI."
+  negativePrompt: "trademarked logos, Meta logo, Facebook logo, Instagram logo, social media app interface, reels UI elements, real dashboard screenshot, stock photo presenter, generic lifestyle scene, retail shop, discount coupon, flashy money imagery, unrealistic guarantees, cluttered layout, low readability, excessive small text, childish cartoon style"
+  styleNotes: "Story/Reels variant optimized as an awareness-video hook; aligns with knowledgeBrief guidance to build video-view audiences first and create lookalikes after 1,000 viewers."
+  rationale: "配信実績が0で勝敗判断できないため、knowledgeBriefsの方針どおりCPAではなくThruPlay・100%完全視聴率を伸ばす認知動画の冒頭フックと、後段CV配信へ接続する二段階設計を可視化しました。配置情報が不明なため、dimensionPresetsからフィード正方形・縦長フィード・Story/Reelsをカバーし、講座/無形商材向けの専門的でoperator-gradeな図解トーンに統一しています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "Meta広告運用の専門性を訴求する内容で、成果保証や不適切なターゲティング示唆はなく、画像プロンプトもロゴ・UIの回避が明記されています。軽微な可読性とブランド誤認防止の注意はありますが、配信前提として大きなポリシーリスクは低いです。"
+  issues:
+    - severity: "info"
+      category: "policy_compliance"
+      message: "コピーはB2B広告運用ノウハウの訴求で、禁止コンテンツ、誇大な成果保証、個人属性の断定、差別的表現は見当たりません。"
+    - severity: "info"
+      category: "brand_usage"
+      message: "Meta、ASC、Advantage+などの名称を説明的に使用しており、ロゴやUI使用を避ける指示も入っています。広告・LP上ではMeta/Facebook公式または提携先であるかのような表現にならないよう維持してください。"
+    - severity: "warn"
+      category: "creative_readability"
+      message: "画像内にKPI名、フロー、複数ステップなどテキスト要素が多いため、実制作時に小さな配置では可読性が落ちる可能性があります。特にStory/Reelsでは安全領域と文字サイズの確認を推奨します。"
+ai:
+  imagePromptAiRunId: "630ccda8-2680-4bd7-a4a3-d2806d3079e2"
+  creativeQaAiRunId: "37a231e1-9b45-4800-bff0-792062e883bd"

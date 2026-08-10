@@ -1,0 +1,35 @@
+version: 1
+creative:
+  id: "5c5391e2-1ed2-4ae0-add9-3783763d093d"
+  key: "image_630ccda8-2680-4bd7-a4a3-d2806d3079e2_v1"
+  accountKey: "act_315366547698354"
+  displayName: "Image variant 2"
+  mediaType: "image"
+  variantIndex: 1
+  status: "fallback_text_only"
+prompt:
+  text: "Create a vertical 4:5 Japanese B2B ad visual for 池田FB広告運用代行, aimed at business owners selling courses, seminars, coaching, and other intangible services. Layout: bold top hook area with large Japanese headline 「最初からCVだけ追わない」, followed by a structured vertical flow: 1「認知動画で視聴者を貯める」, 2「50% / 100% 視聴者を分析」, 3「類似1%・3%・5%へ拡張」, 4「ASCとAdvantage+でCV配信」. Use a refined operator-grade palette: deep navy, white, light gray, electric blue accents, small orange markers for decision points. Visual motif: an abstract campaign control board made of simple cards and arrows, but not a real ad platform UI. Include a strong visual separation line between 「認知KPI」 and 「CV KPI」 with labels 「ThruPlay / 完全視聴率」 and 「ROAS / CPO / CPA」. Sharp, professional, consultant-like, Japanese typography, plenty of whitespace."
+  negativePrompt: "trademarked logos, brand marks, Meta logo, Facebook logo, Instagram logo, real ad manager interface, fake browser dashboard, unrelated ecommerce product, generic office team photo, storefront, cityscape, coupon, discount badge, get-rich-quick claim, overly playful illustration, messy infographic, tiny unreadable text, neon overload"
+  styleNotes: "Feed portrait variant with stronger educational hierarchy; uses performance context of no delivery data by proposing a clear testable first creative based on the two-stage strategy and KPI separation."
+  rationale: "配信実績が0で勝敗判断できないため、knowledgeBriefsの方針どおりCPAではなくThruPlay・100%完全視聴率を伸ばす認知動画の冒頭フックと、後段CV配信へ接続する二段階設計を可視化しました。配置情報が不明なため、dimensionPresetsからフィード正方形・縦長フィード・Story/Reelsをカバーし、講座/無形商材向けの専門的でoperator-gradeな図解トーンに統一しています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "Meta広告運用の専門性を訴求する内容で、成果保証や不適切なターゲティング示唆はなく、画像プロンプトもロゴ・UIの回避が明記されています。軽微な可読性とブランド誤認防止の注意はありますが、配信前提として大きなポリシーリスクは低いです。"
+  issues:
+    - severity: "info"
+      category: "policy_compliance"
+      message: "コピーはB2B広告運用ノウハウの訴求で、禁止コンテンツ、誇大な成果保証、個人属性の断定、差別的表現は見当たりません。"
+    - severity: "info"
+      category: "brand_usage"
+      message: "Meta、ASC、Advantage+などの名称を説明的に使用しており、ロゴやUI使用を避ける指示も入っています。広告・LP上ではMeta/Facebook公式または提携先であるかのような表現にならないよう維持してください。"
+    - severity: "warn"
+      category: "creative_readability"
+      message: "画像内にKPI名、フロー、複数ステップなどテキスト要素が多いため、実制作時に小さな配置では可読性が落ちる可能性があります。特にStory/Reelsでは安全領域と文字サイズの確認を推奨します。"
+ai:
+  imagePromptAiRunId: "630ccda8-2680-4bd7-a4a3-d2806d3079e2"
+  creativeQaAiRunId: "37a231e1-9b45-4800-bff0-792062e883bd"
