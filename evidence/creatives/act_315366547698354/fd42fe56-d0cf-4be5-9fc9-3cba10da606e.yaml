@@ -1,0 +1,35 @@
+version: 1
+creative:
+  id: "fd42fe56-d0cf-4be5-9fc9-3cba10da606e"
+  key: "image_619e1c6e-6d57-498e-9c77-a2af6329ae17_v0"
+  accountKey: "act_315366547698354"
+  displayName: "Image variant 1"
+  mediaType: "image"
+  variantIndex: 0
+  status: "fallback_text_only"
+prompt:
+  text: "Operator-grade Japanese ad creative for 池田FB広告運用代行, square feed ad. Clean premium consulting visual for business owners and marketing managers: a calm Japanese advertising consultant at a desk reviewing abstract KPI sheets, with a large central decision matrix showing four KPI blocks labeled in Japanese:「CPO」「ROAS」「バックエンド売上」「CV」and a bold headline area reading「CPAだけで判断しない Meta広告運用」. Use dark navy, charcoal, white, and restrained electric blue accents, high contrast first-view composition, sharp grid layout, minimal corporate photography mixed with flat data visualization, no real platform UI, no logos, no trademark icons. Convey strategic account-level optimization using ASC and Advantage+ audience as small neutral text chips, not as branded UI. Premium, analytical, trustworthy, self-investment audience, lots of negative space, crisp typography, realistic but polished business-consulting style."
+  negativePrompt: "trademarked logos, Meta logo, Facebook logo, Instagram logo, real platform screenshots, generic SaaS dashboard, unrelated storefront, coupons, easy-money tone, flashy get-rich imagery, cluttered charts, illegible tiny text, exaggerated claims, cheap stock photo look, cartoon mascot, low contrast, blurry text"
+  styleNotes: "Square feed variant emphasizing the core conversion-ad message: judge by CPO, ROAS, backend revenue and CV, not CPA alone. Keep typography bold and minimal; avoid actual platform branding while allowing neutral KPI visuals."
+  rationale: "配信実績がなくCTR/CPAでは評価不能なため、強い初見コントラストと明確な判断軸提示で再始動時の学習データ獲得に寄せました。知識ブリーフの「CV広告はバックエンド売上/CPO/ROASを優先」「認知はThruPlay・完全視聴率で評価し動画視聴者データを蓄積」に従い、CPA単体ではなくアカウント単位の改善判断と認知動画併走を表現しています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "禁止コンテンツ、差別的表現、個人属性の断定、誇大な収益保証は見当たらず、Meta広告運用代行のB2B訴求として概ね配信可能です。商標表記と成果訴求の見え方、動画前提コピーの配信面だけ運用時に注意してください。"
+  issues:
+    - severity: "warn"
+      category: "brand_trademark"
+      message: "「FB広告」「Meta広告」「Advantage+」などMeta関連商標・略称の使用があります。説明的利用としては概ね許容されますが、Meta/Facebookとの提携・公認を示唆しない表現に留め、可能であれば「FB」略称より正式名称の使用を推奨します。"
+    - severity: "warn"
+      category: "claim_substantiation"
+      message: "「ROAS改善」「勝てる広告費配分」など成果向上を連想させる表現があります。定量保証はしていないため重大リスクは低いものの、実績・根拠なしに確実な成果を示す見え方にならないよう注意が必要です。"
+    - severity: "warn"
+      category: "format_consistency"
+      message: "代替コピーに「動画を最後まで見ると」とあるため、静止画広告や動画でない配置に流用すると誤認を招く可能性があります。動画クリエイティブでのみ使用するのが安全です。"
+ai:
+  imagePromptAiRunId: "619e1c6e-6d57-498e-9c77-a2af6329ae17"
+  creativeQaAiRunId: "ccf57826-bfde-4eb0-a9f4-b2ad622155c9"

@@ -1,0 +1,46 @@
+apiVersion: addroid.io/v1
+kind: DryRunSnapshot
+metadata:
+  accountId: act_315366547698354
+  name: awareness-video-hook-tests-2026-08-dry-run
+  source: accounts/act_315366547698354/campaigns/2026-08-awareness-video-tests.yaml
+spec:
+  decision: propose
+  live_api_calls: false
+  expected_objects:
+    campaigns: 1
+    adsets: 2
+    ads: 10
+    uploaded_video_files: 10
+  budget_check:
+    currency: JPY
+    thruplay_test_daily_budget: 5000
+    ad_recall_lift_test_daily_budget: 5000
+    total_daily_budget: 10000
+    minimum_test_days: 2
+    minimum_test_window_budget: 20000
+  optimization_check:
+    campaign_objective: OUTCOME_AWARENESS
+    allowed_optimization_goals:
+      - THRUPLAY
+      - AD_RECALL_LIFT
+    prohibited_optimization_goals:
+      - REACH
+      - IMPRESSIONS
+    passed: true
+  billing_check:
+    thruplay:
+      preferred: THRUPLAY
+      fallback: IMPRESSIONS
+      fallback_changes_optimization_goal: false
+    ad_recall_lift:
+      preferred: IMPRESSIONS
+      optimization_goal: AD_RECALL_LIFT
+  evaluation_check:
+    primary_metric: video_100_percent_completion_rate
+    threshold: 0.02
+    failing_creative_action: propose_opening_hook_replacement
+  warnings:
+    - Confirm that the five source awareness video assets exist before deployment.
+    - Confirm ThruPlay billing eligibility at publish time.
+    - Campaign, ad sets, and ads are configured as PAUSED for human review before activation.

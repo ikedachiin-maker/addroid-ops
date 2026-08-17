@@ -1,0 +1,141 @@
+apiVersion: addroid.io/v1
+kind: CampaignPlan
+metadata:
+  accountId: act_315366547698354
+  name: awareness-video-hook-tests-2026-08
+  labels:
+    proposal: improvement-act_315366547698354
+    objective_family: awareness
+    test_type: video_hook
+spec:
+  status: proposed
+  currency: JPY
+  objective: OUTCOME_AWARENESS
+  buying_type: AUCTION
+  prohibited_optimization_goals:
+    - REACH
+    - IMPRESSIONS
+  test_window:
+    minimum_days: 2
+    start: next_available_publish_window
+  budget:
+    total_daily_budget_jpy: 10000
+    per_test_daily_budget_jpy: 5000
+    effective_daily_budget_per_creative_jpy: 1000
+  campaign:
+    name: AW_Test_VideoHooks_TP_vs_ARL_2026-08
+    objective: OUTCOME_AWARENESS
+    status: PAUSED
+    special_ad_categories: []
+  creative_library:
+    message_guidance:
+      opening_hook: strong_first_3_seconds
+      required_message: watch_to_the_end_to_receive_or_understand_the_benefit
+      success_metric: video_100_percent_completion_rate
+      acceptance_threshold: 0.02
+    hook_variants:
+      - id: hook_01
+        source_asset: awareness_hook_01.mp4
+        description: Awareness video hook variant 01
+      - id: hook_02
+        source_asset: awareness_hook_02.mp4
+        description: Awareness video hook variant 02
+      - id: hook_03
+        source_asset: awareness_hook_03.mp4
+        description: Awareness video hook variant 03
+      - id: hook_04
+        source_asset: awareness_hook_04.mp4
+        description: Awareness video hook variant 04
+      - id: hook_05
+        source_asset: awareness_hook_05.mp4
+        description: Awareness video hook variant 05
+  adsets:
+    - name: AS_Awareness_THRUPLAY_5xHooks_JPY5000d
+      optimization_goal: THRUPLAY
+      billing:
+        preferred_billing_event: THRUPLAY
+        eligibility_check: required
+        fallback_when_unavailable:
+          billing_event: IMPRESSIONS
+          bid_strategy: LOWEST_COST_WITHOUT_CAP
+          keep_optimization_goal: THRUPLAY
+          note: Use impression billing only as a billing fallback; do not change optimization to IMPRESSIONS.
+      daily_budget_jpy: 5000
+      min_duration_days: 2
+      targeting_ref: account_default_awareness
+      status: PAUSED
+      ads:
+        - name: AD_THRUPLAY_Hook01
+          creative_id: hook_01
+          upload_filename: awareness_hook_01_thruplay.mp4
+          message: Watch to the end to understand the benefit.
+          status: PAUSED
+        - name: AD_THRUPLAY_Hook02
+          creative_id: hook_02
+          upload_filename: awareness_hook_02_thruplay.mp4
+          message: Watch to the end to understand the benefit.
+          status: PAUSED
+        - name: AD_THRUPLAY_Hook03
+          creative_id: hook_03
+          upload_filename: awareness_hook_03_thruplay.mp4
+          message: Watch to the end to understand the benefit.
+          status: PAUSED
+        - name: AD_THRUPLAY_Hook04
+          creative_id: hook_04
+          upload_filename: awareness_hook_04_thruplay.mp4
+          message: Watch to the end to understand the benefit.
+          status: PAUSED
+        - name: AD_THRUPLAY_Hook05
+          creative_id: hook_05
+          upload_filename: awareness_hook_05_thruplay.mp4
+          message: Watch to the end to understand the benefit.
+          status: PAUSED
+    - name: AS_Awareness_AD_RECALL_LIFT_5xHooks_JPY5000d
+      optimization_goal: AD_RECALL_LIFT
+      billing:
+        preferred_billing_event: IMPRESSIONS
+        note: Impression billing is allowed here as billing; optimization remains AD_RECALL_LIFT.
+      daily_budget_jpy: 5000
+      min_duration_days: 2
+      targeting_ref: account_default_awareness
+      status: PAUSED
+      ads:
+        - name: AD_ADRECALL_Hook01
+          creative_id: hook_01
+          upload_filename: awareness_hook_01_ad_recall_lift.mp4
+          message: Watch to the end to understand the benefit.
+          status: PAUSED
+        - name: AD_ADRECALL_Hook02
+          creative_id: hook_02
+          upload_filename: awareness_hook_02_ad_recall_lift.mp4
+          message: Watch to the end to understand the benefit.
+          status: PAUSED
+        - name: AD_ADRECALL_Hook03
+          creative_id: hook_03
+          upload_filename: awareness_hook_03_ad_recall_lift.mp4
+          message: Watch to the end to understand the benefit.
+          status: PAUSED
+        - name: AD_ADRECALL_Hook04
+          creative_id: hook_04
+          upload_filename: awareness_hook_04_ad_recall_lift.mp4
+          message: Watch to the end to understand the benefit.
+          status: PAUSED
+        - name: AD_ADRECALL_Hook05
+          creative_id: hook_05
+          upload_filename: awareness_hook_05_ad_recall_lift.mp4
+          message: Watch to the end to understand the benefit.
+          status: PAUSED
+  evaluation:
+    run_after_days: 2
+    primary_metric: video_100_percent_completion_rate
+    pass_condition:
+      operator: greater_than_or_equal
+      value: 0.02
+    actions:
+      passing_creatives: keep_enabled_for_next_review
+      failing_creatives:
+        action: propose_opening_hook_replacement
+        reason: 100_percent_video_completion_rate_below_2_percent
+    notes:
+      - Do not evaluate this awareness test on CPA or conversion volume.
+      - Replace weak opening hooks before further spend on creatives below threshold.

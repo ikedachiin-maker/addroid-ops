@@ -1,0 +1,35 @@
+version: 1
+creative:
+  id: "554b6b2a-ce1f-4534-9c83-2d8c5e2bc55f"
+  key: "image_619e1c6e-6d57-498e-9c77-a2af6329ae17_v1"
+  accountKey: "act_315366547698354"
+  displayName: "Image variant 2"
+  mediaType: "image"
+  variantIndex: 1
+  status: "fallback_text_only"
+prompt:
+  text: "Portrait feed ad for 池田FB広告運用代行 targeting serious business owners and marketers. Create a vertical premium infographic composition: top hook in large Japanese text「広告アカウント単位で改善判断」, middle section shows a clean funnel flow with abstract icons only:「動画視聴者データ」→「類似オーディエンス」→「CV獲得」→「ROAS改善」, lower section shows two parallel campaign lanes labeled「ASC」and「Advantage+オーディエンス」merging into one account-level performance board. Use operator-grade design: dark navy background, white cards, thin electric-blue connector lines, subtle gold accent for revenue impact, precise Japanese business typography, no logos or real ad manager UI. Make it feel like a high-value consulting framework rather than a generic dashboard, with strong contrast and clear reading on mobile."
+  negativePrompt: "trademarked logos, Facebook or Meta branding, Instagram glyphs, real screenshots, generic dashboard template, unrelated people shopping, storefront, free coupon messaging, casual gimmicky tone, overfilled text, unreadable labels, cartoon style, neon casino look, low-quality stock imagery"
+  styleNotes: "Portrait feed variant connects the CV strategy with the awareness-data accumulation policy: video viewers feed later lookalikes while ASC and Advantage+ are judged at account level."
+  rationale: "配信実績がなくCTR/CPAでは評価不能なため、強い初見コントラストと明確な判断軸提示で再始動時の学習データ獲得に寄せました。知識ブリーフの「CV広告はバックエンド売上/CPO/ROASを優先」「認知はThruPlay・完全視聴率で評価し動画視聴者データを蓄積」に従い、CPA単体ではなくアカウント単位の改善判断と認知動画併走を表現しています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "禁止コンテンツ、差別的表現、個人属性の断定、誇大な収益保証は見当たらず、Meta広告運用代行のB2B訴求として概ね配信可能です。商標表記と成果訴求の見え方、動画前提コピーの配信面だけ運用時に注意してください。"
+  issues:
+    - severity: "warn"
+      category: "brand_trademark"
+      message: "「FB広告」「Meta広告」「Advantage+」などMeta関連商標・略称の使用があります。説明的利用としては概ね許容されますが、Meta/Facebookとの提携・公認を示唆しない表現に留め、可能であれば「FB」略称より正式名称の使用を推奨します。"
+    - severity: "warn"
+      category: "claim_substantiation"
+      message: "「ROAS改善」「勝てる広告費配分」など成果向上を連想させる表現があります。定量保証はしていないため重大リスクは低いものの、実績・根拠なしに確実な成果を示す見え方にならないよう注意が必要です。"
+    - severity: "warn"
+      category: "format_consistency"
+      message: "代替コピーに「動画を最後まで見ると」とあるため、静止画広告や動画でない配置に流用すると誤認を招く可能性があります。動画クリエイティブでのみ使用するのが安全です。"
+ai:
+  imagePromptAiRunId: "619e1c6e-6d57-498e-9c77-a2af6329ae17"
+  creativeQaAiRunId: "ccf57826-bfde-4eb0-a9f4-b2ad622155c9"
