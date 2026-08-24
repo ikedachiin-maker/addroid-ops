@@ -1,0 +1,140 @@
+apiVersion: addroid.io/v1
+kind: ExperimentPlan
+metadata:
+  name: awareness-recall-thruplay-test
+  accountId: act_315366547698354
+  labels:
+    channel: meta
+    funnelStage: awareness
+    source: ai-proposal
+spec:
+  status: proposed
+  applyMode: after_merge
+  snapshot:
+    currentDailyBudget:
+      amount: 0
+      currency: JPY
+    recentDelivery: zero
+    observationWindow: recent_week
+
+  objective: OUTCOME_AWARENESS
+  rationale: >-
+    Recent delivery is zero, so this plan starts a controlled awareness
+    delivery test rather than optimizing existing performance. The test follows
+    knowledgeBrief guidance: 1,000 JPY/day per awareness test unit for 2-3 days,
+    with AD_RECALL_LIFT and THRUPLAY tested in parallel.
+
+  budget:
+    dailyTotal:
+      amount: 10000
+      currency: JPY
+    minimumRunDays: 2
+    maximumRunDays: 3
+    allocation:
+      - name: ad-recall-lift-cell
+        optimizationGoal: AD_RECALL_LIFT
+        units: 5
+        dailyBudgetPerUnit:
+          amount: 1000
+          currency: JPY
+        dailySubtotal:
+          amount: 5000
+          currency: JPY
+      - name: thruplay-cell
+        optimizationGoal: THRUPLAY
+        units: 5
+        dailyBudgetPerUnit:
+          amount: 1000
+          currency: JPY
+        dailySubtotal:
+          amount: 5000
+          currency: JPY
+
+  campaign:
+    action: create
+    name: Awareness Test - Recall Lift vs ThruPlay
+    objective: OUTCOME_AWARENESS
+    allowedOptimizationGoals:
+      - AD_RECALL_LIFT
+      - THRUPLAY
+    prohibitedOptimizationGoals:
+      - REACH
+      - IMPRESSIONS
+    evaluationPolicy:
+      primaryDecisionMetric: VIDEO_100_PERCENT_COMPLETE_VIEW_RATE
+      doNotJudgeBy:
+        - CPA
+        - CV
+
+  adSets:
+    - namePattern: Awareness Recall Lift - Hook {01..05}
+      count: 5
+      optimizationGoal: AD_RECALL_LIFT
+      dailyBudget:
+        amount: 1000
+        currency: JPY
+      bidStrategy: LOWEST_COST_WITHOUT_CAP
+      billingEvent: IMPRESSIONS
+      learningPolicy:
+        avoidBidCapDuringInitialLearning: true
+    - namePattern: Awareness ThruPlay - Hook {01..05}
+      count: 5
+      optimizationGoal: THRUPLAY
+      dailyBudget:
+        amount: 1000
+        currency: JPY
+      bidStrategy: LOWEST_COST_WITHOUT_CAP
+      billingEventPreference:
+        preferred: THRUPLAY
+        fallback: IMPRESSIONS
+        note: Use ThruPlay billing only when available in Meta.
+      learningPolicy:
+        avoidBidCapDuringInitialLearning: true
+
+  audiences:
+    videoViewerCustomAudiences:
+      splitByOptimizationGoal: true
+      create:
+        - name: Awareness ARL Video Viewers 50pct
+          sourceOptimizationGoal: AD_RECALL_LIFT
+          retentionDays: 365
+          videoViewPercent: 50
+        - name: Awareness ThruPlay Video Viewers 50pct
+          sourceOptimizationGoal: THRUPLAY
+          retentionDays: 365
+          videoViewPercent: 50
+      optionalIfBudgetAllows:
+        - name: Awareness ARL Video Viewers 100pct
+          sourceOptimizationGoal: AD_RECALL_LIFT
+          retentionDays: 365
+          videoViewPercent: 100
+        - name: Awareness ThruPlay Video Viewers 100pct
+          sourceOptimizationGoal: THRUPLAY
+          retentionDays: 365
+          videoViewPercent: 100
+    lookalikeNextStep:
+      deferUntilMinimumSeedSize: 1000
+      proposedRatios:
+        - 1
+        - 3
+        - 5
+
+  creatives:
+    requiredVideoCount: 5
+    comparisonAxis: opening_hook
+    requirements:
+      - Prepare five awareness videos with different opening hooks.
+      - Include an incentive-style message equivalent to "動画を最後まで見ると特典がある" in primary text.
+      - Reuse the five hook variants across AD_RECALL_LIFT and THRUPLAY cells.
+    successCriteria:
+      metric: VIDEO_100_PERCENT_COMPLETE_VIEW_RATE
+      operator: ">="
+      value: 0.02
+    iterationPolicy:
+      ifBelowThreshold: Replace opening hook before judging CPA or CV.
+
+  guardrails:
+    noReachOptimization: true
+    noImpressionsOptimization: true
+    stopAfterDaysUnlessExtended: 3
+    requireHumanApprovalBeforeMerge: true
