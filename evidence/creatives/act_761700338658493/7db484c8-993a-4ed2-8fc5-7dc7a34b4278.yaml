@@ -1,0 +1,35 @@
+version: 1
+creative:
+  id: "7db484c8-993a-4ed2-8fc5-7dc7a34b4278"
+  key: "image_e3eae4da-2f07-4d3a-8e9f-86c2a4fd2d34_v0"
+  accountKey: "act_761700338658493"
+  displayName: "Image variant 1"
+  mediaType: "image"
+  variantIndex: 0
+  status: "fallback_text_only"
+prompt:
+  text: "Premium editorial key visual for an invitation to the アイボリーサロン説明会, a calm self-investment learning salon briefing. Scene: a refined ivory-toned seminar lounge with warm natural window light, a small round table with an open notebook, elegant pen, a simple glass of water, and one neatly arranged chair angled toward a softly lit presentation area. Mood should suggest “serious people investing in their future” without showing a salesy event. Composition: centered, high-contrast first-frame thumbnail, clear negative space in the upper third for headline overlay, subtle depth of field, ivory / warm beige / muted gold palette, polished but human, trustworthy, aspirational, operator-grade."
+  negativePrompt: "visible text, readable Japanese text, misspelled characters, trademarked logos, brand logos, coupons, discount badges, cheap or easy-money imagery, beauty salon treatment scene, storefront, SaaS dashboard, generic app UI, clutter, flashy neon, childish colors, exaggerated luxury, stock-photo handshake, before-after claims"
+  styleNotes: "Use a premium ivory palette and quiet confidence. Keep the image product-neutral but clearly seminar / learning / briefing oriented, with space for Japanese copy to be added later."
+  rationale: "配信実績が0のためCTR/CPA改善ではなく、知識ブリーフの方針に沿ってAD_RECALL_LIFT/THRUPLAY向けの冒頭フックと、CV広告向けの説明会申込メッセージに合う上質な自己投資ビジュアルを優先しました。配置情報がないため、提供プリセットからfeed_square・feed_portrait・story_reelsの実用的なMeta面カバレッジで展開します。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "コピーと画像プロンプトは、自己投資・説明会参加の訴求として概ね適切で、Meta広告ポリシー上の重大な違反は見当たりません。成果や変化に関する表現はLPで過度な期待を与えない補足があるとより安全です。"
+  issues:
+    - severity: "warn"
+      category: "claims_substantiation"
+      message: "「成果につながる」「参加後の変化」などの表現は、具体的な成果保証と受け取られないようLP側で内容・実績・条件を明確にしておくことを推奨します。現状の文面自体は断定的な収益保証や誇大表現ではありません。"
+    - severity: "info"
+      category: "meta_policy_personal_attributes"
+      message: "「〜したい方へ」という呼びかけは一般的な関心・意向への訴求であり、個人の属性や状態を断定していないため大きなポリシー懸念はありません。"
+    - severity: "info"
+      category: "image_prompt_safety"
+      message: "画像プロンプトは可読テキスト、ロゴ、割引訴求、誤解を招く金銭表現を明示的に除外しており、Meta広告向けに安全性の高い設計です。"
+ai:
+  imagePromptAiRunId: "e3eae4da-2f07-4d3a-8e9f-86c2a4fd2d34"
+  creativeQaAiRunId: "2a406ef6-385c-4500-a0a8-07877031ba60"
