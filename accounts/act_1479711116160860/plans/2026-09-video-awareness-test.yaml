@@ -1,0 +1,137 @@
+apiVersion: addroid.io/v1alpha1
+kind: AwarenessTestPlan
+metadata:
+  name: video-awareness-hook-test-2026-09
+  accountId: act_1479711116160860
+  status: proposed
+  labels:
+    source: ai-proposal
+    objective: outcome-awareness
+    testType: video-hook-awareness
+spec:
+  objective: OUTCOME_AWARENESS
+  purpose: Restart controlled awareness delivery and collect video completion data.
+  guardrails:
+    allowedOptimizationGoals:
+      - AD_RECALL_LIFT
+      - THRUPLAY
+    disallowedOptimizationGoals:
+      - REACH
+      - IMPRESSIONS
+    primaryRankingMetric: video_p100_rate
+    doNotRankBy:
+      - cpa
+      - conversions
+      - clicks
+    successBenchmark:
+      metric: video_p100_rate
+      operator: ">="
+      value: 0.02
+  budget:
+    currency: JPY
+    initialDailyBudget: 10000
+    dailyBudgetPerCreativePerTrack: 1000
+    plannedMinimumTestDays: 2
+    plannedInitialMaximumSpend: 20000
+    reallocationRule: After the minimum test period, pause losers and concentrate budget on the creative with the highest video_p100_rate if it is at or above 2.0%.
+  structure:
+    campaign:
+      name: AW Video Hook Test - Outcome Awareness - 2026-09
+      objective: OUTCOME_AWARENESS
+      status: paused_until_human_approval
+    tracks:
+      - name: ad-recall-lift
+        adSetName: AW Video Hook Test - AD_RECALL_LIFT
+        optimizationGoal: AD_RECALL_LIFT
+        dailyBudget: 5000
+        billingEventPreference: default_available
+        creativeUploadSuffix: ad-recall-lift
+        reportingNotes:
+          - Evaluate against video_p100_rate, not CPA or conversions.
+          - Keep uploaded assets separate from THRUPLAY assets for clean viewer audiences.
+      - name: thruplay
+        adSetName: AW Video Hook Test - THRUPLAY
+        optimizationGoal: THRUPLAY
+        dailyBudget: 5000
+        billingEventPreference: THRUPLAY
+        billingEventFallback: default_available
+        reportIfBillingUnavailable: true
+        creativeUploadSuffix: thruplay
+        reportingNotes:
+          - Use ThruPlay billing if selectable.
+          - If ThruPlay billing is unavailable, launch with the default available billing event and flag the limitation in reporting.
+          - Keep uploaded assets separate from AD_RECALL_LIFT assets for clean viewer audiences.
+  creatives:
+    retentionMessageRequired: true
+    retentionMessageGuidance: Include a benefit or reason to watch until the end.
+    variants:
+      - id: hook-01
+        name: Hook 01 - direct benefit
+        openingHook: Lead with the clearest end-user benefit in the first seconds.
+        fileNames:
+          adRecallLift: hook-01-direct-benefit-ad-recall-lift.mp4
+          thruplay: hook-01-direct-benefit-thruplay.mp4
+      - id: hook-02
+        name: Hook 02 - problem statement
+        openingHook: Start with the audience problem or pain point before revealing the benefit.
+        fileNames:
+          adRecallLift: hook-02-problem-statement-ad-recall-lift.mp4
+          thruplay: hook-02-problem-statement-thruplay.mp4
+      - id: hook-03
+        name: Hook 03 - curiosity gap
+        openingHook: Open with a curiosity-driven statement that is resolved later in the video.
+        fileNames:
+          adRecallLift: hook-03-curiosity-gap-ad-recall-lift.mp4
+          thruplay: hook-03-curiosity-gap-thruplay.mp4
+      - id: hook-04
+        name: Hook 04 - social proof
+        openingHook: Begin with a credibility or social-proof cue before the core message.
+        fileNames:
+          adRecallLift: hook-04-social-proof-ad-recall-lift.mp4
+          thruplay: hook-04-social-proof-thruplay.mp4
+      - id: hook-05
+        name: Hook 05 - end reward
+        openingHook: Tell viewers there is a useful takeaway or benefit for watching until the end.
+        fileNames:
+          adRecallLift: hook-05-end-reward-ad-recall-lift.mp4
+          thruplay: hook-05-end-reward-thruplay.mp4
+  audienceSeparation:
+    separateUploadsPerOptimizationTrack: true
+    rationale: Preserve clean viewer audiences for later lookalike or retargeting tests.
+  measurement:
+    minimumRuntimeDays: 2
+    primaryMetric: video_p100_rate
+    benchmarkVideoP100Rate: 0.02
+    collectMetrics:
+      - spend
+      - impressions
+      - reach
+      - thruplays
+      - video_p25_rate
+      - video_p50_rate
+      - video_p75_rate
+      - video_p100_rate
+      - estimated_ad_recall_lift
+    decisionRules:
+      - name: pause-under-benchmark-losers
+        afterDays: 2
+        action: Pause variants materially below the 2.0% video_p100_rate benchmark.
+      - name: concentrate-on-winner
+        afterDays: 2
+        action: Move remaining budget to the highest video_p100_rate creative if it clears benchmark.
+      - name: no-cpa-ranking
+        action: Do not use CPA, conversion volume, or click metrics to select awareness winners during this test.
+  dryRun:
+    expectedCampaigns: 1
+    expectedAdSets: 2
+    expectedAds: 10
+    expectedCreativeUploads: 10
+    requiresHumanAssetUpload: true
+    launchStatus: paused_until_human_approval
+  snapshots:
+    proposalAccountId: act_1479711116160860
+    currentDailyBudget: 0
+    currentDailyBudgetCurrency: JPY
+    observedDeliveryData: none
+    observedClickData: none
+    observedConversionData: none
