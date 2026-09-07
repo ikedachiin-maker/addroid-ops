@@ -1,0 +1,56 @@
+account_id: act_3712039932340685
+status: proposed
+dry_run: true
+proposal_source: addroid
+review_rule:
+  name: awareness_video_test_day_2_review
+  applies_to_campaign: awareness_video_test_always_on_2026_09
+  trigger:
+    type: elapsed_time
+    after_days: 2
+  checklist:
+    - id: creative_full_view_pass_line
+      description: Flag creatives below the full-view pass line for hook replacement.
+      metric: video_100_completion_rate
+      operator: lt
+      threshold: 0.02
+      action: flag_for_hook_replacement
+      severity: warning
+    - id: creative_full_view_winner
+      description: Mark creatives at or above the full-view pass line as candidates for budget concentration.
+      metric: video_100_completion_rate
+      operator: gte
+      threshold: 0.02
+      action: candidate_for_budget_concentration
+      severity: info
+    - id: avoid_cpa_decisioning
+      description: Do not make winner or loser calls from CPA or conversion metrics during the awareness test.
+      forbidden_decision_metrics:
+        - cpa
+        - cost_per_purchase
+        - conversions
+      action: require_video_completion_based_review
+      severity: info
+  audience_milestones:
+    - id: fifty_percent_video_view_custom_audience
+      source_event: video_view_50_percent
+      minimum_users: 1000
+      action: flag_lookalike_creation
+      lookalike_percentages:
+        - 1
+        - 3
+        - 5
+      note: Create lookalike audience proposals only after the 50% video-view custom audience reaches 1,000 users.
+  reporting:
+    snapshot_metrics:
+      - spend
+      - impressions
+      - thruplays
+      - video_50_completion_rate
+      - video_100_completion_rate
+      - estimated_ad_recall_lift
+    required_notes:
+      - Confirm no REACH optimization was used.
+      - Confirm no IMPRESSIONS optimization was used.
+      - Identify creatives below 2.0% full-view completion rate.
+      - Identify creatives at or above 2.0% full-view completion rate.
