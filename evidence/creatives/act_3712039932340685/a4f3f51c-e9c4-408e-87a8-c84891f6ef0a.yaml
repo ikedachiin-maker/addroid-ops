@@ -1,0 +1,35 @@
+version: 1
+creative:
+  id: "a4f3f51c-e9c4-408e-87a8-c84891f6ef0a"
+  key: "image_1aba34dd-0af8-45f4-a5f2-c2dcf7f18de0_v0"
+  accountKey: "act_3712039932340685"
+  displayName: "Image variant 1"
+  mediaType: "image"
+  variantIndex: 0
+  status: "fallback_text_only"
+prompt:
+  text: "1080x1080 square B2B advertising operations infographic for a Japanese ad account, operator-grade consulting aesthetic. Clean navy and white background with cyan accent lines, no logos. Center headline in large Japanese text:「ROAS/CPOで見るMeta運用」. Visual structure: two parallel strategy lanes labeled「ASC」and「Advantage+オーディエンス」feeding into one account-level decision panel labeled「広告アカウント全体で判断」with large metrics「ROAS」「CPO」. A small secondary loop at the bottom:「少額の認知動画」→「動画視聴者」→「類似1% / 3% / 5%」→「CV広告」. Use abstract flow nodes, check marks, arrows, and measurement cards, but do not depict any real ad platform UI. Crisp Japanese sans-serif typography, high contrast first-glance readability, professional operator manual mood, minimal but data-driven."
+  negativePrompt: "trademarked logos, Meta logo, Facebook logo, Instagram logo, real UI screenshots, fake software dashboard, generic storefront, lifestyle people, stock photo look, coupon or easy-money wording, cluttered text, low contrast, distorted Japanese characters, excessive gradients, mascot, cartoonish style"
+  styleNotes: "Feed square coverage. Preserve the copy’s core message: judge ASC and A+A by account-wide ROAS/CPO while building video-viewer data for lookalikes. Operator-grade navy/white/cyan palette and sharp infographic hierarchy."
+  rationale: "配信実績が0のため勝敗判定ではなく、設定確認後に使える戦略説明クリエイティブとして、知識ブリーフの「CV広告はバックエンド売上/CPO/ROAS優先」「ASCとA+Aは両方配信」「認知動画はThruPlay/想起と完全視聴率で評価し視聴者1,000件から類似作成」を反映しました。配置シグナルがないため、dimensionPresetsからフィード正方形・縦長フィード・Story/Reelsの実用カバレッジを選び、抽象的な店舗やSaaS画面ではなく広告運用アーキテクチャそのものをビジュアル化しています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "B2B向け広告運用サービスの訴求として、Meta広告ポリシー上の明確な禁止表現や差別的・個人属性への不適切な言及は見当たりません。成果示唆の表現と商標名の扱いは、誤認や保証に見えないよう運用時に注意が必要です。"
+  issues:
+    - severity: "warn"
+      category: "claims_substantiation"
+      message: "「ROAS 300%を基準」「CV広告の初速を高めます」「勝てる広告」などは保証表現ではないものの、成果改善を示唆するため、実績・根拠・条件を説明できる状態にしてください。"
+    - severity: "info"
+      category: "trademark_brand_usage"
+      message: "「Meta」「Advantage+」などのプラットフォーム名称を記述していますが、ロゴ使用や公式提携の示唆は避けられており、画像プロンプトでも商標ロゴ除外が指定されています。"
+    - severity: "info"
+      category: "creative_readability"
+      message: "画像プロンプトは情報量が多めで、生成結果によっては日本語テキストが小さく読みにくくなる可能性があります。主要メッセージの可読性を確認してください。"
+ai:
+  imagePromptAiRunId: "1aba34dd-0af8-45f4-a5f2-c2dcf7f18de0"
+  creativeQaAiRunId: "be702f03-d88b-4321-b249-53d6204e7391"
