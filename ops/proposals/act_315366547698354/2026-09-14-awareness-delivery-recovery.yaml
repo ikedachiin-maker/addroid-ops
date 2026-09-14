@@ -1,0 +1,153 @@
+apiVersion: addroid.ops/v1
+kind: ImprovementProposal
+metadata:
+  name: awareness-delivery-recovery-2026-09-14
+  accountId: act_315366547698354
+  createdBy: addroid-oss-gitops-agent
+spec:
+  decision: propose
+  dry_run_until_approved: true
+  observation_window:
+    start: "2026-09-07"
+    end: "2026-09-13"
+    delivery_summary:
+      impressions: 0
+      spend: 0
+      clicks: 0
+      conversions: 0
+      note: 配信実績がすべて0のため、成果判断前に配信不能要因を切り分ける。
+
+  prerequisites:
+    requires_delivery_diagnostic: true
+    checklist:
+      - id: account_payment_status
+        owner: human
+        required: true
+        description: アカウント支払い方法、請求上限、支払い失敗、アカウント停止がないか確認する。
+      - id: object_delivery_status
+        owner: human
+        required: true
+        description: キャンペーン、広告セット、広告がONかつ配信可能ステータスか確認する。
+      - id: review_status
+        owner: human
+        required: true
+        description: 広告審査の否認、制限、再審査待ちがないか確認する。
+      - id: trafficking_completeness
+        owner: human
+        required: true
+        description: 入稿漏れ、クリエイティブ未紐付け、リンク切れ、配置不備がないか確認する。
+      - id: measurement_integration
+        owner: human
+        required: true
+        description: ピクセル、CAPI、SDK、イベント、ドメイン、UTMなど計測連携を確認する。
+      - id: data_ingestion_health
+        owner: addroid
+        required: true
+        description: AdDroid側のデータ取得不備、権限不足、同期遅延がないか確認する。
+
+  guardrails:
+    campaign_objective_allowlist:
+      - OUTCOME_AWARENESS
+    awareness_optimization_goal_allowlist:
+      - AD_RECALL_LIFT
+      - THRUPLAY
+    awareness_optimization_goal_blocklist:
+      - REACH
+      - IMPRESSIONS
+    minimum_test_duration_days: 2
+    creative_count: 5
+    daily_budget_per_creative_jpy: 1000
+    total_daily_budget_jpy: 5000
+    pass_criteria:
+      primary_metric: video_p100_rate
+      minimum_video_p100_rate: 0.02
+      secondary_metrics:
+        - thruplay_rate
+        - estimated_ad_recall_lift
+        - cost_per_thruplay
+    budget_shift_rule: 評価後、動画100%完全視聴率が最も高い勝者へ予算を寄せる。
+
+  changes:
+    - hierarchy: account
+      target: act_315366547698354
+      category: delivery_diagnostic
+      action: verify_before_launch
+      proposedChange: 配信実績が0のため、アカウント支払い・配信ステータス・審査状況・入稿有無・計測連携・データ取得不備を確認する。
+      rationale: 2026-09-07〜09-13の配信がすべて0で、成果判断ができないため、予算や入札の評価前に配信不能要因を切り分ける。
+
+    - hierarchy: campaign
+      target: new OUTCOME_AWARENESS awareness test campaign
+      category: new_campaign
+      action: create_after_prerequisites_pass
+      campaign:
+        name: awareness-test-2026-09-14
+        objective: OUTCOME_AWARENESS
+        status: PAUSED
+        buying_type: AUCTION
+      proposedChange: 配信可能であることを確認後、OUTCOME_AWARENESSキャンペーンを新設し、最適化目標はAD_RECALL_LIFTとTHRUPLAYのみで並行テストする。REACH/IMPRESSIONSは使用しない。
+      rationale: 知識ブリーフの『認知キャンペーンの最適化目標はAD_RECALL_LIFT / THRUPLAYのみ、REACH / IMPRESSIONSは禁止』に従う。
+
+    - hierarchy: adset
+      target: new awareness creative test ad sets
+      category: budget_increase
+      action: create_after_prerequisites_pass
+      budget:
+        currency: JPY
+        previous_total_daily_budget: 0
+        proposed_total_daily_budget: 5000
+        adset_daily_budget: 1000
+        minimum_duration_days: 2
+      adsets:
+        - name: awareness-test-ad-recall-hook-01
+          optimization_goal: AD_RECALL_LIFT
+          daily_budget: 1000
+        - name: awareness-test-thruplay-hook-02
+          optimization_goal: THRUPLAY
+          daily_budget: 1000
+        - name: awareness-test-ad-recall-hook-03
+          optimization_goal: AD_RECALL_LIFT
+          daily_budget: 1000
+        - name: awareness-test-thruplay-hook-04
+          optimization_goal: THRUPLAY
+          daily_budget: 1000
+        - name: awareness-test-thruplay-hook-05
+          optimization_goal: THRUPLAY
+          daily_budget: 1000
+      proposedChange: 初期テストとして5本の認知動画クリエイティブを各日予算1,000円で2日以上配信し、合計日予算を0円から5,000円へ増額する。
+      rationale: 知識ブリーフの『認知テストは1本あたり日1,000円×2〜3日、5本並行』『完全視聴率2.0%以上を合格ライン』に基づく。
+
+    - hierarchy: ad
+      target: new awareness video ads
+      category: creative_change
+      action: prepare_creatives
+      creative_requirements:
+        count: 5
+        format: video
+        hook_variants_required: true
+        main_text_must_include: 動画を最後まで見ると特典がもらえる
+        separate_uploads_by_optimization_goal: true
+        naming_examples:
+          - arl_hook01_reward_watch_to_end.mp4
+          - thruplay_hook01_reward_watch_to_end.mp4
+      proposedChange: 認知用動画は冒頭フック違いを5本用意し、メインテキストに『動画を最後まで見ると特典がもらえる』要素を入れる。AD_RECALL_LIFT用とTHRUPLAY用は同一素材でもファイル名を変えて別アップロードする。
+      rationale: 知識ブリーフの『完全視聴率2%未満は冒頭フック改善』『認知動画には最後まで見る理由を入れる』『最適化目標別に視聴者オーディエンスを分離』に従う。
+
+  reporting:
+    evaluation_after_days: 2
+    winner_selection:
+      sort_by: video_p100_rate
+      tie_breakers:
+        - thruplay_rate
+        - cost_per_thruplay
+        - estimated_ad_recall_lift
+    required_snapshot_metrics:
+      - impressions
+      - spend
+      - reach
+      - video_p25_rate
+      - video_p50_rate
+      - video_p75_rate
+      - video_p100_rate
+      - thruplays
+      - cost_per_thruplay
+      - estimated_ad_recall_lift
