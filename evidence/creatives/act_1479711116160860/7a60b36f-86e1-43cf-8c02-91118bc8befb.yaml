@@ -1,0 +1,38 @@
+version: 1
+creative:
+  id: "7a60b36f-86e1-43cf-8c02-91118bc8befb"
+  key: "image_f2b6a80f-b7ca-4964-9d16-3f00113e39f0_v2"
+  accountKey: "act_1479711116160860"
+  displayName: "Image variant 3"
+  mediaType: "image"
+  variantIndex: 2
+  status: "fallback_text_only"
+prompt:
+  text: "Create a 9:16 story/reels first-frame visual for スマコンプロジェクト, suitable for a short awareness video opening. Visual concept: a dark-to-light transformation path made from real paper cards on a desk, leading from a blurred card representing迷い/current uncertainty to a sharply lit card with a bold arrow icon representing次に取るべき行動. A serious adult silhouette is visible at the edge of frame, leaning in to review the plan. Cinematic vertical framing, large negative space in the top third for hook text overlay, strong contrast in the first second, premium practical seminar/consulting feel. No logos. Use navy, black, white, and one warm amber accent. The mood should say “本気で変える人向け” without using hype or easy-success imagery."
+  negativePrompt: "trademarked logos, branded devices, social media platform logos, random storefront, fake app dashboard, unrelated lifestyle travel scene, coupon, freebie-heavy design, easy/simple/quick visual clichés, cash, luxury cars, lottery imagery, cartoon mascots, noisy collage, low-resolution, unreadable generated text, excessive neon"
+  styleNotes: "Optimized as a story/reels hook variation: symbolic dark-to-light path and arrow-based action cue support complete-view testing, while preserving the serious self-investment positioning."
+  rationale: "配信実績が0のため勝ち負け判断ではなく、knowledgeBriefsの『認知はCPA/CVではなくThruPlay・動画100%完全視聴率2%以上で評価』『冒頭フック差し替えを比較』に沿って、強い初速コントラストと“現状整理→判断→次の行動”が一目で伝わるファーストフレーム案にしました。dimensionPresetsに合わせ、配置が不明でもMeta主要面を検証できるよう1:1、4:5、9:16で展開しています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "重大なMetaポリシー違反や明確な誇大保証表現は見当たらず、全体として自己投資・実践型案内の訴求に留まっています。一方で、成果示唆や選別的なトーンは審査・ブランド観点で軽微な注意点があります。"
+  issues:
+    - severity: "warn"
+      category: "Meta policy - implied outcomes"
+      message: "コピー内の「成果に変える」「成果につながる自己投資」は、商材内容によっては収益・キャリア・個人変革の結果を示唆する表現として審査上やや敏感です。保証表現ではないため重大ではありませんが、LP側で具体的成果の根拠や免責が整っているか確認推奨です。"
+    - severity: "warn"
+      category: "Tone / inclusivity"
+      message: "「行動できる人だけに届けたい」は強い選別感・煽りに見える可能性があります。ポリシー違反ではありませんが、ブランドの信頼感を優先するなら圧迫感が出ないか注意が必要です。"
+    - severity: "info"
+      category: "Image prompt compliance"
+      message: "画像プロンプトは現金・高級車・誇大成功表現・ロゴ・UI表示を避ける指定があり、Meta広告上の誤認リスクは低めです。"
+    - severity: "info"
+      category: "Targeting / representation"
+      message: "人物指定で「Japanese professional in their 30s-40s」としているため、実際の配信対象が広い場合は年齢・属性の印象が狭くならないか確認すると安全です。"
+ai:
+  imagePromptAiRunId: "f2b6a80f-b7ca-4964-9d16-3f00113e39f0"
+  creativeQaAiRunId: "03495728-4065-4b37-b9a9-2a67c0fc029a"

@@ -1,0 +1,196 @@
+version: 1
+kind: ad_improvement_plan
+metadata:
+  account_id: act_1479711116160860
+  source: addroid
+  created_at: '2026-09-14'
+  proposal_name: awareness_video_test_2d
+  status: proposed
+
+controls:
+  dry_run_until_merged: true
+  currency: JPY
+  max_daily_budget: 10000
+  max_lifetime_budget: 20000
+  flight_days: 2
+  prohibited_optimization_goals:
+    - REACH
+    - IMPRESSIONS
+  allowed_optimization_goals:
+    - AD_RECALL_LIFT
+    - THRUPLAY
+  primary_success_metric: video_p100_rate
+  creative_pass_thresholds:
+    video_p100_rate_min: 0.02
+
+campaigns:
+  - id: new_OUTCOME_AWARENESS_test
+    action: create
+    name: AWR | 2D Video Test | AD_RECALL_LIFT vs THRUPLAY | 2026-09-14
+    objective: OUTCOME_AWARENESS
+    status: PAUSED
+    buying_type: AUCTION
+    special_ad_categories: []
+    budget_strategy:
+      type: adset_budget
+      total_daily_budget: 10000
+      total_lifetime_budget: 20000
+    flight:
+      duration_days: 2
+      start_policy: on_human_merge_then_operator_schedule
+      end_policy: stop_after_2_days
+    evaluation:
+      judge_after: 2_days
+      winner_selection:
+        metric: video_p100_rate
+        minimum_pass_rate: 0.02
+        action: shift_budget_to_best_creative_objective_combo
+      loser_handling:
+        pause_creatives_below_video_p100_rate: 0.02
+
+adsets:
+  - id: new_AD_RECALL_LIFT_adset
+    campaign_id: new_OUTCOME_AWARENESS_test
+    action: create
+    name: AWR | AD_RECALL_LIFT | 5 Videos | JPY1000ea | 2D
+    status: PAUSED
+    optimization_goal: AD_RECALL_LIFT
+    billing_event: IMPRESSIONS
+    daily_budget: 5000
+    budget_notes: JPY 1000 per video per day across 5 video variants.
+    promoted_object: {}
+    targeting:
+      geo_locations:
+        countries:
+          - JP
+      age_min: 18
+      age_max: 65
+      publisher_platforms:
+        - facebook
+        - instagram
+      device_platforms:
+        - mobile
+        - desktop
+      exclusions:
+        custom_audiences:
+          - existing_customer_audience_if_available
+    placements:
+      mode: advantage_plus_placements
+    ads:
+      - id: awr_adrecall_video_01
+        action: create
+        name: AWR | AD_RECALL_LIFT | Video 01
+        creative_asset_ref: upload_required_video_01
+      - id: awr_adrecall_video_02
+        action: create
+        name: AWR | AD_RECALL_LIFT | Video 02
+        creative_asset_ref: upload_required_video_02
+      - id: awr_adrecall_video_03
+        action: create
+        name: AWR | AD_RECALL_LIFT | Video 03
+        creative_asset_ref: upload_required_video_03
+      - id: awr_adrecall_video_04
+        action: create
+        name: AWR | AD_RECALL_LIFT | Video 04
+        creative_asset_ref: upload_required_video_04
+      - id: awr_adrecall_video_05
+        action: create
+        name: AWR | AD_RECALL_LIFT | Video 05
+        creative_asset_ref: upload_required_video_05
+
+  - id: new_THRUPLAY_adset
+    campaign_id: new_OUTCOME_AWARENESS_test
+    action: create
+    name: AWR | THRUPLAY | 5 Videos | JPY1000ea | 2D
+    status: PAUSED
+    optimization_goal: THRUPLAY
+    billing_event:
+      preferred: THRUPLAY
+      fallback: IMPRESSIONS
+      operator_check_required: true
+      note: Use ThruPlay billing if selectable for this account; otherwise keep standard delivery until eligible.
+    daily_budget: 5000
+    budget_notes: JPY 1000 per video per day across 5 video variants.
+    promoted_object: {}
+    targeting:
+      geo_locations:
+        countries:
+          - JP
+      age_min: 18
+      age_max: 65
+      publisher_platforms:
+        - facebook
+        - instagram
+      device_platforms:
+        - mobile
+        - desktop
+      exclusions:
+        custom_audiences:
+          - existing_customer_audience_if_available
+    placements:
+      mode: advantage_plus_placements
+    ads:
+      - id: awr_thruplay_video_01
+        action: create
+        name: AWR | THRUPLAY | Video 01
+        creative_asset_ref: upload_required_video_01
+      - id: awr_thruplay_video_02
+        action: create
+        name: AWR | THRUPLAY | Video 02
+        creative_asset_ref: upload_required_video_02
+      - id: awr_thruplay_video_03
+        action: create
+        name: AWR | THRUPLAY | Video 03
+        creative_asset_ref: upload_required_video_03
+      - id: awr_thruplay_video_04
+        action: create
+        name: AWR | THRUPLAY | Video 04
+        creative_asset_ref: upload_required_video_04
+      - id: awr_thruplay_video_05
+        action: create
+        name: AWR | THRUPLAY | Video 05
+        creative_asset_ref: upload_required_video_05
+
+audiences:
+  - id: video_viewers_50pct_awareness_test
+    action: prepare
+    type: video_view_custom_audience
+    name: VV 50pct | Awareness Test | act_1479711116160860
+    retention_days: 365
+    rule:
+      event: video_view
+      completion_percent_gte: 50
+      source_campaign_id: new_OUTCOME_AWARENESS_test
+
+  - id: video_viewers_100pct_awareness_test
+    action: prepare_if_volume_allows
+    type: video_view_custom_audience
+    name: VV 100pct | Awareness Test | act_1479711116160860
+    retention_days: 365
+    rule:
+      event: video_view
+      completion_percent_gte: 100
+      source_campaign_id: new_OUTCOME_AWARENESS_test
+
+  - id: existing_customer_audience_if_available
+    action: attach_if_available
+    type: customer_list_custom_audience
+    name: Existing Customers | Exclusion or 0pct Budget Cap
+    treatment:
+      default: exclude_from_awareness_test
+      fallback: budget_cap_0_percent
+
+lookalikes:
+  status: deferred
+  create_only_when_source_audience_size_gte: 1000
+  future_recommendations:
+    - source_audience_id: video_viewers_50pct_awareness_test
+      ratios:
+        - 1
+        - 3
+        - 5
+    - source_audience_id: video_viewers_100pct_awareness_test
+      ratios:
+        - 1
+        - 3
+        - 5
