@@ -1,0 +1,65 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザーは修正済みクリエイティブを承認し、認知広告のみ10月12日から3日間・全体1日1000円で配信する設定を明示的に依頼。想起リフトとThruPlayを各日500円にし、期間総額も各1500円（計3000円）に制限。日程は日本時間10月12日0時〜15日0時。コンバージョン広告は変更しない。本PRは停止状態で予算と期間を設定し、反映確認後に既存の監査付きactivate経路で認知広告のみ有効化する。",
+  "createdAt": "2026-10-11T09:49:14.893Z",
+  "actions": [
+    {
+      "kind": "campaign.update",
+      "payload": {
+        "campaignId": "120250308230770254",
+        "status": "PAUSED",
+        "spendCap": 1500
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250308231600254",
+        "status": "PAUSED",
+        "dailyBudget": 500,
+        "lifetimeBudget": 0,
+        "startTime": "2026-10-12T00:00:00+09:00",
+        "endTime": "2026-10-15T00:00:00+09:00",
+        "guardContext": {
+          "currentDailyBudget": 0,
+          "currentLifetimeBudget": 1500,
+          "currency": "JPY",
+          "source": "ads_hierarchy"
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "campaign.update",
+      "payload": {
+        "campaignId": "120250308232040254",
+        "status": "PAUSED",
+        "spendCap": 1500
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250308232680254",
+        "status": "PAUSED",
+        "dailyBudget": 500,
+        "lifetimeBudget": 0,
+        "startTime": "2026-10-12T00:00:00+09:00",
+        "endTime": "2026-10-15T00:00:00+09:00",
+        "guardContext": {
+          "currentDailyBudget": 0,
+          "currentLifetimeBudget": 1500,
+          "currency": "JPY",
+          "source": "ads_hierarchy"
+        }
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
