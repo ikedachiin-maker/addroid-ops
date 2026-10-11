@@ -1,0 +1,61 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー承認済みの6案制作・管理画面登録。登録03_本業から広げる視点。内容参照はhttps://sub.ad-marketing.xyz/p/NgI1IK0ynp3M。入口はメール登録ページ、CompleteRegistrationを計測。既存4キャンペーンの予算は変更しない。比較候補としてPAUSEDで作成し、配信は開始しない。認知は想起リフトとThruPlayへ別名ファイルで登録。CVは配信時に各系統1案を選択する。 投稿者は合同会社アドマーケティングFacebookページ。利用できないInstagramアカウントの自動指定は除去。",
+  "createdAt": "2026-10-11T08:34:55.848Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_cv03_advplus_20261011-03_}}",
+      "payload": {
+        "creativeId": "gekifudosan_cv03_advplus_20261011-03_",
+        "name": "gekifudosan_cv03_advplus_20261011｜登録03_本業から広げる視点｜登録獲得",
+        "pageId": "214160711780390",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_cv03_advplus_20261011-03_/cv03_advplus.mp4",
+        "mediaType": "video",
+        "body": "遺品整理・片付け・古物の再販。その経験と空き家の再生には、どんな接点があるのか。池田宜史×富岡信成（税理士）が出演する無料動画講座で紹介。メール登録して、学びの全体像をご確認ください。",
+        "primaryText": "遺品整理・片付け・古物の再販。その経験と空き家の再生には、どんな接点があるのか。池田宜史×富岡信成（税理士）が出演する無料動画講座で紹介。メール登録して、学びの全体像をご確認ください。",
+        "title": "本業の経験を広げる無料講座",
+        "headline": "本業の経験を広げる無料講座",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "SIGN_UP",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_advplus&utm_content=cv03"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_cv03_advplus_20261011-03_",
+        "displayName": "gekifudosan_cv03_advplus_20261011｜登録03_本業から広げる視点｜登録獲得"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:draft-mv3ki21l}}",
+      "dependsOn": [
+        "{{creative:gekifudosan_cv03_advplus_20261011-03_}}"
+      ],
+      "payload": {
+        "adId": "draft-mv3ki21l",
+        "adsetRef": "120250308233810254",
+        "name": "激安不動産_登録03_本業から広げる視点_登録獲得_候補_20261011",
+        "creativeRef": "{{creative:gekifudosan_cv03_advplus_20261011-03_}}",
+        "status": "PAUSED",
+        "pixelId": "1593465604724678",
+        "conversionDomain": "sub.ad-marketing.xyz"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "draft-mv3ki21l",
+        "displayName": "激安不動産_登録03_本業から広げる視点_登録獲得_候補_20261011",
+        "parentNodeType": "adset",
+        "parentNodeKey": "120250308233810254",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
