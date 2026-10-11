@@ -1,0 +1,61 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー承認済みの6案制作・管理画面登録。登録01_経験を学びに。内容参照はhttps://sub.ad-marketing.xyz/p/NgI1IK0ynp3M。入口はメール登録ページ、CompleteRegistrationを計測。既存4キャンペーンの予算は変更しない。比較候補としてPAUSEDで作成し、配信は開始しない。認知は想起リフトとThruPlayへ別名ファイルで登録。CVは配信時に各系統1案を選択する。 投稿者は合同会社アドマーケティングFacebookページ。利用できないInstagramアカウントの自動指定は除去。",
+  "createdAt": "2026-10-11T08:34:45.385Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_cv01_advplus_20261011-01_}}",
+      "payload": {
+        "creativeId": "gekifudosan_cv01_advplus_20261011-01_",
+        "name": "gekifudosan_cv01_advplus_20261011｜登録01_経験を学びに｜登録獲得",
+        "pageId": "214160711780390",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_cv01_advplus_20261011-01_/cv01_advplus.mp4",
+        "mediaType": "video",
+        "body": "古物商の「仕入れ→再生→販売」を、不動産ではどう活かすのか。池田宜史×富岡信成（税理士）出演の「古物商のための激安不動産 完全講座」を無料公開。メール登録して動画をご覧ください。",
+        "primaryText": "古物商の「仕入れ→再生→販売」を、不動産ではどう活かすのか。池田宜史×富岡信成（税理士）出演の「古物商のための激安不動産 完全講座」を無料公開。メール登録して動画をご覧ください。",
+        "title": "古物商のための無料動画講座",
+        "headline": "古物商のための無料動画講座",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "SIGN_UP",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_advplus&utm_content=cv01"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_cv01_advplus_20261011-01_",
+        "displayName": "gekifudosan_cv01_advplus_20261011｜登録01_経験を学びに｜登録獲得"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:draft-mv3khtyw}}",
+      "dependsOn": [
+        "{{creative:gekifudosan_cv01_advplus_20261011-01_}}"
+      ],
+      "payload": {
+        "adId": "draft-mv3khtyw",
+        "adsetRef": "120250308233810254",
+        "name": "激安不動産_登録01_経験を学びに_登録獲得_候補_20261011",
+        "creativeRef": "{{creative:gekifudosan_cv01_advplus_20261011-01_}}",
+        "status": "PAUSED",
+        "pixelId": "1593465604724678",
+        "conversionDomain": "sub.ad-marketing.xyz"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "draft-mv3khtyw",
+        "displayName": "激安不動産_登録01_経験を学びに_登録獲得_候補_20261011",
+        "parentNodeType": "adset",
+        "parentNodeKey": "120250308233810254",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
