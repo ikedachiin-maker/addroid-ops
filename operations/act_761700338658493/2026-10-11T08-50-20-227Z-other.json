@@ -1,0 +1,167 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザーの修正依頼に従い、認知広告01・02のナレーションのみを認知03と同じ池田氏の既存音声クローンへ変更し、末尾「激安不動産」の読みを「げきやすふどうさん」に修正。想起リフト／ThruPlayの既存4広告の素材を差し替える。広告ID・本文・リンク・予算・日程は維持し、PAUSEDのまま。広告追加や配信開始は行わない。認知03とコンバージョン広告3案は変更しない。",
+  "createdAt": "2026-10-11T08:50:20.227Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_aw01_recall_voice_v2_20261011}}",
+      "payload": {
+        "creativeId": "gekifudosan_aw01_recall_voice_v2_20261011",
+        "name": "gekifudosan_aw01_recall_voice_v2_20261011｜認知01_モノから家へ｜池田音声・読み修正版",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_aw01_recall_voice_v2_20261011/aw01_recall_voice_v2.mp4",
+        "pageId": "214160711780390",
+        "headline": "古物商の経験を、不動産へ",
+        "primaryText": "モノの価値を見極め、手を入れて次の人へ。その「仕入れ→再生→販売」の考え方を、古い家にも広げる。古物商のための激安不動産 完全講座で、その可能性を紹介しています。",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "LEARN_MORE",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_recall&utm_content=aw01"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_aw01_recall_voice_v2_20261011",
+        "displayName": "認知01_モノから家へ｜池田音声・読み修正版"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_aw01_recall_voice_v2_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308389830254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_aw01_recall_voice_v2_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_aw02_recall_voice_v2_20261011}}",
+      "payload": {
+        "creativeId": "gekifudosan_aw02_recall_voice_v2_20261011",
+        "name": "gekifudosan_aw02_recall_voice_v2_20261011｜認知02_残置物の見方｜池田音声・読み修正版",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_aw02_recall_voice_v2_20261011/aw02_recall_voice_v2.mp4",
+        "pageId": "214160711780390",
+        "headline": "残置物を見る目が、入口になる",
+        "primaryText": "片付ける前に、「何を活かせるか」を考える。古物商や遺品整理の経験と、空き家の再生にはどんな接点があるのか。仕入れ・再生・販売の視点を、無料動画で紹介しています。",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "LEARN_MORE",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_recall&utm_content=aw02"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_aw02_recall_voice_v2_20261011",
+        "displayName": "認知02_残置物の見方｜池田音声・読み修正版"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_aw02_recall_voice_v2_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308426510254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_aw02_recall_voice_v2_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_aw01_thruplay_voice_v2_20261011}}",
+      "payload": {
+        "creativeId": "gekifudosan_aw01_thruplay_voice_v2_20261011",
+        "name": "gekifudosan_aw01_thruplay_voice_v2_20261011｜認知01_モノから家へ｜池田音声・読み修正版",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_aw01_thruplay_voice_v2_20261011/aw01_thruplay_voice_v2.mp4",
+        "pageId": "214160711780390",
+        "headline": "古物商の経験を、不動産へ",
+        "primaryText": "モノの価値を見極め、手を入れて次の人へ。その「仕入れ→再生→販売」の考え方を、古い家にも広げる。古物商のための激安不動産 完全講座で、その可能性を紹介しています。",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "LEARN_MORE",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_thruplay&utm_content=aw01"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_aw01_thruplay_voice_v2_20261011",
+        "displayName": "認知01_モノから家へ｜池田音声・読み修正版"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_aw01_thruplay_voice_v2_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308428810254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_aw01_thruplay_voice_v2_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_aw02_thruplay_voice_v2_20261011}}",
+      "payload": {
+        "creativeId": "gekifudosan_aw02_thruplay_voice_v2_20261011",
+        "name": "gekifudosan_aw02_thruplay_voice_v2_20261011｜認知02_残置物の見方｜池田音声・読み修正版",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_aw02_thruplay_voice_v2_20261011/aw02_thruplay_voice_v2.mp4",
+        "pageId": "214160711780390",
+        "headline": "残置物を見る目が、入口になる",
+        "primaryText": "片付ける前に、「何を活かせるか」を考える。古物商や遺品整理の経験と、空き家の再生にはどんな接点があるのか。仕入れ・再生・販売の視点を、無料動画で紹介しています。",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "LEARN_MORE",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_thruplay&utm_content=aw02"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_aw02_thruplay_voice_v2_20261011",
+        "displayName": "認知02_残置物の見方｜池田音声・読み修正版"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_aw02_thruplay_voice_v2_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308419250254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_aw02_thruplay_voice_v2_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
