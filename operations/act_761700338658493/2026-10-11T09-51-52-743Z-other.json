@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "PR58で日額500円×2と日程は反映済み。spendCapの型付き別名はupdate経路では送信されないため、正式なgraphPayload.spend_capで各キャンペーンの期間上限1500円を設定する。ユーザーは修正済みクリエイティブを承認し、認知広告のみ10月12日から3日間・全体1日1000円で配信する設定を明示的に依頼。想起リフトとThruPlayを各日500円にし、期間総額も各1500円（計3000円）に制限。日程は日本時間10月12日0時〜15日0時。コンバージョン広告は変更しない。本PRは停止状態で予算と期間を設定し、反映確認後に既存の監査付きactivate経路で認知広告のみ有効化する。",
+  "createdAt": "2026-10-11T09:51:52.743Z",
+  "actions": [
+    {
+      "kind": "campaign.update",
+      "payload": {
+        "campaignId": "120250308230770254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "spend_cap": "1500"
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "campaign.update",
+      "payload": {
+        "campaignId": "120250308232040254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "spend_cap": "1500"
+        }
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
