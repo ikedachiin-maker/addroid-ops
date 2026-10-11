@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー承認済みの6案制作・管理画面登録。登録02_最初の一件を学ぶ。内容参照はhttps://sub.ad-marketing.xyz/p/NgI1IK0ynp3M。入口はメール登録ページ、CompleteRegistrationを計測。既存4キャンペーンの予算は変更しない。比較候補としてPAUSEDで作成し、配信は開始しない。認知は想起リフトとThruPlayへ別名ファイルで登録。CVは配信時に各系統1案を選択する。",
+  "createdAt": "2026-10-11T08:34:50.427Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_cv02_advplus_20261011-02_}}",
+      "payload": {
+        "creativeId": "gekifudosan_cv02_advplus_20261011-02_",
+        "name": "gekifudosan_cv02_advplus_20261011｜登録02_最初の一件を学ぶ｜登録獲得",
+        "pageId": "214160711780390",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_cv02_advplus_20261011-02_/cv02_advplus.mp4",
+        "mediaType": "video",
+        "body": "古い家をどう見て、どう活かすのか。最初の1件を考える前に、古物商の経験と不動産の接点を学ぶ。「古物商のための激安不動産 完全講座」を無料公開しています。メール登録後に動画をご覧いただけます。",
+        "primaryText": "古い家をどう見て、どう活かすのか。最初の1件を考える前に、古物商の経験と不動産の接点を学ぶ。「古物商のための激安不動産 完全講座」を無料公開しています。メール登録後に動画をご覧いただけます。",
+        "title": "最初の1件を考える、無料講座",
+        "headline": "最初の1件を考える、無料講座",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "SIGN_UP",
+        "instagramUserId": "17841464213696414",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_advplus&utm_content=cv02"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_cv02_advplus_20261011-02_",
+        "displayName": "gekifudosan_cv02_advplus_20261011｜登録02_最初の一件を学ぶ｜登録獲得"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:draft-mv3khxv1}}",
+      "dependsOn": [
+        "{{creative:gekifudosan_cv02_advplus_20261011-02_}}"
+      ],
+      "payload": {
+        "adId": "draft-mv3khxv1",
+        "adsetRef": "120250308233810254",
+        "name": "激安不動産_登録02_最初の一件を学ぶ_登録獲得_候補_20261011",
+        "creativeRef": "{{creative:gekifudosan_cv02_advplus_20261011-02_}}",
+        "status": "PAUSED",
+        "pixelId": "1593465604724678",
+        "conversionDomain": "sub.ad-marketing.xyz"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "draft-mv3khxv1",
+        "displayName": "激安不動産_登録02_最初の一件を学ぶ_登録獲得_候補_20261011",
+        "parentNodeType": "adset",
+        "parentNodeKey": "120250308233810254",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
