@@ -1,0 +1,61 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー承認済みの6案制作・管理画面登録。認知02_残置物の見方。内容参照はhttps://sub.ad-marketing.xyz/p/NgI1IK0ynp3M。入口はメール登録ページ、CompleteRegistrationを計測。既存4キャンペーンの予算は変更しない。比較候補としてPAUSEDで作成し、配信は開始しない。認知は想起リフトとThruPlayへ別名ファイルで登録。CVは配信時に各系統1案を選択する。 投稿者は合同会社アドマーケティングFacebookページ。利用できないInstagramアカウントの自動指定は除去。",
+  "createdAt": "2026-10-11T08:34:19.963Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_aw02_recall_20261011-02_}}",
+      "payload": {
+        "creativeId": "gekifudosan_aw02_recall_20261011-02_",
+        "name": "gekifudosan_aw02_recall_20261011｜認知02_残置物の見方｜想起リフト",
+        "pageId": "214160711780390",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_aw02_recall_20261011-02_/aw02_recall.mp4",
+        "mediaType": "video",
+        "body": "片付ける前に、「何を活かせるか」を考える。古物商や遺品整理の経験と、空き家の再生にはどんな接点があるのか。仕入れ・再生・販売の視点を、無料動画で紹介しています。",
+        "primaryText": "片付ける前に、「何を活かせるか」を考える。古物商や遺品整理の経験と、空き家の再生にはどんな接点があるのか。仕入れ・再生・販売の視点を、無料動画で紹介しています。",
+        "title": "残置物を見る目が、入口になる",
+        "headline": "残置物を見る目が、入口になる",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "LEARN_MORE",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_recall&utm_content=aw02"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_aw02_recall_20261011-02_",
+        "displayName": "gekifudosan_aw02_recall_20261011｜認知02_残置物の見方｜想起リフト"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:draft-mv3khacl}}",
+      "dependsOn": [
+        "{{creative:gekifudosan_aw02_recall_20261011-02_}}"
+      ],
+      "payload": {
+        "adId": "draft-mv3khacl",
+        "adsetRef": "120250308231600254",
+        "name": "激安不動産_認知02_残置物の見方_想起リフト_候補_20261011",
+        "creativeRef": "{{creative:gekifudosan_aw02_recall_20261011-02_}}",
+        "status": "PAUSED",
+        "pixelId": "1593465604724678",
+        "conversionDomain": "sub.ad-marketing.xyz"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "draft-mv3khacl",
+        "displayName": "激安不動産_認知02_残置物の見方_想起リフト_候補_20261011",
+        "parentNodeType": "adset",
+        "parentNodeKey": "120250308231600254",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
