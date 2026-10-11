@@ -1,0 +1,61 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "動画のアップロードは完了。AdDroidが自動選択したInstagramアカウントには本広告アカウントの利用権限がないため、別の投稿者として確認済みの合同会社アドマーケティングFacebookページを使う。Instagramの権限は変更せず、creativeから未承認のInstagram指定を除去する。内容・予算・PAUSEDを維持。",
+  "createdAt": "2026-10-11T08:35:41.532Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_aw01_recall_20261011-01_}}",
+      "payload": {
+        "creativeId": "gekifudosan_aw01_recall_20261011-01_",
+        "name": "gekifudosan_aw01_recall_20261011｜認知01_モノから家へ｜想起リフト",
+        "pageId": "214160711780390",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_aw01_recall_20261011-01_/aw01_recall.mp4",
+        "mediaType": "video",
+        "body": "モノの価値を見極め、手を入れて次の人へ。その「仕入れ→再生→販売」の考え方を、古い家にも広げる。古物商のための激安不動産 完全講座で、その可能性を紹介しています。",
+        "primaryText": "モノの価値を見極め、手を入れて次の人へ。その「仕入れ→再生→販売」の考え方を、古い家にも広げる。古物商のための激安不動産 完全講座で、その可能性を紹介しています。",
+        "title": "古物商の経験を、不動産へ",
+        "headline": "古物商の経験を、不動産へ",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "LEARN_MORE",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_recall&utm_content=aw01"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_aw01_recall_20261011-01_",
+        "displayName": "gekifudosan_aw01_recall_20261011｜認知01_モノから家へ｜想起リフト"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:draft-mv3k267s}}",
+      "dependsOn": [
+        "{{creative:gekifudosan_aw01_recall_20261011-01_}}"
+      ],
+      "payload": {
+        "adId": "draft-mv3k267s",
+        "adsetRef": "120250308231600254",
+        "name": "激安不動産_認知01_モノから家へ_想起リフト_候補_20261011",
+        "creativeRef": "{{creative:gekifudosan_aw01_recall_20261011-01_}}",
+        "status": "PAUSED",
+        "pixelId": "1593465604724678",
+        "conversionDomain": "sub.ad-marketing.xyz"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "draft-mv3k267s",
+        "displayName": "激安不動産_認知01_モノから家へ_想起リフト_候補_20261011",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_gekifudosan_awareness_recall_20261011",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
