@@ -1,0 +1,273 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "codex",
+  "actor": "codex",
+  "rationale": "ユーザー指定で設定案を更新。アイボリーサロン説明会で【不動産】古物商×激安不動産投資ファネルの認知・登録獲得を準備。認知は全体1,000円/日相当×3日、2026-10-12 00:00〜10-15 00:00 JST（10/12〜10/14）。想起リフトとThruPlayへ期間予算1,500円ずつ、総額3,000円。日別消化は変動する。CVは合計2,000円/日、現行Advantage+リード（キャンペーン予算1,000円）とA+A（広告セット予算1,000円）の2系統。両方OUTCOME_LEADS、ピクセル1593465604724678、COMPLETE_REGISTRATION。旧ASCはMeta APIで廃止済みのため登録目的に合わせた現行仕様へ翻訳し、旧ASCとの同一性・独立アルゴリズム・学習相乗効果は主張しない。1キャンペーン=1広告セット=1広告を予定するが広告素材・発信元未確定のためこの操作は4キャンペーン+4広告セットのPAUSED作成のみ。開始日時が来てもPAUSEDのままなので配信しない。素材・動画別アップロード・ThruPlay課金可否・既存顧客除外・実広告トラッキングは同梱の運用計画に記録。配信開始は後続の承認済みactivate経路。URL https://sub.ad-marketing.xyz/p/LLwd5i17rMW0 は後続広告で使用。",
+  "createdAt": "2026-10-11T07:48:39.000Z",
+  "actions": [
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:cmp_gekifudosan_awareness_recall_20261011",
+      "payload": {
+        "campaignId": "cmp_gekifudosan_awareness_recall_20261011",
+        "name": "古物商×激安不動産_認知_想起リフト_3日テスト",
+        "objective": "OUTCOME_AWARENESS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_gekifudosan_awareness_recall_20261011",
+        "displayName": "古物商×激安不動産_認知_想起リフト_3日テスト",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_gekifudosan_awareness_recall_20261011",
+      "dependsOn": [
+        "campaign:cmp_gekifudosan_awareness_recall_20261011"
+      ],
+      "payload": {
+        "adsetId": "ads_gekifudosan_awareness_recall_20261011",
+        "campaignRef": "campaign:cmp_gekifudosan_awareness_recall_20261011",
+        "name": "日本_日本語_想起リフト_3日総額1500円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "lifetimeBudget": 1500,
+        "startTime": "2026-10-12T00:00:00+09:00",
+        "endTime": "2026-10-15T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_gekifudosan_awareness_recall_20261011",
+        "displayName": "日本_日本語_想起リフト_3日総額1500円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_gekifudosan_awareness_recall_20261011",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:cmp_gekifudosan_awareness_thruplay_20261011",
+      "payload": {
+        "campaignId": "cmp_gekifudosan_awareness_thruplay_20261011",
+        "name": "古物商×激安不動産_認知_ThruPlay_3日テスト",
+        "objective": "OUTCOME_AWARENESS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_gekifudosan_awareness_thruplay_20261011",
+        "displayName": "古物商×激安不動産_認知_ThruPlay_3日テスト",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_gekifudosan_awareness_thruplay_20261011",
+      "dependsOn": [
+        "campaign:cmp_gekifudosan_awareness_thruplay_20261011"
+      ],
+      "payload": {
+        "adsetId": "ads_gekifudosan_awareness_thruplay_20261011",
+        "campaignRef": "campaign:cmp_gekifudosan_awareness_thruplay_20261011",
+        "name": "日本_日本語_ThruPlay_3日総額1500円",
+        "status": "PAUSED",
+        "optimizationGoal": "THRUPLAY",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "lifetimeBudget": 1500,
+        "startTime": "2026-10-12T00:00:00+09:00",
+        "endTime": "2026-10-15T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_gekifudosan_awareness_thruplay_20261011",
+        "displayName": "日本_日本語_ThruPlay_3日総額1500円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_gekifudosan_awareness_thruplay_20261011",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:cmp_gekifudosan_registration_advplus_20261011",
+      "payload": {
+        "campaignId": "cmp_gekifudosan_registration_advplus_20261011",
+        "name": "古物商×激安不動産_登録_Advantage+リード_CBO",
+        "objective": "OUTCOME_LEADS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "dailyBudget": 1000,
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_gekifudosan_registration_advplus_20261011",
+        "displayName": "古物商×激安不動産_登録_Advantage+リード_CBO",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_gekifudosan_registration_advplus_20261011",
+      "dependsOn": [
+        "campaign:cmp_gekifudosan_registration_advplus_20261011"
+      ],
+      "payload": {
+        "adsetId": "ads_gekifudosan_registration_advplus_20261011",
+        "campaignRef": "campaign:cmp_gekifudosan_registration_advplus_20261011",
+        "name": "日本_日本語_登録完了_Advantage+リード",
+        "status": "PAUSED",
+        "optimizationGoal": "OFFSITE_CONVERSIONS",
+        "billingEvent": "IMPRESSIONS",
+        "destinationType": "WEBSITE",
+        "pixelId": "1593465604724678",
+        "customEventType": "COMPLETE_REGISTRATION",
+        "attributionSpec": [
+          {
+            "event_type": "CLICK_THROUGH",
+            "window_days": 7
+          },
+          {
+            "event_type": "VIEW_THROUGH",
+            "window_days": 1
+          }
+        ],
+        "targeting": {
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          }
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_gekifudosan_registration_advplus_20261011",
+        "displayName": "日本_日本語_登録完了_Advantage+リード",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_gekifudosan_registration_advplus_20261011",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:cmp_gekifudosan_registration_aa_20261011",
+      "payload": {
+        "campaignId": "cmp_gekifudosan_registration_aa_20261011",
+        "name": "古物商×激安不動産_登録_A+A_ABO",
+        "objective": "OUTCOME_LEADS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_gekifudosan_registration_aa_20261011",
+        "displayName": "古物商×激安不動産_登録_A+A_ABO",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_gekifudosan_registration_aa_20261011",
+      "dependsOn": [
+        "campaign:cmp_gekifudosan_registration_aa_20261011"
+      ],
+      "payload": {
+        "adsetId": "ads_gekifudosan_registration_aa_20261011",
+        "campaignRef": "campaign:cmp_gekifudosan_registration_aa_20261011",
+        "name": "日本_日本語_登録完了_A+A_1000円",
+        "status": "PAUSED",
+        "optimizationGoal": "OFFSITE_CONVERSIONS",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "dailyBudget": 1000,
+        "destinationType": "WEBSITE",
+        "pixelId": "1593465604724678",
+        "customEventType": "COMPLETE_REGISTRATION",
+        "attributionSpec": [
+          {
+            "event_type": "CLICK_THROUGH",
+            "window_days": 7
+          },
+          {
+            "event_type": "VIEW_THROUGH",
+            "window_days": 1
+          }
+        ],
+        "targeting": {
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          }
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_gekifudosan_registration_aa_20261011",
+        "displayName": "日本_日本語_登録完了_A+A_1000円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_gekifudosan_registration_aa_20261011",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ],
+  "updatedAt": "2026-10-11T08:03:05+00:00"
+}
