@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー承認のコンバージョン広告3案を、承認済みA+A側広告セットにも停止状態で登録。Advantage+側と同じ3クリエイティブを参照する比較候補。予算は2系統合計2000円/日のまま変更しない。配信開始前に各系統1案を選ぶ。",
+  "createdAt": "2026-10-11T08:39:29.575Z",
+  "actions": [
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:ad_gekifudosan_cv01_aa_20261011}}",
+      "payload": {
+        "adId": "ad_gekifudosan_cv01_aa_20261011",
+        "adsetRef": "120250308234890254",
+        "name": "激安不動産_登録01_経験を学びに_A+A_候補_20261011",
+        "creativeRef": "1143403811355876",
+        "status": "PAUSED",
+        "pixelId": "1593465604724678",
+        "conversionDomain": "sub.ad-marketing.xyz"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_gekifudosan_cv01_aa_20261011",
+        "displayName": "激安不動産_登録01_経験を学びに_A+A_候補_20261011",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_gekifudosan_registration_aa_20261011",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:ad_gekifudosan_cv02_aa_20261011}}",
+      "payload": {
+        "adId": "ad_gekifudosan_cv02_aa_20261011",
+        "adsetRef": "120250308234890254",
+        "name": "激安不動産_登録02_最初の一件を学ぶ_A+A_候補_20261011",
+        "creativeRef": "1626637838899877",
+        "status": "PAUSED",
+        "pixelId": "1593465604724678",
+        "conversionDomain": "sub.ad-marketing.xyz"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_gekifudosan_cv02_aa_20261011",
+        "displayName": "激安不動産_登録02_最初の一件を学ぶ_A+A_候補_20261011",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_gekifudosan_registration_aa_20261011",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:ad_gekifudosan_cv03_aa_20261011}}",
+      "payload": {
+        "adId": "ad_gekifudosan_cv03_aa_20261011",
+        "adsetRef": "120250308234890254",
+        "name": "激安不動産_登録03_本業から広げる視点_A+A_候補_20261011",
+        "creativeRef": "2861143117594118",
+        "status": "PAUSED",
+        "pixelId": "1593465604724678",
+        "conversionDomain": "sub.ad-marketing.xyz"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_gekifudosan_cv03_aa_20261011",
+        "displayName": "激安不動産_登録03_本業から広げる視点_A+A_候補_20261011",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_gekifudosan_registration_aa_20261011",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
