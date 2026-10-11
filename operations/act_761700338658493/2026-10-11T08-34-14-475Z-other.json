@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー承認済みの6案制作・管理画面登録。認知01_モノから家へ。内容参照はhttps://sub.ad-marketing.xyz/p/NgI1IK0ynp3M。入口はメール登録ページ、CompleteRegistrationを計測。既存4キャンペーンの予算は変更しない。比較候補としてPAUSEDで作成し、配信は開始しない。認知は想起リフトとThruPlayへ別名ファイルで登録。CVは配信時に各系統1案を選択する。",
+  "createdAt": "2026-10-11T08:34:14.475Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_aw01_thruplay_20261011-01_-thruplay}}",
+      "payload": {
+        "creativeId": "gekifudosan_aw01_thruplay_20261011-01_-thruplay",
+        "name": "gekifudosan_aw01_thruplay_20261011｜認知01_モノから家へ｜ThruPlay",
+        "pageId": "214160711780390",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_aw01_thruplay_20261011-01_-thruplay/aw01_thruplay.mp4",
+        "mediaType": "video",
+        "body": "モノの価値を見極め、手を入れて次の人へ。その「仕入れ→再生→販売」の考え方を、古い家にも広げる。古物商のための激安不動産 完全講座で、その可能性を紹介しています。",
+        "primaryText": "モノの価値を見極め、手を入れて次の人へ。その「仕入れ→再生→販売」の考え方を、古い家にも広げる。古物商のための激安不動産 完全講座で、その可能性を紹介しています。",
+        "title": "古物商の経験を、不動産へ",
+        "headline": "古物商の経験を、不動産へ",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "LEARN_MORE",
+        "instagramUserId": "17841464213696414",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_thruplay&utm_content=aw01"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_aw01_thruplay_20261011-01_-thruplay",
+        "displayName": "gekifudosan_aw01_thruplay_20261011｜認知01_モノから家へ｜ThruPlay"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:draft-mv3kh64c}}",
+      "dependsOn": [
+        "{{creative:gekifudosan_aw01_thruplay_20261011-01_-thruplay}}"
+      ],
+      "payload": {
+        "adId": "draft-mv3kh64c",
+        "adsetRef": "120250308232680254",
+        "name": "激安不動産_認知01_モノから家へ_ThruPlay_候補_20261011",
+        "creativeRef": "{{creative:gekifudosan_aw01_thruplay_20261011-01_-thruplay}}",
+        "status": "PAUSED",
+        "pixelId": "1593465604724678",
+        "conversionDomain": "sub.ad-marketing.xyz"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "draft-mv3kh64c",
+        "displayName": "激安不動産_認知01_モノから家へ_ThruPlay_候補_20261011",
+        "parentNodeType": "adset",
+        "parentNodeKey": "120250308232680254",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
