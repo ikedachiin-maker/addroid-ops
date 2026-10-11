@@ -1,0 +1,332 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー指示: 認知01・02およびコンバージョン01〜03の冒頭3秒を作り直し、CV03をハンドライティングに変更。CV01・02を含む5本すべて池田氏の既存音声を使用。認知03は承認済みのため維持。7動画をアップロードし、既存10広告の素材参照を更新する。広告数・広告ID・本文・URL・予算・日程は維持し、全てPAUSED。配信開始なし。",
+  "createdAt": "2026-10-11T09:12:16.658Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_aw01_recall_hook_v3_20261011}}",
+      "payload": {
+        "creativeId": "gekifudosan_aw01_recall_hook_v3_20261011",
+        "name": "gekifudosan_aw01_recall_hook_v3_20261011｜認知01_モノから家へ｜3秒フック・池田音声",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_aw01_recall_hook_v3_20261011/aw01_recall_hook_v3.mp4",
+        "pageId": "214160711780390",
+        "headline": "古物商の経験を、不動産へ",
+        "primaryText": "モノの価値を見極め、手を入れて次の人へ。その「仕入れ→再生→販売」の考え方を、古い家にも広げる。古物商のための激安不動産 完全講座で、その可能性を紹介しています。",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "LEARN_MORE",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_recall&utm_content=aw01"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_aw01_recall_hook_v3_20261011",
+        "displayName": "認知01_モノから家へ｜3秒フック・池田音声"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_aw01_recall_hook_v3_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308389830254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_aw01_recall_hook_v3_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_aw02_recall_hook_v3_20261011}}",
+      "payload": {
+        "creativeId": "gekifudosan_aw02_recall_hook_v3_20261011",
+        "name": "gekifudosan_aw02_recall_hook_v3_20261011｜認知02_残置物の見方｜3秒フック・池田音声",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_aw02_recall_hook_v3_20261011/aw02_recall_hook_v3.mp4",
+        "pageId": "214160711780390",
+        "headline": "残置物を見る目が、入口になる",
+        "primaryText": "片付ける前に、「何を活かせるか」を考える。古物商や遺品整理の経験と、空き家の再生にはどんな接点があるのか。仕入れ・再生・販売の視点を、無料動画で紹介しています。",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "LEARN_MORE",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_recall&utm_content=aw02"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_aw02_recall_hook_v3_20261011",
+        "displayName": "認知02_残置物の見方｜3秒フック・池田音声"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_aw02_recall_hook_v3_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308426510254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_aw02_recall_hook_v3_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_aw01_thruplay_hook_v3_20261011}}",
+      "payload": {
+        "creativeId": "gekifudosan_aw01_thruplay_hook_v3_20261011",
+        "name": "gekifudosan_aw01_thruplay_hook_v3_20261011｜認知01_モノから家へ｜3秒フック・池田音声",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_aw01_thruplay_hook_v3_20261011/aw01_thruplay_hook_v3.mp4",
+        "pageId": "214160711780390",
+        "headline": "古物商の経験を、不動産へ",
+        "primaryText": "モノの価値を見極め、手を入れて次の人へ。その「仕入れ→再生→販売」の考え方を、古い家にも広げる。古物商のための激安不動産 完全講座で、その可能性を紹介しています。",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "LEARN_MORE",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_thruplay&utm_content=aw01"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_aw01_thruplay_hook_v3_20261011",
+        "displayName": "認知01_モノから家へ｜3秒フック・池田音声"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_aw01_thruplay_hook_v3_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308428810254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_aw01_thruplay_hook_v3_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_aw02_thruplay_hook_v3_20261011}}",
+      "payload": {
+        "creativeId": "gekifudosan_aw02_thruplay_hook_v3_20261011",
+        "name": "gekifudosan_aw02_thruplay_hook_v3_20261011｜認知02_残置物の見方｜3秒フック・池田音声",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_aw02_thruplay_hook_v3_20261011/aw02_thruplay_hook_v3.mp4",
+        "pageId": "214160711780390",
+        "headline": "残置物を見る目が、入口になる",
+        "primaryText": "片付ける前に、「何を活かせるか」を考える。古物商や遺品整理の経験と、空き家の再生にはどんな接点があるのか。仕入れ・再生・販売の視点を、無料動画で紹介しています。",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "LEARN_MORE",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_thruplay&utm_content=aw02"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_aw02_thruplay_hook_v3_20261011",
+        "displayName": "認知02_残置物の見方｜3秒フック・池田音声"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_aw02_thruplay_hook_v3_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308419250254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_aw02_thruplay_hook_v3_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_cv01_advplus_hook_v3_20261011}}",
+      "payload": {
+        "creativeId": "gekifudosan_cv01_advplus_hook_v3_20261011",
+        "name": "gekifudosan_cv01_advplus_hook_v3_20261011｜登録01_経験を学びに｜3秒フック・池田音声",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_cv01_advplus_hook_v3_20261011/cv01_advplus_hook_v3.mp4",
+        "pageId": "214160711780390",
+        "headline": "古物商のための無料動画講座",
+        "primaryText": "古物商の「仕入れ→再生→販売」を、不動産ではどう活かすのか。池田宜史×富岡信成（税理士）出演の「古物商のための激安不動産 完全講座」を無料公開。メール登録して動画をご覧ください。",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "SIGN_UP",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_advplus&utm_content=cv01"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_cv01_advplus_hook_v3_20261011",
+        "displayName": "登録01_経験を学びに｜3秒フック・池田音声"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_cv01_advplus_hook_v3_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308404020254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_cv01_advplus_hook_v3_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_cv01_advplus_hook_v3_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308429590254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_cv01_advplus_hook_v3_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_cv02_advplus_hook_v3_20261011}}",
+      "payload": {
+        "creativeId": "gekifudosan_cv02_advplus_hook_v3_20261011",
+        "name": "gekifudosan_cv02_advplus_hook_v3_20261011｜登録02_最初の一件を学ぶ｜3秒フック・池田音声",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_cv02_advplus_hook_v3_20261011/cv02_advplus_hook_v3.mp4",
+        "pageId": "214160711780390",
+        "headline": "最初の1件を考える、無料講座",
+        "primaryText": "古い家をどう見て、どう活かすのか。最初の1件を考える前に、古物商の経験と不動産の接点を学ぶ。「古物商のための激安不動産 完全講座」を無料公開しています。メール登録後に動画をご覧いただけます。",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "SIGN_UP",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_advplus&utm_content=cv02"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_cv02_advplus_hook_v3_20261011",
+        "displayName": "登録02_最初の一件を学ぶ｜3秒フック・池田音声"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_cv02_advplus_hook_v3_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308401480254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_cv02_advplus_hook_v3_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_cv02_advplus_hook_v3_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308430050254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_cv02_advplus_hook_v3_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_cv03_advplus_hook_v3_20261011}}",
+      "payload": {
+        "creativeId": "gekifudosan_cv03_advplus_hook_v3_20261011",
+        "name": "gekifudosan_cv03_advplus_hook_v3_20261011｜登録03_本業から広げる視点_ハンドライティング｜3秒フック・池田音声",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_cv03_advplus_hook_v3_20261011/cv03_advplus_hook_v3.mp4",
+        "pageId": "214160711780390",
+        "headline": "本業の経験を広げる無料講座",
+        "primaryText": "遺品整理・片付け・古物の再販。その経験と空き家の再生には、どんな接点があるのか。池田宜史×富岡信成（税理士）が出演する無料動画講座で紹介。メール登録して、学びの全体像をご確認ください。",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "SIGN_UP",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_advplus&utm_content=cv03"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_cv03_advplus_hook_v3_20261011",
+        "displayName": "登録03_本業から広げる視点_ハンドライティング｜3秒フック・池田音声"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_cv03_advplus_hook_v3_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308398850254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_cv03_advplus_hook_v3_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "dependsOn": [
+        "{{creative:gekifudosan_cv03_advplus_hook_v3_20261011}}"
+      ],
+      "payload": {
+        "adId": "120250308430280254",
+        "status": "PAUSED",
+        "graphPayload": {
+          "creative": {
+            "creative_id": "{{creative:gekifudosan_cv03_advplus_hook_v3_20261011}}"
+          }
+        }
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
