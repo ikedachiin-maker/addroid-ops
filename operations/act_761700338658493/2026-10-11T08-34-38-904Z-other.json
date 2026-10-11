@@ -1,0 +1,61 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー承認済みの6案制作・管理画面登録。認知03_本業の現場から_ハンドライティング。内容参照はhttps://sub.ad-marketing.xyz/p/NgI1IK0ynp3M。入口はメール登録ページ、CompleteRegistrationを計測。既存4キャンペーンの予算は変更しない。比較候補としてPAUSEDで作成し、配信は開始しない。認知は想起リフトとThruPlayへ別名ファイルで登録。CVは配信時に各系統1案を選択する。 投稿者は合同会社アドマーケティングFacebookページ。利用できないInstagramアカウントの自動指定は除去。",
+  "createdAt": "2026-10-11T08:34:38.904Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:gekifudosan_aw03_thruplay_20261011-03_-_-thrupla}}",
+      "payload": {
+        "creativeId": "gekifudosan_aw03_thruplay_20261011-03_-_-thrupla",
+        "name": "gekifudosan_aw03_thruplay_20261011｜認知03_本業の現場から_ハンドライティング｜ThruPlay",
+        "pageId": "214160711780390",
+        "storageKey": "creative-submissions/act_761700338658493/gekifudosan_aw03_thruplay_20261011-03_-_-thrupla/aw03_thruplay.mp4",
+        "mediaType": "video",
+        "body": "遺品整理や片付けの現場で目にする、古い家。モノを見る仕事から、家の活かし方を考える学びへ。古物商のための激安不動産 完全講座を、無料動画で公開しています。",
+        "primaryText": "遺品整理や片付けの現場で目にする、古い家。モノを見る仕事から、家の活かし方を考える学びへ。古物商のための激安不動産 完全講座を、無料動画で公開しています。",
+        "title": "本業の現場から、不動産を考える",
+        "headline": "本業の現場から、不動産を考える",
+        "linkUrl": "https://sub.ad-marketing.xyz/p/LLwd5i17rMW0",
+        "description": "古物商のための激安不動産 完全講座",
+        "callToAction": "LEARN_MORE",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=gekifudosan_thruplay&utm_content=aw03"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "gekifudosan_aw03_thruplay_20261011-03_-_-thrupla",
+        "displayName": "gekifudosan_aw03_thruplay_20261011｜認知03_本業の現場から_ハンドライティング｜ThruPlay"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:draft-mv3khoz1}}",
+      "dependsOn": [
+        "{{creative:gekifudosan_aw03_thruplay_20261011-03_-_-thrupla}}"
+      ],
+      "payload": {
+        "adId": "draft-mv3khoz1",
+        "adsetRef": "120250308232680254",
+        "name": "激安不動産_認知03_本業の現場から_ハンドライティング_ThruPlay_候補_20261011",
+        "creativeRef": "{{creative:gekifudosan_aw03_thruplay_20261011-03_-_-thrupla}}",
+        "status": "PAUSED",
+        "pixelId": "1593465604724678",
+        "conversionDomain": "sub.ad-marketing.xyz"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "draft-mv3khoz1",
+        "displayName": "激安不動産_認知03_本業の現場から_ハンドライティング_ThruPlay_候補_20261011",
+        "parentNodeType": "adset",
+        "parentNodeKey": "120250308232680254",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
