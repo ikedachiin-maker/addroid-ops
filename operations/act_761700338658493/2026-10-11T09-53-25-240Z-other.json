@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー承認済みの認知3案を10月12日〜14日、全体1日1000円×3日で配信する。Metaはキャンペーンspend_capに最低10000円を要求し各1500円の設定が不可だった。ユーザーの総額3000円を守るため、当初承認済み案どおり各広告セットの期間予算1500円（各日平均500円）に戻す。想起リフト/ThruPlayの2系統、JST10月12日0時〜15日0時、全体3000円上限を維持。日別消化額は変動する旨をユーザーへ説明済み。反映後は監査付きactivateで認知広告のみ有効化、コンバージョンは停止維持。",
+  "createdAt": "2026-10-11T09:53:25.238Z",
+  "actions": [
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250308231600254",
+        "status": "PAUSED",
+        "dailyBudget": 0,
+        "lifetimeBudget": 1500,
+        "endTime": "2026-10-15T00:00:00+09:00",
+        "graphPayload": {
+          "start_time": "2026-10-12T00:00:00+09:00"
+        },
+        "guardContext": {
+          "currentDailyBudget": 500,
+          "currentLifetimeBudget": 0,
+          "currency": "JPY",
+          "source": "ads_hierarchy"
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250308232680254",
+        "status": "PAUSED",
+        "dailyBudget": 0,
+        "lifetimeBudget": 1500,
+        "endTime": "2026-10-15T00:00:00+09:00",
+        "graphPayload": {
+          "start_time": "2026-10-12T00:00:00+09:00"
+        },
+        "guardContext": {
+          "currentDailyBudget": 500,
+          "currentLifetimeBudget": 0,
+          "currency": "JPY",
+          "source": "ads_hierarchy"
+        }
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
