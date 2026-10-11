@@ -1,0 +1,140 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "codex",
+  "actor": "codex",
+  "rationale": "ユーザー依頼: アイボリーサロン説明会で【不動産】古物商×激安不動産投資ファネル向けの新規計測設定を準備。合計2,000円/日（認知500円、コンバージョン1,500円）。キャンペーン2件・広告セット2件をPAUSEDで作成。CVはピクセル1593465604724678とCOMPLETE_REGISTRATION、リンク先はhttps://sub.ad-marketing.xyz/p/LLwd5i17rMW0（後続の広告作成時に使用）。素材と発信元ページ未確定のため、この変更はキャンペーンと広告セットの準備まで。対象は日本・日本語の広い配信。配信開始は別の明示操作で行う。",
+  "createdAt": "2026-10-11T07:48:39.000Z",
+  "actions": [
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:cmp_gekifudosan_awareness_20261011",
+      "payload": {
+        "campaignId": "cmp_gekifudosan_awareness_20261011",
+        "name": "古物商×激安不動産_認知_20261011",
+        "objective": "OUTCOME_AWARENESS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_gekifudosan_awareness_20261011",
+        "displayName": "古物商×激安不動産_認知_20261011",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_gekifudosan_awareness_20261011",
+      "dependsOn": [
+        "campaign:cmp_gekifudosan_awareness_20261011"
+      ],
+      "payload": {
+        "adsetId": "ads_gekifudosan_awareness_20261011",
+        "campaignRef": "campaign:cmp_gekifudosan_awareness_20261011",
+        "name": "日本_日本語_想起リフト_500円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "dailyBudget": 500,
+        "targeting": {
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_gekifudosan_awareness_20261011",
+        "displayName": "日本_日本語_想起リフト_500円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_gekifudosan_awareness_20261011",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:cmp_gekifudosan_registration_20261011",
+      "payload": {
+        "campaignId": "cmp_gekifudosan_registration_20261011",
+        "name": "古物商×激安不動産_メール登録_20261011",
+        "objective": "OUTCOME_LEADS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_gekifudosan_registration_20261011",
+        "displayName": "古物商×激安不動産_メール登録_20261011",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_gekifudosan_registration_20261011",
+      "dependsOn": [
+        "campaign:cmp_gekifudosan_registration_20261011"
+      ],
+      "payload": {
+        "adsetId": "ads_gekifudosan_registration_20261011",
+        "campaignRef": "campaign:cmp_gekifudosan_registration_20261011",
+        "name": "日本_日本語_メール登録完了_1500円",
+        "status": "PAUSED",
+        "optimizationGoal": "OFFSITE_CONVERSIONS",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "dailyBudget": 1500,
+        "destinationType": "WEBSITE",
+        "pixelId": "1593465604724678",
+        "customEventType": "COMPLETE_REGISTRATION",
+        "attributionSpec": [
+          {
+            "event_type": "CLICK_THROUGH",
+            "window_days": 7
+          },
+          {
+            "event_type": "VIEW_THROUGH",
+            "window_days": 1
+          }
+        ],
+        "targeting": {
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          }
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_gekifudosan_registration_20261011",
+        "displayName": "日本_日本語_メール登録完了_1500円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_gekifudosan_registration_20261011",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
