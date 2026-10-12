@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "budget_change",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー承認により停止済みThruPlayの未消化予算1123円を想起リフトへ移管。停止後の消化は実績377円/予算残高換算376円の大きい側を切り上げて377円として確保し、想起リフトの期間予算を2623円に設定する。両者合計3000円以内。想起リフト3広告を継続し、配信地域JP・言語日本語(locales:[11])を維持/明示再設定。終了は10月15日0時JSTのまま。ThruPlayおよびコンバージョン広告は停止を維持する。",
+  "createdAt": "2026-10-12T08:39:24.190Z",
+  "actions": [
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250308231600254",
+        "lifetimeBudget": 2623,
+        "endTime": "2026-10-15T00:00:00+09:00",
+        "targeting": {
+          "age_max": 65,
+          "age_min": 18,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "guardContext": {
+          "currentDailyBudget": 0,
+          "currentLifetimeBudget": 1500,
+          "currency": "JPY",
+          "source": "ads_hierarchy"
+        }
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
