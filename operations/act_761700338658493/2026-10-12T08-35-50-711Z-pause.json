@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "pause",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザーがThruPlayを停止し、想起リフトのみ認知広告配信に変更するよう明示的に依頼。ThruPlayキャンペーン、広告セット、広告3件をPAUSEDにする。想起リフトは配信継続。未消化予算の移管も承認済みだが、本変更はまず停止のみ。停止後の消化を確認して別PRで総額3000円以内の移管を行う。日本・日本語のみの配信条件と10月15日0時JST終了を維持。",
+  "createdAt": "2026-10-12T08:35:50.711Z",
+  "actions": [
+    {
+      "kind": "campaign.update",
+      "payload": {
+        "campaignId": "120250308232040254",
+        "status": "PAUSED"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250308232680254",
+        "status": "PAUSED"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "payload": {
+        "adId": "120250308409160254",
+        "status": "PAUSED"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "payload": {
+        "adId": "120250308428810254",
+        "status": "PAUSED"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.update",
+      "payload": {
+        "adId": "120250308419250254",
+        "status": "PAUSED"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
