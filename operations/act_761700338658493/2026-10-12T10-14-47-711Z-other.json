@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー依頼。想起リフトで配信する指定3動画の50%以上視聴者を365日保持し、過去の視聴も含める専用元オーディエンスを作成。日本の類似1%/3%/5%の元とする。広告・予算・配信状態は変更せず、コンバージョン広告は停止を維持。",
+  "createdAt": "2026-10-12T10:14:47.711Z",
+  "actions": [
+    {
+      "kind": "customaudience.create",
+      "ref": "customaudience:recall50",
+      "payload": {
+        "name": "古物商×激安不動産_想起リフト動画50%以上_365日_20261012",
+        "description": "今回の想起リフト認知3動画の50%以上視聴者。ThruPlay動画は対象外。類似オーディエンスの元データ。",
+        "mode": "video_engagement",
+        "videoIds": [
+          "1121623490323275",
+          "1745741619871986",
+          "2724498761340004"
+        ],
+        "watchedPercent": 50,
+        "retentionDays": 365
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
