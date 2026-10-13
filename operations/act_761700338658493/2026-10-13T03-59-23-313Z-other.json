@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー依頼。PR63の動画とページの関連付けエラーを修復。アップロード元advideo IDではなく、配信中の想起リフト広告のeffective_object_story_idから実際のFacebook投稿画面で確認したページ動画IDを使用。AW01投稿122277857882173287→1080819498159115、AW02投稿122277857942173287→2546230782557383、AW03投稿122277849524173287→1479948260623079。50%以上視聴者を365日保持し過去視聴も含める。ThruPlayは対象外。配信動画の再アップロードや差し替えは行わない。広告・予算・配信状態は変更せず、コンバージョン広告は停止維持。",
+  "createdAt": "2026-10-13T03:59:23.313Z",
+  "actions": [
+    {
+      "kind": "customaudience.create",
+      "ref": "customaudience:recall50",
+      "payload": {
+        "name": "古物商×激安不動産_想起リフト動画50%以上_365日_20261012",
+        "description": "今回の想起リフト認知3動画の50%以上視聴者。ThruPlay動画は対象外。類似オーディエンスの元データ。",
+        "mode": "video_engagement",
+        "videoIds": [
+          "1080819498159115",
+          "2546230782557383",
+          "1479948260623079"
+        ],
+        "watchedPercent": 50,
+        "retentionDays": 365
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
