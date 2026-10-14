@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー依頼。今回の想起リフト3動画50%以上視聴者の元オーディエンスから、日本の類似オーディエンスを累積0–1%、0–3%、0–5%の3種類作成する。広告の配信状態・予算は変更せず、コンバージョン広告は引き続き停止。",
+  "createdAt": "2026-10-14T01:38:30.965Z",
+  "actions": [
+    {
+      "kind": "customaudience.create",
+      "ref": "customaudience:recall50jp1",
+      "payload": {
+        "name": "古物商×激安不動産_想起50%類似_JP_1%_20261014",
+        "description": "想起リフト動画50%以上視聴者（120250338472440254）を元にした日本の類似1%。",
+        "mode": "lookalike",
+        "originAudienceId": "120250338472440254",
+        "country": "JP",
+        "percent": 1
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "customaudience.create",
+      "ref": "customaudience:recall50jp3",
+      "payload": {
+        "name": "古物商×激安不動産_想起50%類似_JP_3%_20261014",
+        "description": "想起リフト動画50%以上視聴者（120250338472440254）を元にした日本の類似3%。",
+        "mode": "lookalike",
+        "originAudienceId": "120250338472440254",
+        "country": "JP",
+        "percent": 3
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "customaudience.create",
+      "ref": "customaudience:recall50jp5",
+      "payload": {
+        "name": "古物商×激安不動産_想起50%類似_JP_5%_20261014",
+        "description": "想起リフト動画50%以上視聴者（120250338472440254）を元にした日本の類似5%。",
+        "mode": "lookalike",
+        "originAudienceId": "120250338472440254",
+        "country": "JP",
+        "percent": 5
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
