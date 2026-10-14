@@ -1,0 +1,91 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized",
+  "rationale": "ユーザー依頼。想起リフト3動画50%以上視聴者を元にした日本の類似1%・3%・5%を既存CV広告セット2つに指定。運用ノウハウのAdvantage+とA+A構成、日本・日本語、登録完了の最適化、日予算合計2000円を維持。Advantage+では指定類似は配信の手がかりとなり、範囲外に拡張される可能性がある。キャンペーン・広告セット・広告は停止を維持し、今回は配信開始しない。",
+  "createdAt": "2026-10-14T01:40:04.057Z",
+  "actions": [
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250308233810254",
+        "status": "PAUSED",
+        "targeting": {
+          "age_max": 65,
+          "age_min": 18,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "frequently_in",
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          },
+          "user_age_unknown": true,
+          "custom_audiences": [
+            {
+              "id": "120250356297220254"
+            },
+            {
+              "id": "120250356297920254"
+            },
+            {
+              "id": "120250356298140254"
+            }
+          ]
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250308234890254",
+        "status": "PAUSED",
+        "targeting": {
+          "age_max": 65,
+          "age_min": 18,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "frequently_in",
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          },
+          "user_age_unknown": true,
+          "custom_audiences": [
+            {
+              "id": "120250356297220254"
+            },
+            {
+              "id": "120250356297920254"
+            },
+            {
+              "id": "120250356298140254"
+            }
+          ]
+        }
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
