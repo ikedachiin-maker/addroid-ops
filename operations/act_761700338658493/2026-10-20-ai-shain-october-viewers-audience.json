@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー指示（2026-10-19）: 11月は10月の動画を見た人を除いて「11月30日まで」で出し直す。その除外に使う、AI社員10月動画（10本）の25%以上視聴者のリスト（AdDroidで作れる最小の視聴率）。配信や予算には影響しない。",
+  "createdAt": "2026-10-19T15:14:18.000Z",
+  "actions": [
+    {
+      "kind": "customaudience.create",
+      "ref": "customaudience:aishain_oct_viewers25",
+      "payload": {
+        "name": "AI社員_10月動画_25%以上視聴_365日",
+        "description": "AI社員ニーズテスト10月分（10/21〜）の動画10本を25%以上見た人。11月の配信から除外するためのリスト。",
+        "mode": "video_engagement",
+        "videoIds": [
+          "2401127727382241",
+          "4620010224899196",
+          "2998044583884975",
+          "1098320339488542",
+          "2587046458425043",
+          "2172318593355821",
+          "1912423893524628",
+          "2242958176550203",
+          "1596925674768622",
+          "1115504624227556"
+        ],
+        "watchedPercent": 25,
+        "retentionDays": 365
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
