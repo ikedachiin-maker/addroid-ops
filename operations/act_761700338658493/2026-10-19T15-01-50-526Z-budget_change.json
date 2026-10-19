@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "budget_change",
+  "source": "cli-chat",
+  "actor": "codex:user-authorized-cv-budget-20261020",
+  "rationale": "cv-budget-20261020。2026-10-19ユーザー明示承認：10月20日0時以降に既存2系統を維持し、Advantage+キャンペーンとA+A広告セットを各日額1000円から2500円、計5000円へ増額。今回CPA条件なし。予算以外は不変。自動入替は既存の1日1本/24時間1本・48時間/1000reach・遅延計測・QA・監査を維持する。",
+  "createdAt": "2026-10-19T15:01:50.524Z",
+  "actions": [
+    {
+      "kind": "campaign.update",
+      "payload": {
+        "campaignId": "120250308233020254",
+        "dailyBudget": 2500,
+        "guardContext": {
+          "currentDailyBudget": 1000,
+          "currency": "JPY",
+          "source": "ads_hierarchy"
+        }
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250308234890254",
+        "dailyBudget": 2500,
+        "guardContext": {
+          "currentDailyBudget": 1000,
+          "currentLifetimeBudget": 0,
+          "currency": "JPY",
+          "source": "ads_hierarchy"
+        }
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
