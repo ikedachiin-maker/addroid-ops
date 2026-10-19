@@ -1,0 +1,500 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー承認（2026-10-19）: AI社員「あなた専用のAI社員を無料で作ります」のニーズテスト。認知広告・広告想起リフトのみ（古物商の認知広告と同じ配信方法: OUTCOME_AWARENESS/AD_RECALL_LIFT/IMPRESSIONS課金/自動入札/日本・日本語・18-65歳・居住+最近いた人/Advantage+オーディエンスOFF/期間予算）。1本＝1広告セットで予算を均等にするため10広告セット×期間予算3,000円＝総額30,000円。配信は2026-10-21 00:00〜10-24 00:00 JST（ユーザー指定の0時開始）。この操作はキャンペーン1件と広告セット10件をPAUSEDで作成するだけで、広告は後続の動画入稿PRで追加する。リンク先は https://utage-system.com/p/I7JwxdMp1J6D 。",
+  "createdAt": "2026-10-19T14:12:41.000Z",
+  "actions": [
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:cmp_aishain_awareness_recall_20261021",
+      "payload": {
+        "campaignId": "cmp_aishain_awareness_recall_20261021",
+        "name": "AI社員_認知_想起リフト_ニーズテスト10本_3日",
+        "objective": "OUTCOME_AWARENESS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_aishain_awareness_recall_20261021",
+        "displayName": "AI社員_認知_想起リフト_ニーズテスト10本_3日",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai01_recall_20261021",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261021"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai01_recall_20261021",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261021",
+        "name": "AI社員01_期限の抜け漏れ_想起リフト_3日総額3000円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "lifetimeBudget": 3000,
+        "startTime": "2026-10-21T00:00:00+09:00",
+        "endTime": "2026-10-24T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai01_recall_20261021",
+        "displayName": "AI社員01_期限の抜け漏れ_想起リフト_3日総額3000円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261021",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai02_recall_20261021",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261021"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai02_recall_20261021",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261021",
+        "name": "AI社員02_書類の打ち直し_想起リフト_3日総額3000円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "lifetimeBudget": 3000,
+        "startTime": "2026-10-21T00:00:00+09:00",
+        "endTime": "2026-10-24T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai02_recall_20261021",
+        "displayName": "AI社員02_書類の打ち直し_想起リフト_3日総額3000円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261021",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai03_recall_20261021",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261021"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai03_recall_20261021",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261021",
+        "name": "AI社員03_過去の資料が見つからない_想起リフト_3日総額3000円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "lifetimeBudget": 3000,
+        "startTime": "2026-10-21T00:00:00+09:00",
+        "endTime": "2026-10-24T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai03_recall_20261021",
+        "displayName": "AI社員03_過去の資料が見つからない_想起リフト_3日総額3000円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261021",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai04_recall_20261021",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261021"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai04_recall_20261021",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261021",
+        "name": "AI社員04_見込み客フォロー_想起リフト_3日総額3000円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "lifetimeBudget": 3000,
+        "startTime": "2026-10-21T00:00:00+09:00",
+        "endTime": "2026-10-24T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai04_recall_20261021",
+        "displayName": "AI社員04_見込み客フォロー_想起リフト_3日総額3000円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261021",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai05_recall_20261021",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261021"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai05_recall_20261021",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261021",
+        "name": "AI社員05_現場の記録が紙_想起リフト_3日総額3000円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "lifetimeBudget": 3000,
+        "startTime": "2026-10-21T00:00:00+09:00",
+        "endTime": "2026-10-24T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai05_recall_20261021",
+        "displayName": "AI社員05_現場の記録が紙_想起リフト_3日総額3000円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261021",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai06_recall_20261021",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261021"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai06_recall_20261021",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261021",
+        "name": "AI社員06_契約書・請求書_想起リフト_3日総額3000円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "lifetimeBudget": 3000,
+        "startTime": "2026-10-21T00:00:00+09:00",
+        "endTime": "2026-10-24T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai06_recall_20261021",
+        "displayName": "AI社員06_契約書・請求書_想起リフト_3日総額3000円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261021",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai07_recall_20261021",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261021"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai07_recall_20261021",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261021",
+        "name": "AI社員07_チャットが追いきれない_想起リフト_3日総額3000円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "lifetimeBudget": 3000,
+        "startTime": "2026-10-21T00:00:00+09:00",
+        "endTime": "2026-10-24T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai07_recall_20261021",
+        "displayName": "AI社員07_チャットが追いきれない_想起リフト_3日総額3000円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261021",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai08_recall_20261021",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261021"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai08_recall_20261021",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261021",
+        "name": "AI社員08_AIの使い分けでコピペ_想起リフト_3日総額3000円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "lifetimeBudget": 3000,
+        "startTime": "2026-10-21T00:00:00+09:00",
+        "endTime": "2026-10-24T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai08_recall_20261021",
+        "displayName": "AI社員08_AIの使い分けでコピペ_想起リフト_3日総額3000円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261021",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai09_recall_20261021",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261021"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai09_recall_20261021",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261021",
+        "name": "AI社員09_何から始めればいいか_想起リフト_3日総額3000円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "lifetimeBudget": 3000,
+        "startTime": "2026-10-21T00:00:00+09:00",
+        "endTime": "2026-10-24T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai09_recall_20261021",
+        "displayName": "AI社員09_何から始めればいいか_想起リフト_3日総額3000円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261021",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai10_recall_20261021",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261021"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai10_recall_20261021",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261021",
+        "name": "AI社員10_池田の実物_対照群_想起リフト_3日総額3000円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "lifetimeBudget": 3000,
+        "startTime": "2026-10-21T00:00:00+09:00",
+        "endTime": "2026-10-24T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai10_recall_20261021",
+        "displayName": "AI社員10_池田の実物_対照群_想起リフト_3日総額3000円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261021",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
