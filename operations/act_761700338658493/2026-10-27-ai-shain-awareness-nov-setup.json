@@ -1,0 +1,238 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー承認（2026-10-27）: 上位4本（08・03・09・07）を4本合計1日1,000円で11月30日まで出し続ける。この操作はその11月分（2026-11-01 00:00〜12-01 00:00 JST、0時開始）のキャンペーン1件と広告セット4件をPAUSEDで作るだけ。1本＝1広告セットで予算を均等にするため4広告セット×期間予算7,500円（1本1日250円）＝総額30,000円。配信方法は10月と同じ（OUTCOME_AWARENESS/AD_RECALL_LIFT/IMPRESSIONS課金/自動入札/日本・日本語・18-65歳・居住+最近いた人/Advantage+オーディエンスOFF）。池田さんの決定（2026-10-19）どおり、10月の動画を見た人（カスタムオーディエンス 120250571943780254）を除外する。広告は後続の動画入稿PRで追加する。",
+  "createdAt": "2026-10-27T06:15:30.000Z",
+  "actions": [
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:cmp_aishain_awareness_recall_20261101",
+      "payload": {
+        "campaignId": "cmp_aishain_awareness_recall_20261101",
+        "name": "AI社員_認知_想起リフト_4本_11月",
+        "objective": "OUTCOME_AWARENESS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_aishain_awareness_recall_20261101",
+        "displayName": "AI社員_認知_想起リフト_4本_11月",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai08_recall_20261101",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261101"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai08_recall_20261101",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261101",
+        "name": "AI社員08_AIの貼り直し_想起リフト_11月総額7500円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          },
+          "excluded_custom_audiences": [
+            {
+              "id": "120250571943780254"
+            }
+          ]
+        },
+        "lifetimeBudget": 7500,
+        "startTime": "2026-11-01T00:00:00+09:00",
+        "endTime": "2026-12-01T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai08_recall_20261101",
+        "displayName": "AI社員08_AIの貼り直し_想起リフト_11月総額7500円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261101",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai03_recall_20261101",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261101"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai03_recall_20261101",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261101",
+        "name": "AI社員03_資料が見つからない_想起リフト_11月総額7500円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          },
+          "excluded_custom_audiences": [
+            {
+              "id": "120250571943780254"
+            }
+          ]
+        },
+        "lifetimeBudget": 7500,
+        "startTime": "2026-11-01T00:00:00+09:00",
+        "endTime": "2026-12-01T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai03_recall_20261101",
+        "displayName": "AI社員03_資料が見つからない_想起リフト_11月総額7500円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261101",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai09_recall_20261101",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261101"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai09_recall_20261101",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261101",
+        "name": "AI社員09_何から始めるか_想起リフト_11月総額7500円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          },
+          "excluded_custom_audiences": [
+            {
+              "id": "120250571943780254"
+            }
+          ]
+        },
+        "lifetimeBudget": 7500,
+        "startTime": "2026-11-01T00:00:00+09:00",
+        "endTime": "2026-12-01T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai09_recall_20261101",
+        "displayName": "AI社員09_何から始めるか_想起リフト_11月総額7500円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261101",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_ai07_recall_20261101",
+      "dependsOn": [
+        "campaign:cmp_aishain_awareness_recall_20261101"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_ai07_recall_20261101",
+        "campaignRef": "campaign:cmp_aishain_awareness_recall_20261101",
+        "name": "AI社員07_チャットが追いきれない_想起リフト_11月総額7500円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          },
+          "excluded_custom_audiences": [
+            {
+              "id": "120250571943780254"
+            }
+          ]
+        },
+        "lifetimeBudget": 7500,
+        "startTime": "2026-11-01T00:00:00+09:00",
+        "endTime": "2026-12-01T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_ai07_recall_20261101",
+        "displayName": "AI社員07_チャットが追いきれない_想起リフト_11月総額7500円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_awareness_recall_20261101",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
