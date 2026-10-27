@@ -1,0 +1,203 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー承認（2026-10-27）: 上位4本（08・03・09・07）を4本合計1日1,000円で11月30日まで出し続ける。この操作は、作成済みの11月分の4広告セットに「11月30日まで」版の動画を1本ずつ入稿する。動画・見出し・本文は10月と同じで、締め切りの日付だけを11月30日に直したもの。リンク先は同じLP（11/1 0時に日付を切り替える）。すべてPAUSEDで作成し、有効化は後続の手順で行う。",
+  "createdAt": "2026-10-27T06:16:41.000Z",
+  "actions": [
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:aishain_ai08_recall_20261101}}",
+      "payload": {
+        "creativeId": "aishain_ai08_recall_20261101",
+        "name": "aishain_ai08_recall_20261101｜AI社員_08_AIの貼り直し｜想起リフト｜11月",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/aishain_ai08_recall_20261101/ai08.mp4",
+        "pageId": "214160711780390",
+        "headline": "【11月30日まで】あなた専用のAI社員を無料で作ります",
+        "title": "【11月30日まで】あなた専用のAI社員を無料で作ります",
+        "primaryText": "ChatGPTで6割まで作って、別のAIに貼り直して仕上げる。\n疲れますよね。\n\n相談者さんは、AIを4つ使い分けていました。\n\n実は私も、去年まで同じでした。\n\nAIを増やせば増やすほど、仕事の記憶はあちこちに散らばっていきます。\n\nだから、1つに絞りました。\n\n仕事の記録を全部そこに集めると、ナレッジが1か所にたまっていきます。\n\n自作した業務の手順は118件、決まった時刻に動く仕組みは20件です（2026年9月時点）。\n\nあなたなら、どれに絞りますか？\n\n任せる仕事は、一緒に決めます。\n\nお渡しするのは、業務1つ分の提案書とひな型です。\n\nご相談の方と45分話し、その日のうちに提案書を出した例もあります。\n\nヒアリングも作るのも、MNPのコンサルで12年間、500名以上を指導してきた私が1人で行います。\n\nだから、数に限りがあります。\n\n11月30日まで、あなた専用のAI社員を無料で作ります。\n\n迷っても、めんどうは減らない。\n\n今すぐ、お申し込みください。\n\n※使うAIツールの利用料は、別にかかる場合があります。",
+        "body": "ChatGPTで6割まで作って、別のAIに貼り直して仕上げる。\n疲れますよね。\n\n相談者さんは、AIを4つ使い分けていました。\n\n実は私も、去年まで同じでした。\n\nAIを増やせば増やすほど、仕事の記憶はあちこちに散らばっていきます。\n\nだから、1つに絞りました。\n\n仕事の記録を全部そこに集めると、ナレッジが1か所にたまっていきます。\n\n自作した業務の手順は118件、決まった時刻に動く仕組みは20件です（2026年9月時点）。\n\nあなたなら、どれに絞りますか？\n\n任せる仕事は、一緒に決めます。\n\nお渡しするのは、業務1つ分の提案書とひな型です。\n\nご相談の方と45分話し、その日のうちに提案書を出した例もあります。\n\nヒアリングも作るのも、MNPのコンサルで12年間、500名以上を指導してきた私が1人で行います。\n\nだから、数に限りがあります。\n\n11月30日まで、あなた専用のAI社員を無料で作ります。\n\n迷っても、めんどうは減らない。\n\n今すぐ、お申し込みください。\n\n※使うAIツールの利用料は、別にかかる場合があります。",
+        "description": "ヒアリング＋業務1つ分の提案書とひな型",
+        "callToAction": "LEARN_MORE",
+        "linkUrl": "https://utage-system.com/p/I7JwxdMp1J6D",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=aishain_recall&utm_content=ai08_202611"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "aishain_ai08_recall_20261101",
+        "displayName": "aishain_ai08_recall_20261101｜AI社員_08_AIの貼り直し｜想起リフト｜11月"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:ad_aishain_ai08_recall_20261101}}",
+      "dependsOn": [
+        "{{creative:aishain_ai08_recall_20261101}}"
+      ],
+      "payload": {
+        "adId": "ad_aishain_ai08_recall_20261101",
+        "adsetRef": "120250575099940254",
+        "name": "AI社員_08_AIの貼り直し_想起リフト_20261101",
+        "creativeRef": "{{creative:aishain_ai08_recall_20261101}}",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_aishain_ai08_recall_20261101",
+        "displayName": "AI社員_08_AIの貼り直し_想起リフト_20261101",
+        "parentNodeType": "adset",
+        "parentNodeKey": "120250575099940254",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:aishain_ai03_recall_20261101}}",
+      "payload": {
+        "creativeId": "aishain_ai03_recall_20261101",
+        "name": "aishain_ai03_recall_20261101｜AI社員_03_資料が見つからない｜想起リフト｜11月",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/aishain_ai03_recall_20261101/ai03.mp4",
+        "pageId": "214160711780390",
+        "headline": "【11月30日まで】あなた専用のAI社員を無料で作ります",
+        "title": "【11月30日まで】あなた専用のAI社員を無料で作ります",
+        "primaryText": "去年の見積もりも、お客様とのメモも、全部パソコンの中にあります。\nなのに、見つからない。\n\nだから毎回、ゼロから作り直す。\n\n毎回ゼロからは、しんどいですよね。\n\nこのままだと、来年も同じ見積もりを作り直すことになります。\n\n資料が無いのではありません。\n\nAIが読める場所に、無いだけです。\n\n私は仕事の会話を基本すべて録画して、1つのフォルダに集めています。\n\n記録が増えれば増えるほど、AIはあなたの仕事のやり方を覚えていきます。\n\n任せる仕事は、一緒に決めます。\n\nお渡しするのは、業務1つ分の提案書とひな型です。\n\nご相談の方と45分話し、その日のうちに提案書を出した例もあります。\n\nヒアリングも作るのも、MNPのコンサルで12年間、500名以上を指導してきた私が1人で行います。\n\nだから、数に限りがあります。\n\n11月30日まで、あなた専用のAI社員を無料で作ります。\n\n迷っても、めんどうは減らない。\n\n今すぐ、お申し込みください。\n\n※使うAIツールの利用料は、別にかかる場合があります。",
+        "body": "去年の見積もりも、お客様とのメモも、全部パソコンの中にあります。\nなのに、見つからない。\n\nだから毎回、ゼロから作り直す。\n\n毎回ゼロからは、しんどいですよね。\n\nこのままだと、来年も同じ見積もりを作り直すことになります。\n\n資料が無いのではありません。\n\nAIが読める場所に、無いだけです。\n\n私は仕事の会話を基本すべて録画して、1つのフォルダに集めています。\n\n記録が増えれば増えるほど、AIはあなたの仕事のやり方を覚えていきます。\n\n任せる仕事は、一緒に決めます。\n\nお渡しするのは、業務1つ分の提案書とひな型です。\n\nご相談の方と45分話し、その日のうちに提案書を出した例もあります。\n\nヒアリングも作るのも、MNPのコンサルで12年間、500名以上を指導してきた私が1人で行います。\n\nだから、数に限りがあります。\n\n11月30日まで、あなた専用のAI社員を無料で作ります。\n\n迷っても、めんどうは減らない。\n\n今すぐ、お申し込みください。\n\n※使うAIツールの利用料は、別にかかる場合があります。",
+        "description": "ヒアリング＋業務1つ分の提案書とひな型",
+        "callToAction": "LEARN_MORE",
+        "linkUrl": "https://utage-system.com/p/I7JwxdMp1J6D",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=aishain_recall&utm_content=ai03_202611"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "aishain_ai03_recall_20261101",
+        "displayName": "aishain_ai03_recall_20261101｜AI社員_03_資料が見つからない｜想起リフト｜11月"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:ad_aishain_ai03_recall_20261101}}",
+      "dependsOn": [
+        "{{creative:aishain_ai03_recall_20261101}}"
+      ],
+      "payload": {
+        "adId": "ad_aishain_ai03_recall_20261101",
+        "adsetRef": "120250575100600254",
+        "name": "AI社員_03_資料が見つからない_想起リフト_20261101",
+        "creativeRef": "{{creative:aishain_ai03_recall_20261101}}",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_aishain_ai03_recall_20261101",
+        "displayName": "AI社員_03_資料が見つからない_想起リフト_20261101",
+        "parentNodeType": "adset",
+        "parentNodeKey": "120250575100600254",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:aishain_ai09_recall_20261101}}",
+      "payload": {
+        "creativeId": "aishain_ai09_recall_20261101",
+        "name": "aishain_ai09_recall_20261101｜AI社員_09_何から始めるか｜想起リフト｜11月",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/aishain_ai09_recall_20261101/ai09.mp4",
+        "pageId": "214160711780390",
+        "headline": "【11月30日まで】あなた専用のAI社員を無料で作ります",
+        "title": "【11月30日まで】あなた専用のAI社員を無料で作ります",
+        "primaryText": "中小企業でAIを使えている会社は、約12%です。\n入れない理由の1位は「何から始めればいいか分からない」62%。\n\nお金や人手より、ここで止まっています。\n\nあなたは、どうですか？\n\n足りないのは、最初に任せる1つの仕事です。\n\n私のきっかけも、自社の格安SIMの仕組み1つでした。\n\n最初の1つなら、始められますよね。\n\nヒアリングで、あなたの仕事の流れを聞かせてください。\n\n私自身、自作した業務の手順は118件あります（2026年9月時点）。\n\n任せる仕事は、一緒に決めます。\n\nお渡しするのは、業務1つ分の提案書とひな型です。\n\nご相談の方と45分話し、その日のうちに提案書を出した例もあります。\n\nヒアリングも作るのも、MNPのコンサルで12年間、500名以上を指導してきた私が1人で行います。\n\nだから、数に限りがあります。\n\n11月30日まで、あなた専用のAI社員を無料で作ります。\n\n迷っても、めんどうは減らない。\n\n今すぐ、お申し込みください。\n\n※使うAIツールの利用料は、別にかかる場合があります。\n\n※株式会社Leach調べ（2025年4月〜2026年3月）",
+        "body": "中小企業でAIを使えている会社は、約12%です。\n入れない理由の1位は「何から始めればいいか分からない」62%。\n\nお金や人手より、ここで止まっています。\n\nあなたは、どうですか？\n\n足りないのは、最初に任せる1つの仕事です。\n\n私のきっかけも、自社の格安SIMの仕組み1つでした。\n\n最初の1つなら、始められますよね。\n\nヒアリングで、あなたの仕事の流れを聞かせてください。\n\n私自身、自作した業務の手順は118件あります（2026年9月時点）。\n\n任せる仕事は、一緒に決めます。\n\nお渡しするのは、業務1つ分の提案書とひな型です。\n\nご相談の方と45分話し、その日のうちに提案書を出した例もあります。\n\nヒアリングも作るのも、MNPのコンサルで12年間、500名以上を指導してきた私が1人で行います。\n\nだから、数に限りがあります。\n\n11月30日まで、あなた専用のAI社員を無料で作ります。\n\n迷っても、めんどうは減らない。\n\n今すぐ、お申し込みください。\n\n※使うAIツールの利用料は、別にかかる場合があります。\n\n※株式会社Leach調べ（2025年4月〜2026年3月）",
+        "description": "ヒアリング＋業務1つ分の提案書とひな型",
+        "callToAction": "LEARN_MORE",
+        "linkUrl": "https://utage-system.com/p/I7JwxdMp1J6D",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=aishain_recall&utm_content=ai09_202611"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "aishain_ai09_recall_20261101",
+        "displayName": "aishain_ai09_recall_20261101｜AI社員_09_何から始めるか｜想起リフト｜11月"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:ad_aishain_ai09_recall_20261101}}",
+      "dependsOn": [
+        "{{creative:aishain_ai09_recall_20261101}}"
+      ],
+      "payload": {
+        "adId": "ad_aishain_ai09_recall_20261101",
+        "adsetRef": "120250575100970254",
+        "name": "AI社員_09_何から始めるか_想起リフト_20261101",
+        "creativeRef": "{{creative:aishain_ai09_recall_20261101}}",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_aishain_ai09_recall_20261101",
+        "displayName": "AI社員_09_何から始めるか_想起リフト_20261101",
+        "parentNodeType": "adset",
+        "parentNodeKey": "120250575100970254",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "creative.create",
+      "ref": "{{creative:aishain_ai07_recall_20261101}}",
+      "payload": {
+        "creativeId": "aishain_ai07_recall_20261101",
+        "name": "aishain_ai07_recall_20261101｜AI社員_07_チャットが追いきれない｜想起リフト｜11月",
+        "mediaType": "video",
+        "storageKey": "creative-submissions/act_761700338658493/aishain_ai07_recall_20261101/ai07.mp4",
+        "pageId": "214160711780390",
+        "headline": "【11月30日まで】あなた専用のAI社員を無料で作ります",
+        "title": "【11月30日まで】あなた専用のAI社員を無料で作ります",
+        "primaryText": "「1日逃すと、もう300件とか会話が入ってて」\n相談者さんの実際の声です。\n\n役に立つコミュニティほど、流れが速い。\n\n全部読む時間、ありませんよね。\n\n大事な話ほど、流れていく。\n\nあとから探しても、どこで流れたか分からない。\n\n欲しいのは、AIが代わりに読んで要点を教えてくれる形です。\n\nDiscordやChatwork、公式LINEのように読み取りの許可が取れるツールなら、要点だけを朝に受け取れます。\n\n300件を全部読まなくても、要点だけで追いつけます。\n\n私自身、自作した業務の手順は118件あります（2026年9月時点）。\n\n任せる仕事は、一緒に決めます。\n\nお渡しするのは、業務1つ分の提案書とひな型です。\n\nご相談の方と45分話し、その日のうちに提案書を出した例もあります。\n\nヒアリングも作るのも、MNPのコンサルで12年間、500名以上を指導してきた私が1人で行います。\n\nだから、数に限りがあります。\n\n11月30日まで、あなた専用のAI社員を無料で作ります。\n\n迷っても、めんどうは減らない。\n\n今すぐ、お申し込みください。\n\n※使うAIツールの利用料は、別にかかる場合があります。",
+        "body": "「1日逃すと、もう300件とか会話が入ってて」\n相談者さんの実際の声です。\n\n役に立つコミュニティほど、流れが速い。\n\n全部読む時間、ありませんよね。\n\n大事な話ほど、流れていく。\n\nあとから探しても、どこで流れたか分からない。\n\n欲しいのは、AIが代わりに読んで要点を教えてくれる形です。\n\nDiscordやChatwork、公式LINEのように読み取りの許可が取れるツールなら、要点だけを朝に受け取れます。\n\n300件を全部読まなくても、要点だけで追いつけます。\n\n私自身、自作した業務の手順は118件あります（2026年9月時点）。\n\n任せる仕事は、一緒に決めます。\n\nお渡しするのは、業務1つ分の提案書とひな型です。\n\nご相談の方と45分話し、その日のうちに提案書を出した例もあります。\n\nヒアリングも作るのも、MNPのコンサルで12年間、500名以上を指導してきた私が1人で行います。\n\nだから、数に限りがあります。\n\n11月30日まで、あなた専用のAI社員を無料で作ります。\n\n迷っても、めんどうは減らない。\n\n今すぐ、お申し込みください。\n\n※使うAIツールの利用料は、別にかかる場合があります。",
+        "description": "ヒアリング＋業務1つ分の提案書とひな型",
+        "callToAction": "LEARN_MORE",
+        "linkUrl": "https://utage-system.com/p/I7JwxdMp1J6D",
+        "urlTags": "utm_source=meta&utm_medium=paid_social&utm_campaign=aishain_recall&utm_content=ai07_202611"
+      },
+      "entity": {
+        "nodeType": "creative",
+        "nodeKey": "aishain_ai07_recall_20261101",
+        "displayName": "aishain_ai07_recall_20261101｜AI社員_07_チャットが追いきれない｜想起リフト｜11月"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:ad_aishain_ai07_recall_20261101}}",
+      "dependsOn": [
+        "{{creative:aishain_ai07_recall_20261101}}"
+      ],
+      "payload": {
+        "adId": "ad_aishain_ai07_recall_20261101",
+        "adsetRef": "120250575101270254",
+        "name": "AI社員_07_チャットが追いきれない_想起リフト_20261101",
+        "creativeRef": "{{creative:aishain_ai07_recall_20261101}}",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_aishain_ai07_recall_20261101",
+        "displayName": "AI社員_07_チャットが追いきれない_想起リフト_20261101",
+        "parentNodeType": "adset",
+        "parentNodeKey": "120250575101270254",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
