@@ -1,0 +1,161 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー依頼（2026-10-30）: 古物商×激安不動産は、10月31日23:59をもって現在のクリエイティブのコンバージョン広告を停止し、代わりに認知広告を1日トータル1,000円で配信する。CV2系統（Advantage+リード 広告セット120250308233810254・A+A 広告セット120250308234890254、現在 各日2,500円）は終了日時を2026-11-01 00:00 JSTにする（状態は変えない。いまPAUSEDにすると即時停止になるため）。認知は新しいキャンペーン1件・広告セット1件（OUTCOME_AWARENESS/AD_RECALL_LIFT/IMPRESSIONS課金/自動入札/日予算1,000円/11-01 00:00開始・終了日なし）。配信方法は10/12〜14の想起リフトと同じ（日本・日本語・18-65歳・居住+最近いた人/Advantage+オーディエンスOFF）。広告はそのとき出した認知3本（creative 4520628818168653・2550398402104097・1685639933561281。文に日付なし、リンク先 https://sub.ad-marketing.xyz/p/LLwd5i17rMW0）をそのまま使う。新規はすべてPAUSEDで作成し、有効化は後続の手順で行う。",
+  "createdAt": "2026-10-30T00:39:42.000Z",
+  "actions": [
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250308233810254",
+        "endTime": "2026-11-01T00:00:00+09:00"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250308234890254",
+        "endTime": "2026-11-01T00:00:00+09:00"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:cmp_gekifudosan_awareness_recall_20261101",
+      "payload": {
+        "campaignId": "cmp_gekifudosan_awareness_recall_20261101",
+        "name": "古物商×激安不動産_認知_想起リフト_常時_11月〜",
+        "objective": "OUTCOME_AWARENESS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_gekifudosan_awareness_recall_20261101",
+        "displayName": "古物商×激安不動産_認知_想起リフト_常時_11月〜",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_gekifudosan_awareness_recall_20261101",
+      "dependsOn": [
+        "campaign:cmp_gekifudosan_awareness_recall_20261101"
+      ],
+      "payload": {
+        "adsetId": "ads_gekifudosan_awareness_recall_20261101",
+        "campaignRef": "campaign:cmp_gekifudosan_awareness_recall_20261101",
+        "name": "日本_日本語_想起リフト_1日1000円",
+        "status": "PAUSED",
+        "optimizationGoal": "AD_RECALL_LIFT",
+        "billingEvent": "IMPRESSIONS",
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "dailyBudget": 1000,
+        "startTime": "2026-11-01T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_gekifudosan_awareness_recall_20261101",
+        "displayName": "日本_日本語_想起リフト_1日1000円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_gekifudosan_awareness_recall_20261101",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:ad_gekifudosan_aw01_recall_20261101",
+      "dependsOn": [
+        "adset:ads_gekifudosan_awareness_recall_20261101"
+      ],
+      "payload": {
+        "adId": "ad_gekifudosan_aw01_recall_20261101",
+        "adsetRef": "adset:ads_gekifudosan_awareness_recall_20261101",
+        "name": "激安不動産_認知01_モノから家へ_想起リフト_20261101",
+        "creativeId": "4520628818168653",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_gekifudosan_aw01_recall_20261101",
+        "displayName": "激安不動産_認知01_モノから家へ_想起リフト_20261101",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_gekifudosan_awareness_recall_20261101",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:ad_gekifudosan_aw02_recall_20261101",
+      "dependsOn": [
+        "adset:ads_gekifudosan_awareness_recall_20261101"
+      ],
+      "payload": {
+        "adId": "ad_gekifudosan_aw02_recall_20261101",
+        "adsetRef": "adset:ads_gekifudosan_awareness_recall_20261101",
+        "name": "激安不動産_認知02_残置物の見方_想起リフト_20261101",
+        "creativeId": "2550398402104097",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_gekifudosan_aw02_recall_20261101",
+        "displayName": "激安不動産_認知02_残置物の見方_想起リフト_20261101",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_gekifudosan_awareness_recall_20261101",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:ad_gekifudosan_aw03_recall_20261101",
+      "dependsOn": [
+        "adset:ads_gekifudosan_awareness_recall_20261101"
+      ],
+      "payload": {
+        "adId": "ad_gekifudosan_aw03_recall_20261101",
+        "adsetRef": "adset:ads_gekifudosan_awareness_recall_20261101",
+        "name": "激安不動産_認知03_本業の現場から_ハンドライティング_想起リフト_20261101",
+        "creativeId": "1685639933561281",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_gekifudosan_aw03_recall_20261101",
+        "displayName": "激安不動産_認知03_本業の現場から_ハンドライティング_想起リフト_20261101",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_gekifudosan_awareness_recall_20261101",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
