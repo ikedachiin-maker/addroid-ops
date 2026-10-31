@@ -1,0 +1,201 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー依頼（2026-10-31）: AI社員のCV広告に1日1,000円を足し、認知動画を95%以上見た人（120250671170950254）の日本の類似1%に出す（ユーザー選択: 95%以上・1%）。プレイブック（awareness-ads-playbook.md 5章）の「動画視聴者の類似にコンバージョン広告を当てる」。既存の Advantage+リード（1,000円）・A+A（1,000円）とは別のキャンペーン（広告セット予算1,000円）にして、AI社員のCVは合計3,000円/日。類似に絞るため Advantage+オーディエンスOFF・類似とカスタムの拡張OFF。日本・日本語・18-65歳。OUTCOME_LEADS/OFFSITE_CONVERSIONS/ピクセル1593465604724678の Lead/クリック7日・ビュー1日。期間 2026-11-01 00:00〜12-01 00:00 JST。広告4本は PR #77 のCV用クリエイティブ（11月版の動画・広告文）をそのまま付ける。すべてPAUSEDで作成し、有効化はユーザー確認のあと。",
+  "createdAt": "2026-10-31T06:09:04.000Z",
+  "actions": [
+    {
+      "kind": "customaudience.create",
+      "ref": "customaudience:aishain_viewers95_jp1_20261101",
+      "payload": {
+        "name": "AI社員_認知95%視聴類似_JP_1%_20261031",
+        "description": "AI社員_認知動画_95%以上視聴_365日（120250671170950254）を元にした日本の類似1%。",
+        "mode": "lookalike",
+        "originAudienceId": "120250671170950254",
+        "country": "JP",
+        "percent": 1
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:cmp_aishain_cv_lal1_20261101",
+      "payload": {
+        "campaignId": "cmp_aishain_cv_lal1_20261101",
+        "name": "AI社員_申込_類似1%_95%視聴_ABO_11月",
+        "objective": "OUTCOME_LEADS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_aishain_cv_lal1_20261101",
+        "displayName": "AI社員_申込_類似1%_95%視聴_ABO_11月",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_aishain_cv_lal1_20261101",
+      "dependsOn": [
+        "campaign:cmp_aishain_cv_lal1_20261101",
+        "customaudience:aishain_viewers95_jp1_20261101"
+      ],
+      "payload": {
+        "adsetId": "ads_aishain_cv_lal1_20261101",
+        "campaignRef": "campaign:cmp_aishain_cv_lal1_20261101",
+        "name": "日本_日本語_申込完了_類似1%_1日1000円",
+        "status": "PAUSED",
+        "optimizationGoal": "OFFSITE_CONVERSIONS",
+        "billingEvent": "IMPRESSIONS",
+        "destinationType": "WEBSITE",
+        "pixelId": "1593465604724678",
+        "customEventType": "LEAD",
+        "attributionSpec": [
+          {
+            "event_type": "CLICK_THROUGH",
+            "window_days": 7
+          },
+          {
+            "event_type": "VIEW_THROUGH",
+            "window_days": 1
+          }
+        ],
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "custom_audiences": [
+            {
+              "id": "{{customaudience:aishain_viewers95_jp1_20261101}}"
+            }
+          ],
+          "targeting_relaxation_types": {
+            "custom_audience": 0,
+            "lookalike": 0
+          },
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        },
+        "startTime": "2026-11-01T00:00:00+09:00",
+        "endTime": "2026-12-01T00:00:00+09:00",
+        "dailyBudget": 1000,
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_aishain_cv_lal1_20261101",
+        "displayName": "日本_日本語_申込完了_類似1%_1日1000円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_aishain_cv_lal1_20261101",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:ad_aishain_ai08_cv_lal1_20261101}}",
+      "dependsOn": [
+        "adset:ads_aishain_cv_lal1_20261101"
+      ],
+      "payload": {
+        "adId": "ad_aishain_ai08_cv_lal1_20261101",
+        "adsetRef": "adset:ads_aishain_cv_lal1_20261101",
+        "name": "AI社員_08_AIの貼り直し_申込_類似1%_20261101",
+        "creativeId": "895311740237489",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_aishain_ai08_cv_lal1_20261101",
+        "displayName": "AI社員_08_AIの貼り直し_申込_類似1%_20261101",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_aishain_cv_lal1_20261101",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:ad_aishain_ai03_cv_lal1_20261101}}",
+      "dependsOn": [
+        "adset:ads_aishain_cv_lal1_20261101"
+      ],
+      "payload": {
+        "adId": "ad_aishain_ai03_cv_lal1_20261101",
+        "adsetRef": "adset:ads_aishain_cv_lal1_20261101",
+        "name": "AI社員_03_資料が見つからない_申込_類似1%_20261101",
+        "creativeId": "2359895424847549",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_aishain_ai03_cv_lal1_20261101",
+        "displayName": "AI社員_03_資料が見つからない_申込_類似1%_20261101",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_aishain_cv_lal1_20261101",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:ad_aishain_ai09_cv_lal1_20261101}}",
+      "dependsOn": [
+        "adset:ads_aishain_cv_lal1_20261101"
+      ],
+      "payload": {
+        "adId": "ad_aishain_ai09_cv_lal1_20261101",
+        "adsetRef": "adset:ads_aishain_cv_lal1_20261101",
+        "name": "AI社員_09_何から始めるか_申込_類似1%_20261101",
+        "creativeId": "1259681586356473",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_aishain_ai09_cv_lal1_20261101",
+        "displayName": "AI社員_09_何から始めるか_申込_類似1%_20261101",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_aishain_cv_lal1_20261101",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "{{ad:ad_aishain_ai07_cv_lal1_20261101}}",
+      "dependsOn": [
+        "adset:ads_aishain_cv_lal1_20261101"
+      ],
+      "payload": {
+        "adId": "ad_aishain_ai07_cv_lal1_20261101",
+        "adsetRef": "adset:ads_aishain_cv_lal1_20261101",
+        "name": "AI社員_07_チャットが追いきれない_申込_類似1%_20261101",
+        "creativeId": "1787822112327037",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_aishain_ai07_cv_lal1_20261101",
+        "displayName": "AI社員_07_チャットが追いきれない_申込_類似1%_20261101",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_aishain_cv_lal1_20261101",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
