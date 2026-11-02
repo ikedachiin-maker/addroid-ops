@@ -1,0 +1,248 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー依頼（2026-11-02）: 古物商×激安不動産のコンバージョン広告を 11/3 0時から再開する。10/31までの配信の照合で、Audience Network 以外の登録率は 広告02『最初の一件を学ぶ』が27.5%（林さんの合格ライン20%超え）・広告01が14.1%だったため、ユーザーは「広告02を中心にして、LPは今のまま」を選択。前回の2系統（Advantage+リード CBO 120250308233020254 / A+A ABO 120250308234490254）はキャンペーン自体が 2026-11-01 00:00 で終了設定のため、同じ設定で新しく2系統を作る。予算は前回と同じ（キャンペーン予算2,500円＋広告セット予算2,500円＝1日5,000円）。配信の設定も前回の広告セット（10/14の更新後の状態）と同じ（OUTCOME_LEADS / OFFSITE_CONVERSIONS / ピクセル1593465604724678 の CompleteRegistration / クリック7日・ビュー1日 / 日本・日本語・18-65歳・居住+よくいる+最近いた人 / Advantage+オーディエンスON・候補に想起50%類似1・3・5%）。広告は広告02だけで、前回と同じクリエイティブ 1610971970807268 をそのまま使う（リンク先はメインLP https://sub.ad-marketing.xyz/p/LLwd5i17rMW0、utm_content=cv02 のまま）。開始は 2026-11-03 00:00 JST・終了日なし。Audience Network の-90%はバリュールールで設定する（プレイブック§6。配置のチェックは外さない。バリュールールは広告マネージャーの画面での設定のため、このファイルには含めない）。認知（想起リフト 120250653409550254・1日1,000円）は止めずに続ける（プレイブック§6「認知は常に出稿」）。すべてPAUSEDで作成し、有効化は後続の手順で行う。",
+  "createdAt": "2026-11-02T00:44:57.000Z",
+  "actions": [
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:cmp_gekifudosan_cv_advplus_20261103",
+      "payload": {
+        "campaignId": "cmp_gekifudosan_cv_advplus_20261103",
+        "name": "古物商×激安不動産_登録_Advantage+リード_CBO_11月",
+        "objective": "OUTCOME_LEADS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "dailyBudget": 2500,
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_gekifudosan_cv_advplus_20261103",
+        "displayName": "古物商×激安不動産_登録_Advantage+リード_CBO_11月",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_gekifudosan_cv_advplus_20261103",
+      "dependsOn": [
+        "campaign:cmp_gekifudosan_cv_advplus_20261103"
+      ],
+      "payload": {
+        "adsetId": "ads_gekifudosan_cv_advplus_20261103",
+        "campaignRef": "campaign:cmp_gekifudosan_cv_advplus_20261103",
+        "name": "日本_日本語_登録完了_Advantage+リード_11月",
+        "status": "PAUSED",
+        "optimizationGoal": "OFFSITE_CONVERSIONS",
+        "billingEvent": "IMPRESSIONS",
+        "destinationType": "WEBSITE",
+        "pixelId": "1593465604724678",
+        "customEventType": "COMPLETE_REGISTRATION",
+        "attributionSpec": [
+          {
+            "event_type": "CLICK_THROUGH",
+            "window_days": 7
+          },
+          {
+            "event_type": "VIEW_THROUGH",
+            "window_days": 1
+          }
+        ],
+        "targeting": {
+          "age_max": 65,
+          "age_min": 18,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "frequently_in",
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          },
+          "user_age_unknown": true,
+          "targeting_relaxation_types": {
+            "custom_audience": 1,
+            "lookalike": 1
+          },
+          "targeting_optimization": "expansion_all",
+          "custom_audiences": [
+            {
+              "id": "120250356297220254"
+            },
+            {
+              "id": "120250356297920254"
+            },
+            {
+              "id": "120250356298140254"
+            }
+          ]
+        },
+        "startTime": "2026-11-03T00:00:00+09:00"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_gekifudosan_cv_advplus_20261103",
+        "displayName": "日本_日本語_登録完了_Advantage+リード_11月",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_gekifudosan_cv_advplus_20261103",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:ad_gekifudosan_cv02_advplus_20261103",
+      "dependsOn": [
+        "adset:ads_gekifudosan_cv_advplus_20261103"
+      ],
+      "payload": {
+        "adId": "ad_gekifudosan_cv02_advplus_20261103",
+        "adsetRef": "adset:ads_gekifudosan_cv_advplus_20261103",
+        "name": "激安不動産_登録02_最初の一件を学ぶ_Advantage+_20261103",
+        "creativeId": "1610971970807268",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_gekifudosan_cv02_advplus_20261103",
+        "displayName": "激安不動産_登録02_最初の一件を学ぶ_Advantage+_20261103",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_gekifudosan_cv_advplus_20261103",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:cmp_gekifudosan_cv_aa_20261103",
+      "payload": {
+        "campaignId": "cmp_gekifudosan_cv_aa_20261103",
+        "name": "古物商×激安不動産_登録_A+A_ABO_11月",
+        "objective": "OUTCOME_LEADS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_gekifudosan_cv_aa_20261103",
+        "displayName": "古物商×激安不動産_登録_A+A_ABO_11月",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_gekifudosan_cv_aa_20261103",
+      "dependsOn": [
+        "campaign:cmp_gekifudosan_cv_aa_20261103"
+      ],
+      "payload": {
+        "adsetId": "ads_gekifudosan_cv_aa_20261103",
+        "campaignRef": "campaign:cmp_gekifudosan_cv_aa_20261103",
+        "name": "日本_日本語_登録完了_A+A_1日2500円_11月",
+        "status": "PAUSED",
+        "optimizationGoal": "OFFSITE_CONVERSIONS",
+        "billingEvent": "IMPRESSIONS",
+        "destinationType": "WEBSITE",
+        "pixelId": "1593465604724678",
+        "customEventType": "COMPLETE_REGISTRATION",
+        "attributionSpec": [
+          {
+            "event_type": "CLICK_THROUGH",
+            "window_days": 7
+          },
+          {
+            "event_type": "VIEW_THROUGH",
+            "window_days": 1
+          }
+        ],
+        "targeting": {
+          "age_max": 65,
+          "age_min": 18,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "frequently_in",
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          },
+          "user_age_unknown": true,
+          "targeting_relaxation_types": {
+            "custom_audience": 1,
+            "lookalike": 1
+          },
+          "targeting_optimization": "expansion_all",
+          "custom_audiences": [
+            {
+              "id": "120250356297220254"
+            },
+            {
+              "id": "120250356297920254"
+            },
+            {
+              "id": "120250356298140254"
+            }
+          ]
+        },
+        "startTime": "2026-11-03T00:00:00+09:00",
+        "dailyBudget": 2500,
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP"
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_gekifudosan_cv_aa_20261103",
+        "displayName": "日本_日本語_登録完了_A+A_1日2500円_11月",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_gekifudosan_cv_aa_20261103",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:ad_gekifudosan_cv02_aa_20261103",
+      "dependsOn": [
+        "adset:ads_gekifudosan_cv_aa_20261103"
+      ],
+      "payload": {
+        "adId": "ad_gekifudosan_cv02_aa_20261103",
+        "adsetRef": "adset:ads_gekifudosan_cv_aa_20261103",
+        "name": "激安不動産_登録02_最初の一件を学ぶ_A+A_20261103",
+        "creativeId": "1610971970807268",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_gekifudosan_cv02_aa_20261103",
+        "displayName": "激安不動産_登録02_最初の一件を学ぶ_A+A_20261103",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_gekifudosan_cv_aa_20261103",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
