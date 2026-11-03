@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー依頼（2026-11-03）: AI社員CVの3系統（Advantage+リード・A+A・類似1%）が11/1〜11/2で費用の93〜100%をオーディエンスネットワーク（主にリワード動画）に使い、申込0件（UTAGE: LP 548人・フォーム11人・申込完了0人）。プレイブック（conversion-ads-playbook.md 6章）どおり、配置は外さずバリュールールでオーディエンスネットワークへの入札を-90%にする。同じ中身（Audience Network -90%）のルールセット「配置」1605454958265171 が既にあり、Meta は同じルールのルールセットを新しく作らせないので、それを3つの広告セットに付ける。予算・配信状態・ターゲティングは変えない。",
+  "createdAt": "2026-11-03T07:11:19.000Z",
+  "actions": [
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250653356440254",
+        "graphPayload": {
+          "value_rule_set_id": "1605454958265171"
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "120250653356440254",
+        "displayName": "日本_日本語_申込完了_Advantage+リード_1日1000円"
+      }
+    },
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250653357860254",
+        "graphPayload": {
+          "value_rule_set_id": "1605454958265171"
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "120250653357860254",
+        "displayName": "日本_日本語_申込完了_A+A_1日1000円"
+      }
+    },
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250671180030254",
+        "graphPayload": {
+          "value_rule_set_id": "1605454958265171"
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "120250671180030254",
+        "displayName": "日本_日本語_申込完了_類似1%_1日1000円"
+      }
+    }
+  ]
+}
