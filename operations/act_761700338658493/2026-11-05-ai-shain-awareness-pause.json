@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー依頼（2026-11-05）「ちょっとこれはニーズないんで止めよう」: AI社員の認知広告を止める。11月の4本（1日1,000円・11/30まで）は11/1〜11/5昼で4,646円・再生31,560・50%まで98（0.31%）・100%まで33（0.10%）で、合格ライン（100%完全視聴率2%以上、awareness-ads-playbook）の約1/20。10月の10本テストも100%まで0.13%。CV 3系統は同日 PR #82 で停止済み。10月末・10本テストのキャンペーンは配信期間が終わっているが ACTIVE のまま残っているので、AI社員の認知はまとめて PAUSED にする。削除・予算・設定は変えない。",
+  "createdAt": "2026-11-05T08:38:47.000Z",
+  "actions": [
+    {
+      "kind": "campaign.status",
+      "payload": {
+        "campaignId": "120250575099300254",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "120250575099300254",
+        "displayName": "AI社員_認知_想起リフト_4本_11月",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "campaign.status",
+      "payload": {
+        "campaignId": "120250571960190254",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "120250571960190254",
+        "displayName": "AI社員_認知_想起リフト_4本_10月末",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "campaign.status",
+      "payload": {
+        "campaignId": "120250445363430254",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "120250445363430254",
+        "displayName": "AI社員_認知_想起リフト_ニーズテスト10本_3日",
+        "status": "paused"
+      }
+    }
+  ]
+}
