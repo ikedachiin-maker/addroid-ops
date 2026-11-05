@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー依頼（2026-11-05）「AI社員は一旦止めよう」: AI社員CVの3系統（Advantage+リード・A+A・類似1%、各1日1,000円）を一時停止する。11/1〜11/5昼で計12,557円・申込（Lead）0件。UTAGE（11/1〜4）は LP 609人・フォーム 19人・申込完了 0人。11/3のバリュールール後はアプリ内広告枠が0〜2%に下がったが、LP到達もほぼ止まった（11/4午後〜11/5昼で約2,900円・LP2）。Advantage+ と A+A は1,000リーチで申込0の見直しラインを超えた（conversion-ads-playbook）。キャンペーンを PAUSED にするだけで、削除・予算・設定は変えない。AI社員の認知広告は対象外。",
+  "createdAt": "2026-11-05T08:32:29.000Z",
+  "actions": [
+    {
+      "kind": "campaign.status",
+      "payload": {
+        "campaignId": "120250653356290254",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "120250653356290254",
+        "displayName": "AI社員_申込_Advantage+リード_CBO_11月",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "campaign.status",
+      "payload": {
+        "campaignId": "120250653357530254",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "120250653357530254",
+        "displayName": "AI社員_申込_A+A_ABO_11月",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "campaign.status",
+      "payload": {
+        "campaignId": "120250671179880254",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "120250671179880254",
+        "displayName": "AI社員_申込_類似1%_95%視聴_ABO_11月",
+        "status": "paused"
+      }
+    }
+  ]
+}
