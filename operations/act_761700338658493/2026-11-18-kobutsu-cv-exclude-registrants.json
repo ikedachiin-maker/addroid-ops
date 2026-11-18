@@ -1,0 +1,105 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー依頼（2026-11-18「登録した人を外す…それはぜひやってください」）: 古物商×激安不動産の配信中のCV広告2系統（Advantage+リード 120250689207780254・A+A 120250689208640254）から、すでにメールを登録した人（顧客リスト 120250956880170254「古物商×激安不動産_UTAGE登録者_メール_20261118」167件）を除外する。ターゲティングは 11/18 16:48 JST に Meta から読んだ現状（日本・日本語・18-65歳・居住+よくいる+最近いた人・想起50%類似 1/3/5% を提案として Advantage+オーディエンスON）をそのまま書き、excluded_custom_audiences だけを足す。予算・配信状態・最適化・バリュールールは変えない。ターゲティングの変更で学習はやり直しになるが、2系統とも学習ステータスは既に FAIL（学習が足りない）。",
+  "createdAt": "2026-11-18T07:55:00.000Z",
+  "actions": [
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250689207780254",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "frequently_in",
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "custom_audiences": [
+            {
+              "id": "120250356297220254"
+            },
+            {
+              "id": "120250356297920254"
+            },
+            {
+              "id": "120250356298140254"
+            }
+          ],
+          "excluded_custom_audiences": [
+            {
+              "id": "120250956880170254"
+            }
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          }
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "120250689207780254",
+        "displayName": "日本_日本語_登録完了_Advantage+リード_11月"
+      }
+    },
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250689208640254",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "frequently_in",
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "custom_audiences": [
+            {
+              "id": "120250356297220254"
+            },
+            {
+              "id": "120250356297920254"
+            },
+            {
+              "id": "120250356298140254"
+            }
+          ],
+          "excluded_custom_audiences": [
+            {
+              "id": "120250956880170254"
+            }
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          }
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "120250689208640254",
+        "displayName": "日本_日本語_登録完了_A+A_1日2500円_11月"
+      }
+    }
+  ]
+}
