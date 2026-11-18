@@ -1,0 +1,107 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "PR #85 の修正: ターゲティングを書き直したとき user_age_unknown を書かなかったため、Meta が true（11/2 の作成時に明示した値）→ false に変えた（年齢がわからない人を外す設定になった）。依頼は登録者の除外だけなので、user_age_unknown を true に戻す。除外（顧客リスト 120250956880170254）とほかのターゲティングは PR #85 のまま。",
+  "createdAt": "2026-11-18T07:58:00.000Z",
+  "actions": [
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250689207780254",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "user_age_unknown": true,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "frequently_in",
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "custom_audiences": [
+            {
+              "id": "120250356297220254"
+            },
+            {
+              "id": "120250356297920254"
+            },
+            {
+              "id": "120250356298140254"
+            }
+          ],
+          "excluded_custom_audiences": [
+            {
+              "id": "120250956880170254"
+            }
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          }
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "120250689207780254",
+        "displayName": "日本_日本語_登録完了_Advantage+リード_11月"
+      }
+    },
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250689208640254",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "user_age_unknown": true,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "frequently_in",
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "custom_audiences": [
+            {
+              "id": "120250356297220254"
+            },
+            {
+              "id": "120250356297920254"
+            },
+            {
+              "id": "120250356298140254"
+            }
+          ],
+          "excluded_custom_audiences": [
+            {
+              "id": "120250956880170254"
+            }
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          }
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "120250689208640254",
+        "displayName": "日本_日本語_登録完了_A+A_1日2500円_11月"
+      }
+    }
+  ]
+}
