@@ -1,0 +1,117 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー依頼（2026-11-17「顧客リストから類似1%の広告セットも進めて」）: 古物商×激安不動産ファネル（UTAGE T1uiAVYlANoq）の登録者のメール167件（SHA-256、池田さん・社内の試験用は除外）で作った顧客リスト 120250956880170254（2026-11-18 作成。AdDroid は顧客リストのアップロードに未対応のため Graph API で作成）を元に、日本の類似1%を作り、古物商の登録（CV）広告に1日2,500円の広告セットを足す（予算は提案どおりの2,500円。古物商の広告費は1日6,000円→8,500円）。既存の Advantage+リード（CBO 2,500円）・A+A（ABO 2,500円）とは別のキャンペーン（ABO）にする。類似に絞るため Advantage+オーディエンスOFF・類似とカスタムの拡張OFF。登録済みの人（顧客リスト）は除外。配信の設定は既存の古物商CVと同じ（OUTCOME_LEADS / OFFSITE_CONVERSIONS / ピクセル1593465604724678 の CompleteRegistration / クリック7日・ビュー1日 / 日本・日本語・18-65歳・居住+よくいる+最近いた人 / バリュールール「配置」1605454958265171＝Audience Network -90%）。広告は既存と同じ広告02『最初の一件を学ぶ』のクリエイティブ 1610971970807268。開始は 2026-11-19 00:00 JST・終了日なし。すべてPAUSEDで作成し、有効化はユーザー確認のあと。既存2系統の登録者除外はこのファイルでは行わない。",
+  "createdAt": "2026-11-18T07:40:00.000Z",
+  "actions": [
+    {
+      "kind": "customaudience.create",
+      "ref": "customaudience:kobutsu_utage_reg_jp1_20261118",
+      "payload": {
+        "name": "古物商×激安不動産_UTAGE登録者類似_JP_1%_20261118",
+        "description": "古物商×激安不動産_UTAGE登録者_メール_20261118（120250956880170254、167件）を元にした日本の類似1%。",
+        "mode": "lookalike",
+        "originAudienceId": "120250956880170254",
+        "country": "JP",
+        "percent": 1
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "campaign.create",
+      "ref": "campaign:cmp_gekifudosan_cv_lal1_20261119",
+      "payload": {
+        "campaignId": "cmp_gekifudosan_cv_lal1_20261119",
+        "name": "古物商×激安不動産_登録_類似1%_UTAGE登録者_ABO_11月",
+        "objective": "OUTCOME_LEADS",
+        "status": "PAUSED",
+        "specialAdCategories": [],
+        "isAdsetBudgetSharingEnabled": false
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "cmp_gekifudosan_cv_lal1_20261119",
+        "displayName": "古物商×激安不動産_登録_類似1%_UTAGE登録者_ABO_11月",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "adset.create",
+      "ref": "adset:ads_gekifudosan_cv_lal1_20261119",
+      "dependsOn": [
+        "campaign:cmp_gekifudosan_cv_lal1_20261119",
+        "customaudience:kobutsu_utage_reg_jp1_20261118"
+      ],
+      "payload": {
+        "adsetId": "ads_gekifudosan_cv_lal1_20261119",
+        "campaignRef": "campaign:cmp_gekifudosan_cv_lal1_20261119",
+        "name": "日本_日本語_登録完了_類似1%_UTAGE登録者_1日2500円",
+        "status": "PAUSED",
+        "optimizationGoal": "OFFSITE_CONVERSIONS",
+        "billingEvent": "IMPRESSIONS",
+        "destinationType": "WEBSITE",
+        "pixelId": "1593465604724678",
+        "customEventType": "COMPLETE_REGISTRATION",
+        "attributionSpec": [
+          { "event_type": "CLICK_THROUGH", "window_days": 7 },
+          { "event_type": "VIEW_THROUGH", "window_days": 1 }
+        ],
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": ["JP"],
+            "location_types": ["frequently_in", "home", "recent"]
+          },
+          "locales": [11],
+          "custom_audiences": [
+            { "id": "{{customaudience:kobutsu_utage_reg_jp1_20261118}}" }
+          ],
+          "excluded_custom_audiences": [
+            { "id": "120250956880170254" }
+          ],
+          "targeting_relaxation_types": { "custom_audience": 0, "lookalike": 0 },
+          "targeting_automation": { "advantage_audience": 0 }
+        },
+        "startTime": "2026-11-19T00:00:00+09:00",
+        "dailyBudget": 2500,
+        "bidStrategy": "LOWEST_COST_WITHOUT_CAP",
+        "graphPayload": { "value_rule_set_id": "1605454958265171" }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "ads_gekifudosan_cv_lal1_20261119",
+        "displayName": "日本_日本語_登録完了_類似1%_UTAGE登録者_1日2500円",
+        "parentNodeType": "campaign",
+        "parentNodeKey": "cmp_gekifudosan_cv_lal1_20261119",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    },
+    {
+      "kind": "ad.create",
+      "ref": "ad:ad_gekifudosan_cv02_lal1_20261119",
+      "dependsOn": ["adset:ads_gekifudosan_cv_lal1_20261119"],
+      "payload": {
+        "adId": "ad_gekifudosan_cv02_lal1_20261119",
+        "adsetRef": "adset:ads_gekifudosan_cv_lal1_20261119",
+        "name": "激安不動産_登録02_最初の一件を学ぶ_類似1%_20261119",
+        "creativeId": "1610971970807268",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "ad",
+        "nodeKey": "ad_gekifudosan_cv02_lal1_20261119",
+        "displayName": "激安不動産_登録02_最初の一件を学ぶ_類似1%_20261119",
+        "parentNodeType": "adset",
+        "parentNodeKey": "ads_gekifudosan_cv_lal1_20261119",
+        "status": "paused"
+      },
+      "externalIdRequired": true
+    }
+  ]
+}
