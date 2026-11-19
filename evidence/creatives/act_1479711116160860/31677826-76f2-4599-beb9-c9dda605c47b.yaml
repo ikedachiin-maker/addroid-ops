@@ -1,0 +1,35 @@
+version: 1
+creative:
+  id: "31677826-76f2-4599-beb9-c9dda605c47b"
+  key: "image_33ee314f-5dba-489b-a109-24fe4d15e9d1_v0"
+  accountKey: "act_1479711116160860"
+  displayName: "Image variant 1"
+  mediaType: "image"
+  variantIndex: 0
+  status: "fallback_text_only"
+prompt:
+  text: "Create an operator-grade Japanese ad creative key visual for スマコンプロジェクト. Square feed composition, dark navy-to-charcoal background with crisp white and electric blue accents. Center: a clean strategic flow diagram showing two parallel lanes labeled “ASC” and “Advantage+” converging into “ROAS / CPO”. Add a secondary lower flow: “動画視聴 50%・100%” → “類似 1% / 3% / 5%”. Visual style should feel like a high-trust advertising operations command board, not a generic software dashboard: bold geometric panels, precise arrows, subtle data grid, premium consulting tone. Include prominent Japanese headline text: “ROAS/CPOで広告を再設計”. Small supporting text: “認知データを蓄積し、CV獲得へつなげる”. No logos, no platform icons, no brand marks."
+  negativePrompt: "trademarked logos, Meta logo, Facebook logo, Instagram logo, app icons, generic storefront, lifestyle model, SaaS dashboard screenshot, fake UI with real platform branding, coupon, discount, easy money, overly playful design, cluttered text, low-resolution typography, distorted Japanese characters"
+  styleNotes: "Square feed variant focused on strategy clarity and message match. Use restrained executive typography, high contrast first-frame readability, and avoid bargain/easy phrasing to attract self-investment-oriented prospects."
+  rationale: "直近は配信・クリック・CVが0のため成果改善よりも配信再開後の認知データ蓄積とCV接続を優先し、knowledgeBriefsの『認知はAD_RECALL_LIFT/THRUPLAY、100%完全視聴率2%以上、動画視聴者から類似1%/3%/5%へ』という方針に合わせたフック型クリエイティブにしました。ブランド情報が限定的なため、スマコンプロジェクトのROAS/CPO再設計訴求を軸に、operator-gradeで高信頼・高コントラストな構成に絞っています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "禁止コンテンツ、個人属性の断定、誇大な収益保証、誤解を招くBefore/After表現は見当たらず、Meta広告ポリシー上の重大リスクは低いです。Meta関連名称の扱いと生成画像内テキストの可読性だけ確認すれば配信可能と判断します。"
+  issues:
+    - severity: "warn"
+      category: "brand_trademark"
+      message: "「ASC」「Advantage+」などMeta関連のプロダクト名がコピーと画像内テキストに含まれています。説明的な参照としては概ね問題ありませんが、Metaとの提携・公式認定・保証を示唆しない表現と配置に留めることを推奨します。"
+    - severity: "info"
+      category: "claims_substantiation"
+      message: "ROAS/CPO、完全視聴率2%以上、類似配信など成果指標に関する表現がありますが、現状は保証表現ではなく運用方針・評価軸として提示されているため大きなポリシーリスクは低いです。"
+    - severity: "info"
+      category: "creative_readability"
+      message: "画像プロンプトはテキスト量がやや多く、生成時に日本語の可読性低下や文字崩れが起きる可能性があります。配信前に実画像で判読性を確認してください。"
+ai:
+  imagePromptAiRunId: "33ee314f-5dba-489b-a109-24fe4d15e9d1"
+  creativeQaAiRunId: "0aa3e5e2-6250-4876-a72f-384a84f550e3"

@@ -1,0 +1,35 @@
+version: 1
+creative:
+  id: "e561ee2f-2cdc-4a95-a637-3a43bcd194a0"
+  key: "image_33ee314f-5dba-489b-a109-24fe4d15e9d1_v2"
+  accountKey: "act_1479711116160860"
+  displayName: "Image variant 3"
+  mediaType: "image"
+  variantIndex: 2
+  status: "fallback_text_only"
+prompt:
+  text: "Create a 9:16 story/reels first-frame visual for a Japanese awareness video ad by スマコンプロジェクト. Strong opening hook at the top in large Japanese text: “最後まで見られる広告が、次の勝ち筋になる”. Below, show an elegant vertical timeline: “想起形成” → “ThruPlay” → “100%完全視聴率 2%以上” → “類似配信へ”. Use abstract cinematic data particles flowing downward into a bright conversion signal labeled “ROAS/CPO”. Design should be high-contrast for mobile viewing, with a dark premium background, white bold type, cyan signal lines, and minimal gold accent for importance. Keep it clean and strategic, like an advertising operations blueprint rather than a software screen. No logos or platform marks."
+  negativePrompt: "trademarked logos, platform logos, UI screenshots, dashboard mockups, generic SaaS product screen, random office scene, influencers, smiling stock people, storefront, discount/coupon language, easy-result claims, excessive small text, illegible Japanese typography, neon clutter"
+  styleNotes: "Story/Reels variant emphasizes awareness-video hook testing and complete-view retention, aligned with ThruPlay / ad recall lift optimization and the 100% complete view rate benchmark."
+  rationale: "直近は配信・クリック・CVが0のため成果改善よりも配信再開後の認知データ蓄積とCV接続を優先し、knowledgeBriefsの『認知はAD_RECALL_LIFT/THRUPLAY、100%完全視聴率2%以上、動画視聴者から類似1%/3%/5%へ』という方針に合わせたフック型クリエイティブにしました。ブランド情報が限定的なため、スマコンプロジェクトのROAS/CPO再設計訴求を軸に、operator-gradeで高信頼・高コントラストな構成に絞っています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "禁止コンテンツ、個人属性の断定、誇大な収益保証、誤解を招くBefore/After表現は見当たらず、Meta広告ポリシー上の重大リスクは低いです。Meta関連名称の扱いと生成画像内テキストの可読性だけ確認すれば配信可能と判断します。"
+  issues:
+    - severity: "warn"
+      category: "brand_trademark"
+      message: "「ASC」「Advantage+」などMeta関連のプロダクト名がコピーと画像内テキストに含まれています。説明的な参照としては概ね問題ありませんが、Metaとの提携・公式認定・保証を示唆しない表現と配置に留めることを推奨します。"
+    - severity: "info"
+      category: "claims_substantiation"
+      message: "ROAS/CPO、完全視聴率2%以上、類似配信など成果指標に関する表現がありますが、現状は保証表現ではなく運用方針・評価軸として提示されているため大きなポリシーリスクは低いです。"
+    - severity: "info"
+      category: "creative_readability"
+      message: "画像プロンプトはテキスト量がやや多く、生成時に日本語の可読性低下や文字崩れが起きる可能性があります。配信前に実画像で判読性を確認してください。"
+ai:
+  imagePromptAiRunId: "33ee314f-5dba-489b-a109-24fe4d15e9d1"
+  creativeQaAiRunId: "0aa3e5e2-6250-4876-a72f-384a84f550e3"
