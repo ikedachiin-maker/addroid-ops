@@ -1,0 +1,35 @@
+version: 1
+creative:
+  id: "233d8257-f582-4504-882f-84c622abb51b"
+  key: "image_1aba34dd-0af8-45f4-a5f2-c2dcf7f18de0_v2"
+  accountKey: "act_3712039932340685"
+  displayName: "Image variant 3"
+  mediaType: "image"
+  variantIndex: 2
+  status: "fallback_text_only"
+prompt:
+  text: "1080x1920 vertical Story/Reels first-frame cover for a Japanese ad operations strategy video, operator-grade, no logos. Dark navy background with a bold high-contrast opening statement centered at top:「CV広告を“はじめまして”にしない」. Under it, cinematic motion-graphic style storyboard panels showing: 1)「認知動画を常時配信」, 2)「視聴者データを蓄積」, 3)「1,000件で類似1%/3%/5%」, 4)「CV広告へ接続」, 5)「ROAS/CPOで評価」. Use abstract audience dots, arrows, segmented rings, and measurement cards; no people, no real platform UI. Bottom small line:「ASC × A+A × 認知動画の後段設計」. Premium Japanese sans-serif typography, strong contrast, spacious safe margins for vertical placement, designed as the first frame of an educational ad video."
+  negativePrompt: "trademarked logos, Meta logo, Facebook logo, Instagram logo, real social media UI, fake analytics dashboard, unrelated product mockup, generic storefront, lifestyle influencer scene, clutter, low readability, small dense copy, distorted Japanese text, cheap coupon aesthetics, cartoon mascot"
+  styleNotes: "Story/Reels variant emphasizes the awareness-video seed strategy and first-frame hook, aligning with ThruPlay/complete-view creative testing rather than asking awareness ads to drive CPA."
+  rationale: "配信実績が0のため勝敗判定ではなく、設定確認後に使える戦略説明クリエイティブとして、知識ブリーフの「CV広告はバックエンド売上/CPO/ROAS優先」「ASCとA+Aは両方配信」「認知動画はThruPlay/想起と完全視聴率で評価し視聴者1,000件から類似作成」を反映しました。配置シグナルがないため、dimensionPresetsからフィード正方形・縦長フィード・Story/Reelsの実用カバレッジを選び、抽象的な店舗やSaaS画面ではなく広告運用アーキテクチャそのものをビジュアル化しています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "B2B向け広告運用サービスの訴求として、Meta広告ポリシー上の明確な禁止表現や差別的・個人属性への不適切な言及は見当たりません。成果示唆の表現と商標名の扱いは、誤認や保証に見えないよう運用時に注意が必要です。"
+  issues:
+    - severity: "warn"
+      category: "claims_substantiation"
+      message: "「ROAS 300%を基準」「CV広告の初速を高めます」「勝てる広告」などは保証表現ではないものの、成果改善を示唆するため、実績・根拠・条件を説明できる状態にしてください。"
+    - severity: "info"
+      category: "trademark_brand_usage"
+      message: "「Meta」「Advantage+」などのプラットフォーム名称を記述していますが、ロゴ使用や公式提携の示唆は避けられており、画像プロンプトでも商標ロゴ除外が指定されています。"
+    - severity: "info"
+      category: "creative_readability"
+      message: "画像プロンプトは情報量が多めで、生成結果によっては日本語テキストが小さく読みにくくなる可能性があります。主要メッセージの可読性を確認してください。"
+ai:
+  imagePromptAiRunId: "1aba34dd-0af8-45f4-a5f2-c2dcf7f18de0"
+  creativeQaAiRunId: "be702f03-d88b-4321-b249-53d6204e7391"

@@ -1,0 +1,97 @@
+account_id: act_3712039932340685
+status: proposed
+dry_run: true
+proposal_source: addroid
+campaign:
+  name: awareness_video_test_always_on_2026_09
+  objective: OUTCOME_AWARENESS
+  buying_type: AUCTION
+  daily_budget:
+    amount: 5000
+    currency: JPY
+  minimum_test_window_days: 2
+  budget_strategy:
+    initial_daily_budget_per_creative:
+      amount: 1000
+      currency: JPY
+    review_after_days: 2
+    concentrate_spend_rule:
+      metric: video_100_completion_rate
+      operator: gte
+      threshold: 0.02
+  guardrails:
+    allowed_optimization_goals:
+      - AD_RECALL_LIFT
+      - THRUPLAY
+    disallowed_optimization_goals:
+      - REACH
+      - IMPRESSIONS
+    do_not_optimize_for:
+      - CPA
+      - conversions
+      - purchases
+  success_metrics:
+    primary:
+      name: video_100_completion_rate
+      pass_line: 0.02
+    secondary:
+      - thruplays
+      - cost_per_thruplay
+      - estimated_ad_recall_lift
+  ad_sets:
+    - name: awareness_video_test_creative_01_ad_recall_lift
+      daily_budget:
+        amount: 1000
+        currency: JPY
+      optimization_goal: AD_RECALL_LIFT
+      billing_event: IMPRESSIONS
+      creative_ref: video_creative_01
+    - name: awareness_video_test_creative_02_ad_recall_lift
+      daily_budget:
+        amount: 1000
+        currency: JPY
+      optimization_goal: AD_RECALL_LIFT
+      billing_event: IMPRESSIONS
+      creative_ref: video_creative_02
+    - name: awareness_video_test_creative_03_ad_recall_lift
+      daily_budget:
+        amount: 1000
+        currency: JPY
+      optimization_goal: AD_RECALL_LIFT
+      billing_event: IMPRESSIONS
+      creative_ref: video_creative_03
+    - name: awareness_video_test_creative_04_thruplay
+      daily_budget:
+        amount: 1000
+        currency: JPY
+      optimization_goal: THRUPLAY
+      billing_event: THRUPLAY
+      creative_ref: video_creative_04
+    - name: awareness_video_test_creative_05_thruplay
+      daily_budget:
+        amount: 1000
+        currency: JPY
+      optimization_goal: THRUPLAY
+      billing_event: THRUPLAY
+      creative_ref: video_creative_05
+  creatives:
+    - id: video_creative_01
+      type: video
+      asset_placeholder: replace_with_video_asset_01
+      review_note: Evaluate hook by video 100% completion rate.
+    - id: video_creative_02
+      type: video
+      asset_placeholder: replace_with_video_asset_02
+      review_note: Evaluate hook by video 100% completion rate.
+    - id: video_creative_03
+      type: video
+      asset_placeholder: replace_with_video_asset_03
+      review_note: Evaluate hook by video 100% completion rate.
+    - id: video_creative_04
+      type: video
+      asset_placeholder: replace_with_video_asset_04
+      review_note: Evaluate hook by video 100% completion rate.
+    - id: video_creative_05
+      type: video
+      asset_placeholder: replace_with_video_asset_05
+      review_note: Evaluate hook by video 100% completion rate.
