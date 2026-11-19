@@ -1,0 +1,35 @@
+version: 1
+creative:
+  id: "668e944d-11f0-4890-a4e9-c658a720e61c"
+  key: "image_43d815c0-dd44-485c-b080-4da5557635ac_v0"
+  accountKey: "act_315366547698354"
+  displayName: "Image variant 1"
+  mediaType: "image"
+  variantIndex: 0
+  status: "fallback_text_only"
+prompt:
+  text: "Square Meta feed ad key visual for 池田FB広告運用代行, operator-grade consulting for講座・無形商材オーナー. Visual: a dark navy strategic planning desk seen from above, with clean paper cards and simple funnel diagram labeled in Japanese: “バックエンド売上”, “CPO”, “ROAS”, and a smaller crossed-out card “CPAだけで判断しない”. Main bold headline centered: “CPAだけで広告を止めない”. Subline: “講座・無形商材の広告運用は売上から逆算”. Include abstract bar charts, calculator, pen, and structured campaign blocks labeled “ASC” and “Advantage+”. No real platform UI, no logos. Premium but practical Japanese B2B design, high contrast navy background, white typography, accent cyan and lime green, crisp layout, generous margins, highly legible text, trustworthy consulting tone."
+  negativePrompt: "No trademarked logos, no Facebook or Meta logo, no real ad manager screenshots, no fake SaaS dashboard UI, no generic storefront, no coupon or easy-money imagery, no exaggerated luxury, no clutter, no illegible small text, no stock-photo smiling team, no unrelated industry motifs, no before-after income claims."
+  styleNotes: "First relaunch concept for feed: strong static hook around the core belief shift from CPA to backend revenue/CPO/ROAS. Use operator-grade numerical framing and avoid casual or discount-oriented language."
+  rationale: "配信実績が0のため勝敗判断ではなく再開時の検証用として、強い冒頭フックと数値判断の明確化を優先しました。knowledgeBriefsの「CV広告はバックエンド売上/CPO/ROAS優先」「認知広告はThruPlay・完全視聴率と視聴者リスト蓄積で評価」に沿い、CPA単体判断から脱却するビジュアルに統一しています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "重大なMetaポリシー違反や禁止商材、差別的・センシティブ属性の断定、虚偽の収益保証は見当たりません。商標・成果表現には軽微な審査リスクがあるため、ロゴ/UI回避と保証に見えない表現管理を推奨します。"
+  issues:
+    - severity: "warn"
+      category: "trademark_platform_reference"
+      message: "コピーと画像内テキストで「ASC」「Advantage+」などMeta製品名を使用しています。正確な運用機能の説明としては許容され得ますが、Meta/Facebookとの提携・公認を示唆しないよう、ロゴやUIを避ける現在の方針を維持してください。"
+    - severity: "warn"
+      category: "performance_claims"
+      message: "「売上に直結」「勝ち筋」「成果につながる」などの表現は、実績保証や確実な成果を示すように受け取られる可能性があります。誇大表現にならないよう、提案・設計・改善支援の範囲であることが明確だと安全です。"
+    - severity: "info"
+      category: "personal_attributes"
+      message: "「自己投資できる事業者向け」「講座・無形商材オーナー向け」はB2Bターゲット指定として概ね問題ありませんが、個人の資産状況や能力を断定する表現に寄せすぎない方がMeta審査上は安全です。"
+ai:
+  imagePromptAiRunId: "43d815c0-dd44-485c-b080-4da5557635ac"
+  creativeQaAiRunId: "5843f000-ad99-4764-a264-6330485a414b"
