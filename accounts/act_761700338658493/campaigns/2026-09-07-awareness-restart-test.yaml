@@ -1,0 +1,169 @@
+apiVersion: addroid.io/v1alpha1
+kind: CampaignPlan
+metadata:
+  name: awareness-restart-test-2026-09-07
+  accountId: act_761700338658493
+  labels:
+    managedBy: addroid
+    proposalCategory: new_campaign
+    objectiveFamily: awareness
+spec:
+  campaign:
+    name: awareness_restart_test_ad_recall_lift_vs_thruplay_2026_09_07
+    objective: OUTCOME_AWARENESS
+    buyingType: AUCTION
+    statusOnCreate: PAUSED
+    activationPolicy: human_review_after_merge
+
+  schedule:
+    testDurationDays: 2
+    timezone: Asia/Tokyo
+
+  budget:
+    currency: JPY
+    totalDailyBudget: 10000
+    estimatedTotalTestBudget: 20000
+    allocationRule: 1000_jpy_per_creative_per_track_per_day
+
+  guardrails:
+    allowedOptimizationGoals:
+      - AD_RECALL_LIFT
+      - THRUPLAY
+    deniedOptimizationGoals:
+      - REACH
+      - IMPRESSIONS
+    evaluationMetric: video_p100_rate
+    creativePassThreshold: 0.02
+    conversionOrCpaJudgementAllowed: false
+
+  creativeRequirements:
+    count: 5
+    trackUploadsMustUseDistinctFilenames: true
+    openingHook: clearly_differentiated_per_video
+    retentionMessageRequired: true
+    retentionMessageExamples:
+      - watch_to_the_end_for_the_key_benefit
+      - stay_until_the_end_for_the_offer_or_takeaway
+    postTestAction:
+      keepIfVideoP100RateAtLeast: 0.02
+      reviseHookIfVideoP100RateBelow: 0.02
+
+  creativeManifest:
+    - creativeKey: awareness_video_01
+      sourceSlot: awareness_video_01
+      trackUploads:
+        adRecallLiftFilename: awareness_video_01_ad_recall_lift.mp4
+        thruplayFilename: awareness_video_01_thruplay.mp4
+      hookRequirement: unique_opening_hook_01
+      retentionMessageRequired: true
+    - creativeKey: awareness_video_02
+      sourceSlot: awareness_video_02
+      trackUploads:
+        adRecallLiftFilename: awareness_video_02_ad_recall_lift.mp4
+        thruplayFilename: awareness_video_02_thruplay.mp4
+      hookRequirement: unique_opening_hook_02
+      retentionMessageRequired: true
+    - creativeKey: awareness_video_03
+      sourceSlot: awareness_video_03
+      trackUploads:
+        adRecallLiftFilename: awareness_video_03_ad_recall_lift.mp4
+        thruplayFilename: awareness_video_03_thruplay.mp4
+      hookRequirement: unique_opening_hook_03
+      retentionMessageRequired: true
+    - creativeKey: awareness_video_04
+      sourceSlot: awareness_video_04
+      trackUploads:
+        adRecallLiftFilename: awareness_video_04_ad_recall_lift.mp4
+        thruplayFilename: awareness_video_04_thruplay.mp4
+      hookRequirement: unique_opening_hook_04
+      retentionMessageRequired: true
+    - creativeKey: awareness_video_05
+      sourceSlot: awareness_video_05
+      trackUploads:
+        adRecallLiftFilename: awareness_video_05_ad_recall_lift.mp4
+        thruplayFilename: awareness_video_05_thruplay.mp4
+      hookRequirement: unique_opening_hook_05
+      retentionMessageRequired: true
+
+  adSets:
+    - name: arl_awareness_video_01_1000jpy_day
+      optimizationGoal: AD_RECALL_LIFT
+      dailyBudget: 1000
+      currency: JPY
+      creativeKey: awareness_video_01
+      uploadFilename: awareness_video_01_ad_recall_lift.mp4
+    - name: arl_awareness_video_02_1000jpy_day
+      optimizationGoal: AD_RECALL_LIFT
+      dailyBudget: 1000
+      currency: JPY
+      creativeKey: awareness_video_02
+      uploadFilename: awareness_video_02_ad_recall_lift.mp4
+    - name: arl_awareness_video_03_1000jpy_day
+      optimizationGoal: AD_RECALL_LIFT
+      dailyBudget: 1000
+      currency: JPY
+      creativeKey: awareness_video_03
+      uploadFilename: awareness_video_03_ad_recall_lift.mp4
+    - name: arl_awareness_video_04_1000jpy_day
+      optimizationGoal: AD_RECALL_LIFT
+      dailyBudget: 1000
+      currency: JPY
+      creativeKey: awareness_video_04
+      uploadFilename: awareness_video_04_ad_recall_lift.mp4
+    - name: arl_awareness_video_05_1000jpy_day
+      optimizationGoal: AD_RECALL_LIFT
+      dailyBudget: 1000
+      currency: JPY
+      creativeKey: awareness_video_05
+      uploadFilename: awareness_video_05_ad_recall_lift.mp4
+    - name: thruplay_awareness_video_01_1000jpy_day
+      optimizationGoal: THRUPLAY
+      dailyBudget: 1000
+      currency: JPY
+      creativeKey: awareness_video_01
+      uploadFilename: awareness_video_01_thruplay.mp4
+    - name: thruplay_awareness_video_02_1000jpy_day
+      optimizationGoal: THRUPLAY
+      dailyBudget: 1000
+      currency: JPY
+      creativeKey: awareness_video_02
+      uploadFilename: awareness_video_02_thruplay.mp4
+    - name: thruplay_awareness_video_03_1000jpy_day
+      optimizationGoal: THRUPLAY
+      dailyBudget: 1000
+      currency: JPY
+      creativeKey: awareness_video_03
+      uploadFilename: awareness_video_03_thruplay.mp4
+    - name: thruplay_awareness_video_04_1000jpy_day
+      optimizationGoal: THRUPLAY
+      dailyBudget: 1000
+      currency: JPY
+      creativeKey: awareness_video_04
+      uploadFilename: awareness_video_04_thruplay.mp4
+    - name: thruplay_awareness_video_05_1000jpy_day
+      optimizationGoal: THRUPLAY
+      dailyBudget: 1000
+      currency: JPY
+      creativeKey: awareness_video_05
+      uploadFilename: awareness_video_05_thruplay.mp4
+
+  reporting:
+    primaryMetric: video_p100_rate
+    minimumPassRate: 0.02
+    compareBy:
+      - optimizationGoal
+      - creativeKey
+    snapshotAfterDays: 2
+    requiredFields:
+      - spend
+      - impressions
+      - thruplays
+      - video_p25_rate
+      - video_p50_rate
+      - video_p75_rate
+      - video_p100_rate
+    decisions:
+      - condition: video_p100_rate >= 0.02
+        action: keep_creative_for_next_awareness_iteration
+      - condition: video_p100_rate < 0.02
+        action: revise_opening_hook_before_retest
