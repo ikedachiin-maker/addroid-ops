@@ -1,0 +1,35 @@
+version: 1
+creative:
+  id: "3a5b49de-1f32-41a2-bafe-7b3399295d42"
+  key: "image_8f321df8-142c-4cf3-a0eb-98384081bdb9_v0"
+  accountKey: "act_761700338658493"
+  displayName: "Image variant 1"
+  mediaType: "image"
+  variantIndex: 0
+  status: "fallback_text_only"
+prompt:
+  text: "Create a premium, calm Japanese seminar invitation visual for “アイボリーサロン説明会” without using any logos or trademarked marks. Square composition for Meta feed: warm ivory and soft beige palette, clean editorial layout, an elegant desk scene with a notebook, pen, simple agenda sheets, and a subtle upward-step or pathway motif symbolizing turning learning into results. Include ample clean negative space in the upper third for later Japanese copy overlay. No readable text in the image itself. Lighting should feel trustworthy, thoughtful, and operator-grade, with a refined adult learning / business self-investment atmosphere, not casual or discount-like."
+  negativePrompt: "trademarked logos, brand logos, readable text, misspelled Japanese, coupon imagery, sale badges, flashy discount design, generic SaaS dashboard, storefront, luxury mansion, unrealistic money, stock-photo handshake cliché, clutter, harsh neon colors, cartoon style, medical or financial claims"
+  styleNotes: "Conversion-feed base creative: message-match with the briefing-session copy, using ivory tones and a serious self-investment mood. Designed for overlaying headline and CTA after generation."
+  rationale: "直近は配信実績がゼロでCPA/CTR改善判断ができないため、知識ブリーフの『認知はAD_RECALL_LIFT/THRUPLAYと完全視聴率で判断』『CV広告は説明会申込率・ROAS/CPOを上位指標にする』方針に沿い、認知用の強い冒頭フレームとCV用の説明会メッセージマッチを両方意識しました。ブランド名以外の詳細素材が少ないため、アイボリー系の上品な学び・成果・次の一歩の文脈に限定し、無関係な業種モチーフやロゴは避けています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "コピー・画像プロンプトともに、説明会内容の確認と納得感を中心にした訴求で、誇大な成果保証や禁止カテゴリへの明確な抵触は見当たりません。自己投資・成果の表現はLPや後続クリエイティブで過度な成功示唆にならないよう管理すれば配信可能です。"
+  issues:
+    - severity: "warn"
+      category: "claims_financial_outcomes"
+      message: "「成果」「自己投資」などの表現は、受け取り方によっては収益・成功につながる示唆と解釈される可能性があります。現状は保証表現ではないため重大なポリシー懸念は低いですが、LP側でも成果保証や誇大な実績訴求と接続しないよう注意が必要です。"
+    - severity: "info"
+      category: "meta_personal_attributes"
+      message: "「〜したい方へ」「関心をお持ちの方へ」というターゲット呼びかけはありますが、個人属性や困難を断定する表現ではなく、Metaの個人属性ポリシー上のリスクは低めです。"
+    - severity: "info"
+      category: "image_prompt_compliance"
+      message: "画像プロンプトはロゴ、読める文字、誇大な金銭表現、割引訴求、before/after表現を避ける指定があり、ブランドトーンと広告ポリシーの両面で概ね安全です。"
+ai:
+  imagePromptAiRunId: "8f321df8-142c-4cf3-a0eb-98384081bdb9"
+  creativeQaAiRunId: "8242819d-699e-434d-b119-ebe113f3a0b7"
