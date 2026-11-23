@@ -1,0 +1,81 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー依頼（2026-11-23）「一旦コンバージョン広告の方は配信ストップにしてください。で、認知広告の予算を1日1,500円にしたいです」: 古物商×激安不動産の配信中のCV広告2系統（Advantage+リード CBO 1日2,500円・A+A ABO 1日2,500円、11/3〜）をキャンペーンごと PAUSED にする。10月のCV 2系統は11/1で配信期間が終わっているが ACTIVE のまま残っているので、AI社員のとき（2026-11-05）と同じくまとめて PAUSED にする。類似1%（120250957202290254）は既に PAUSED。認知（想起リフト）の広告セット 120250653410250254 の日予算を1,000円→1,500円にする（1.5倍・警告ライン2倍未満）。削除・ターゲティング・広告は変えない。古物商の広告費は1日6,000円→1,500円になる。",
+  "createdAt": "2026-11-23T07:05:00.000Z",
+  "actions": [
+    {
+      "kind": "campaign.status",
+      "payload": {
+        "campaignId": "120250689207670254",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "120250689207670254",
+        "displayName": "古物商×激安不動産_登録_Advantage+リード_CBO_11月",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "campaign.status",
+      "payload": {
+        "campaignId": "120250689208470254",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "120250689208470254",
+        "displayName": "古物商×激安不動産_登録_A+A_ABO_11月",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "campaign.status",
+      "payload": {
+        "campaignId": "120250308233020254",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "120250308233020254",
+        "displayName": "古物商×激安不動産_登録_Advantage+リード_CBO",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "campaign.status",
+      "payload": {
+        "campaignId": "120250308234490254",
+        "status": "PAUSED"
+      },
+      "entity": {
+        "nodeType": "campaign",
+        "nodeKey": "120250308234490254",
+        "displayName": "古物商×激安不動産_登録_A+A_ABO",
+        "status": "paused"
+      }
+    },
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250653410250254",
+        "dailyBudget": 1500,
+        "guardContext": {
+          "currentDailyBudget": 1000,
+          "currentLifetimeBudget": 0,
+          "currency": "JPY",
+          "source": "meta_graph_read_20261123"
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "120250653410250254",
+        "displayName": "日本_日本語_想起リフト_1日1000円"
+      }
+    }
+  ]
+}
