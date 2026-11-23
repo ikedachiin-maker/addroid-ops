@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "accountKey": "act_761700338658493",
+  "intent": "other",
+  "source": "claude-code",
+  "actor": "claude-code:user-authorized",
+  "rationale": "ユーザー依頼（2026-11-23）「Instagramを育てる方向で行きたいです。広告はすべてInstagramに全振りでいいかなと思っています」: CV広告の結果が落ちてきたので費用を Instagram に回す。フォロワー31人に狙いのターゲット層が多いため。配信中の広告は認知（想起リフト）の広告セット 120250653410250254 だけ（CV は同日 PR #87 で停止済み）なので、その配置を Advantage+ 配置から Instagram のみ（Instagram 内の置き場所は Meta 任せ）にする。10/12〜11/23 の認知は費用の91%が Facebook・Instagram は7%で、Instagram からの LP クリック0・プロフィールアクセス1だった。ターゲティングは 16:17 JST に Meta から読んだ現状（日本・日本語・18-65歳・居住+最近いた人・Advantage+オーディエンスOFF）をそのまま書き、publisher_platforms だけを足す。名前を実態（1日1,500円・Instagramのみ）に合わせる。予算1,500円・最適化（AD_RECALL_LIFT）・広告は変えない。",
+  "createdAt": "2026-11-23T07:20:00.000Z",
+  "actions": [
+    {
+      "kind": "adset.update",
+      "payload": {
+        "adsetId": "120250653410250254",
+        "name": "日本_日本語_想起リフト_Instagramのみ_1日1500円",
+        "targeting": {
+          "age_min": 18,
+          "age_max": 65,
+          "geo_locations": {
+            "countries": [
+              "JP"
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "locales": [
+            11
+          ],
+          "publisher_platforms": [
+            "instagram"
+          ],
+          "targeting_automation": {
+            "advantage_audience": 0
+          }
+        }
+      },
+      "entity": {
+        "nodeType": "adset",
+        "nodeKey": "120250653410250254",
+        "displayName": "日本_日本語_想起リフト_Instagramのみ_1日1500円"
+      }
+    }
+  ]
+}
