@@ -1,0 +1,164 @@
+apiVersion: addroid.io/v1alpha1
+kind: AdImprovementPlan
+metadata:
+  name: awareness-restart-test-2026-09-14
+  accountId: act_761700338658493
+  createdBy: addroid-ai
+  baseRef: main
+spec:
+  dryRun: true
+  status: proposed
+  summary: >-
+    Restart delivery with an awareness-stage video test after confirming
+    measurement readiness. Evaluate by video 100% completion rate rather than
+    CPA or conversions.
+  snapshot:
+    spend: 0
+    impressions: 0
+    clicks: 0
+    conversions: 0
+    interpretation: >-
+      Delivery and measurement checks are required before performance
+      optimization because the recent account snapshot has no delivery volume.
+  measurementChecks:
+    requiredBeforeActivation: true
+    items:
+      - id: pixel-capi-connectivity
+        label: Confirm Pixel and CAPI are connected and receiving events
+        required: true
+      - id: primary-events
+        label: Confirm primary events are configured and mapped correctly
+        required: true
+      - id: video-view-audience-accumulation
+        label: Confirm video-view audience accumulation is enabled
+        required: true
+      - id: awareness-kpi
+        label: Fix awareness evaluation KPI to video 100% completion rate
+        required: true
+        metric: video_100_pct_completion_rate
+  campaign:
+    action: create
+    name: New OUTCOME_AWARENESS campaign - video hook test
+    objective: OUTCOME_AWARENESS
+    buyingType: AUCTION
+    status: PAUSED
+    specialAdCategories: []
+    allowedOptimizationGoals:
+      - AD_RECALL_LIFT
+      - THRUPLAY
+    disallowedOptimizationGoals:
+      - REACH
+      - IMPRESSIONS
+    notes:
+      - Do not optimize this awareness test for CPA or conversion volume.
+      - Keep AD_RECALL_LIFT and THRUPLAY viewers separated for audience hygiene.
+  creatives:
+    hooks:
+      - hook01
+      - hook02
+      - hook03
+      - hook04
+      - hook05
+    uploadRequirements:
+      adRecallLiftFilenames:
+        - awareness_hook01_ad_recall_lift.mp4
+        - awareness_hook02_ad_recall_lift.mp4
+        - awareness_hook03_ad_recall_lift.mp4
+        - awareness_hook04_ad_recall_lift.mp4
+        - awareness_hook05_ad_recall_lift.mp4
+      thruplayFilenames:
+        - awareness_hook01_thruplay.mp4
+        - awareness_hook02_thruplay.mp4
+        - awareness_hook03_thruplay.mp4
+        - awareness_hook04_thruplay.mp4
+        - awareness_hook05_thruplay.mp4
+      rationale: >-
+        Separate filenames are required so video-view audiences can be split by
+        optimization goal and creative hook.
+  adSets:
+    currency: JPY
+    minimumTestDays: 2
+    dailyBudgetPerAdSet: 1000
+    totalAdSets: 10
+    estimatedDailyBudget: 10000
+    estimatedMinimumTestBudget: 20000
+    evaluation:
+      metric: video_100_pct_completion_rate
+      passThreshold: 0.02
+      actionAfterMinimumTest: >-
+        Shift budget toward the highest-completion-rate winner that clears the
+        2.0% threshold. Do not judge this awareness test by CPA or conversions.
+    definitions:
+      - name: ARL hook01 - awareness video test
+        optimizationGoal: AD_RECALL_LIFT
+        billingEvent: IMPRESSIONS
+        dailyBudget: 1000
+        creativeFile: awareness_hook01_ad_recall_lift.mp4
+        audiencePool: video_viewers_ad_recall_lift_hook01
+      - name: ARL hook02 - awareness video test
+        optimizationGoal: AD_RECALL_LIFT
+        billingEvent: IMPRESSIONS
+        dailyBudget: 1000
+        creativeFile: awareness_hook02_ad_recall_lift.mp4
+        audiencePool: video_viewers_ad_recall_lift_hook02
+      - name: ARL hook03 - awareness video test
+        optimizationGoal: AD_RECALL_LIFT
+        billingEvent: IMPRESSIONS
+        dailyBudget: 1000
+        creativeFile: awareness_hook03_ad_recall_lift.mp4
+        audiencePool: video_viewers_ad_recall_lift_hook03
+      - name: ARL hook04 - awareness video test
+        optimizationGoal: AD_RECALL_LIFT
+        billingEvent: IMPRESSIONS
+        dailyBudget: 1000
+        creativeFile: awareness_hook04_ad_recall_lift.mp4
+        audiencePool: video_viewers_ad_recall_lift_hook04
+      - name: ARL hook05 - awareness video test
+        optimizationGoal: AD_RECALL_LIFT
+        billingEvent: IMPRESSIONS
+        dailyBudget: 1000
+        creativeFile: awareness_hook05_ad_recall_lift.mp4
+        audiencePool: video_viewers_ad_recall_lift_hook05
+      - name: TP hook01 - awareness video test
+        optimizationGoal: THRUPLAY
+        billingEvent: THRUPLAY_IF_AVAILABLE_ELSE_IMPRESSIONS
+        dailyBudget: 1000
+        creativeFile: awareness_hook01_thruplay.mp4
+        audiencePool: video_viewers_thruplay_hook01
+      - name: TP hook02 - awareness video test
+        optimizationGoal: THRUPLAY
+        billingEvent: THRUPLAY_IF_AVAILABLE_ELSE_IMPRESSIONS
+        dailyBudget: 1000
+        creativeFile: awareness_hook02_thruplay.mp4
+        audiencePool: video_viewers_thruplay_hook02
+      - name: TP hook03 - awareness video test
+        optimizationGoal: THRUPLAY
+        billingEvent: THRUPLAY_IF_AVAILABLE_ELSE_IMPRESSIONS
+        dailyBudget: 1000
+        creativeFile: awareness_hook03_thruplay.mp4
+        audiencePool: video_viewers_thruplay_hook03
+      - name: TP hook04 - awareness video test
+        optimizationGoal: THRUPLAY
+        billingEvent: THRUPLAY_IF_AVAILABLE_ELSE_IMPRESSIONS
+        dailyBudget: 1000
+        creativeFile: awareness_hook04_thruplay.mp4
+        audiencePool: video_viewers_thruplay_hook04
+      - name: TP hook05 - awareness video test
+        optimizationGoal: THRUPLAY
+        billingEvent: THRUPLAY_IF_AVAILABLE_ELSE_IMPRESSIONS
+        dailyBudget: 1000
+        creativeFile: awareness_hook05_thruplay.mp4
+        audiencePool: video_viewers_thruplay_hook05
+  guardrails:
+    requireHumanApproval: true
+    keepCampaignPausedOnCreate: true
+    forbidOptimizationGoals:
+      - REACH
+      - IMPRESSIONS
+    forbidAwarenessEvaluationMetrics:
+      - cpa
+      - conversions
+    activationBlockedUntil:
+      - pixel-capi-connectivity
+      - primary-events
+      - video-view-audience-accumulation
