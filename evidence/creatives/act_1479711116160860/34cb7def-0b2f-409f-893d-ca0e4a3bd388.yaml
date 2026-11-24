@@ -1,0 +1,38 @@
+version: 1
+creative:
+  id: "34cb7def-0b2f-409f-893d-ca0e4a3bd388"
+  key: "image_f2b6a80f-b7ca-4964-9d16-3f00113e39f0_v0"
+  accountKey: "act_1479711116160860"
+  displayName: "Image variant 1"
+  mediaType: "image"
+  variantIndex: 0
+  status: "fallback_text_only"
+prompt:
+  text: "Create an operator-grade first-frame ad visual for スマコンプロジェクト, aimed at serious adults with high self-investment intent. Square composition. Scene: a focused Japanese professional in their 30s-40s at a clean desk, reviewing a simple handwritten action map with three clear sections: current situation, decision points, next action. The person looks determined, not casual; subtle cinematic lighting, high contrast opening-frame impact, premium consulting / practical guidance atmosphere. Include visual motifs of整理 and行動: aligned sticky notes, a pen marking the next step, a small checklist, no visible brand logos. Leave a clean upper-left text-safe area for headline overlay. Color direction: deep navy, charcoal, white, subtle warm accent. Serious, trustworthy, no hype, no luxury-flex imagery."
+  negativePrompt: "trademarked logos, real company logos, generic storefront, SaaS dashboard, app UI, unrelated business office stock photo, coupon imagery, easy money, cash piles, luxury cars, exaggerated success claims, cartoon style, cluttered background, smiling influencer pose, low-quality text, unreadable fake typography, medical or financial guarantees"
+  styleNotes: "Awareness/ThruPlay first-frame style: strong contrast, immediate seriousness, and a clear visual metaphor for turning self-investment into action. Keep text minimal or leave space for overlay; avoid cheap/easy benefits."
+  rationale: "配信実績が0のため勝ち負け判断ではなく、knowledgeBriefsの『認知はCPA/CVではなくThruPlay・動画100%完全視聴率2%以上で評価』『冒頭フック差し替えを比較』に沿って、強い初速コントラストと“現状整理→判断→次の行動”が一目で伝わるファーストフレーム案にしました。dimensionPresetsに合わせ、配置が不明でもMeta主要面を検証できるよう1:1、4:5、9:16で展開しています。"
+generation:
+  provider: null
+  model: null
+  storageRef: null
+  parameters: null
+qa:
+  recommendation: "approve"
+  rationale: "重大なMetaポリシー違反や明確な誇大保証表現は見当たらず、全体として自己投資・実践型案内の訴求に留まっています。一方で、成果示唆や選別的なトーンは審査・ブランド観点で軽微な注意点があります。"
+  issues:
+    - severity: "warn"
+      category: "Meta policy - implied outcomes"
+      message: "コピー内の「成果に変える」「成果につながる自己投資」は、商材内容によっては収益・キャリア・個人変革の結果を示唆する表現として審査上やや敏感です。保証表現ではないため重大ではありませんが、LP側で具体的成果の根拠や免責が整っているか確認推奨です。"
+    - severity: "warn"
+      category: "Tone / inclusivity"
+      message: "「行動できる人だけに届けたい」は強い選別感・煽りに見える可能性があります。ポリシー違反ではありませんが、ブランドの信頼感を優先するなら圧迫感が出ないか注意が必要です。"
+    - severity: "info"
+      category: "Image prompt compliance"
+      message: "画像プロンプトは現金・高級車・誇大成功表現・ロゴ・UI表示を避ける指定があり、Meta広告上の誤認リスクは低めです。"
+    - severity: "info"
+      category: "Targeting / representation"
+      message: "人物指定で「Japanese professional in their 30s-40s」としているため、実際の配信対象が広い場合は年齢・属性の印象が狭くならないか確認すると安全です。"
+ai:
+  imagePromptAiRunId: "f2b6a80f-b7ca-4964-9d16-3f00113e39f0"
+  creativeQaAiRunId: "03495728-4065-4b37-b9a9-2a67c0fc029a"
